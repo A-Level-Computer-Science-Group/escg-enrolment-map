@@ -38,8 +38,25 @@
             "pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw"
         }
       ).addTo(mymap);
+
+      var circle = L.circle([50.78967, 0.26843], {
+        color: "red",
+        fillColor: "#f03",
+        fillOpacity: 0.5,
+        radius: 500,
+        weight: 2
+      }).addTo(mymap);
+
+      function activeCircle() {
+        circle.setStyle({ weight: 20 });
+      }
+      function unActiveCircle() {
+        circle.setStyle({ weight: 2 });
+      }
+
+      circle.on("click", activeCircle);
+      circle.on("mouseover", activeCircle);
+      circle.on("mouseout", unActiveCircle);
     </script>
   </body>
 </html>
-
-11/50.8656/0.0989
