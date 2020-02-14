@@ -44,6 +44,10 @@
 
     // MISC map settings
     var maxRadius = 500;
+    // radius calculation type, such as "percentage" or "real"
+    var radiusCalc = 'real';
+    // variable from filter drop-down menu
+    var filter = 'btec'; // temporary
 
     // can't use this commercially without buying an access key
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -56,30 +60,21 @@
     var ESCG_eastbourne = L.marker([50.788290, 0.271392]).addTo(mymap);
     ESCG_eastbourne.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
 
+    // each school must be added to school array as object
+    var schools = [];
+
     // example school. Will be recieved from college as JSON file hopefully
-    var parklands = {
+    schools.push({
         name: 'Parklands',
         students: {
             total: 500,
-            BTEC: 200,
+            btec: 200,
         },
-        coords: getCoords(this.name),
-    }
-
-    // each school must be added to school array as object
-    var schools = [
-        parklands,
-    ];
+        coords: getCoords('Parklands'),
+    });
 
     // array of markers
     var schoolMarkers = [];
-
-    // variable from filter drop-down menu
-    var filter = new String;
-    filter = 'total'; // temporary
-
-    // radius calculation type, such as "percentage" or "student numbers"
-    var radiusCalc = 'percentage';
 
     // creates a marker (circle) for each school and adds that marker to the marker array
     schools.forEach(school => {
@@ -89,7 +84,7 @@
             fillOpacity: 0.5,
             radius: getRadius(school.students),
         }).addTo(mymap);
-        newMarker.bindPopup("<b>" + school.name + "</b>");
+        newMarker.bindPopup("<b>" + school.name + "</b><br>" + filter.slice(0, 1).toUpperCase() + filter.slice(1) + " Students: " + school.students[filter]);
         schoolMarkers.push(newMarker);
     });
 
@@ -103,9 +98,13 @@
 
     function getRadius(students) {
         let radius = new Number;
-        if (radiusCalc == 'percentage') {
-            radius = (students[filter] / students.total) * maxRadius;
-            return radius;
+        switch (radiusCalc) {
+            case 'percentage':
+                radius = (students[filter] / students.total) * maxRadius;
+                return radius;
+            case 'real':
+                radius = Math.min(students[filter], maxRadius);
+                return radius;
         }
     }
 </script>
