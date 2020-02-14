@@ -1,0 +1,96 @@
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+        integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+        crossorigin=""></script>
+
+    <style>
+        * {
+            margin: auto;
+            text-align: center;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            float: none;
+            position: relative;
+            display: inline-block;
+        }
+
+        #header {
+            padding: 15px;
+        }
+
+        #mapid {
+            height: 70%;
+            width: 70%;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mapid"></div>
+</body>
+
+<script>
+    /* *** MAP STUFF *** */
+    var mymap = L.map('mapid').setView([50.788290, 0.271392], 14);
+
+    // can't use this commercially without buying an access key
+    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+        maxZoom: 18,
+        id: 'mapbox/streets-v11',
+        accessToken: 'pk.eyJ1IjoibGF5dG9uZ2IiLCJhIjoiY2s2aHZtandrMjkybTNrbXYzbzdvN3NtaCJ9.3iCAYC_Jxjf77q4-osWKzA'
+    }).addTo(mymap);
+
+    var ESCG_eastbourne = L.marker([50.788290, 0.271392]).addTo(mymap);
+    ESCG_eastbourne.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
+
+    // example school. Will be recieved from college as JSON file hopefully
+    var parklands = {
+        name: 'Parklands',
+        students: {
+            total: 500,
+            BTEC: 200,
+        },
+        coords: getCoords(this.name),
+    }
+
+    // each school must be added to school array as object
+    var schools = [
+        parklands,
+    ];
+
+    // array of markers
+    var schoolMarkers = [];
+
+    // variable from filter drop-down menu
+    var filter = new String;
+
+    // creates a marker (circle) for each school and adds that marker to the marker array
+    schools.forEach(school => {
+        var newMarker = L.circle(school.coords, {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: school.students[filter],
+        }).addTo(mymap);
+        newMarker.bindPopup("<b>" + school.name + "</b>");
+        schoolMarkers.push(newMarker);
+    });
+
+    // coords wont be in the college's database, so we'll need to return those manually.
+    function getCoords(name) {
+        switch (name.toLowerCase()) {
+            case 'parklands':
+                return [50.798761, 0.269415];
+        }
+    }
+</script>
