@@ -42,6 +42,9 @@
     /* *** MAP STUFF *** */
     var mymap = L.map('mapid').setView([50.788290, 0.271392], 14);
 
+    // MISC map settings
+    var maxRadius = 500;
+
     // can't use this commercially without buying an access key
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -73,6 +76,10 @@
 
     // variable from filter drop-down menu
     var filter = new String;
+    filter = 'total'; // temporary
+
+    // radius calculation type, such as "percentage" or "student numbers"
+    var radiusCalc = 'percentage';
 
     // creates a marker (circle) for each school and adds that marker to the marker array
     schools.forEach(school => {
@@ -80,7 +87,7 @@
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: school.students[filter],
+            radius: getRadius(school.students),
         }).addTo(mymap);
         newMarker.bindPopup("<b>" + school.name + "</b>");
         schoolMarkers.push(newMarker);
@@ -91,6 +98,14 @@
         switch (name.toLowerCase()) {
             case 'parklands':
                 return [50.798761, 0.269415];
+        }
+    };
+
+    function getRadius(students) {
+        let radius = new Number;
+        if (radiusCalc == 'percentage') {
+            radius = (students[filter] / students.total) * maxRadius;
+            return radius;
         }
     }
 </script>
