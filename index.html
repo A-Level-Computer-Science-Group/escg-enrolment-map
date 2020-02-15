@@ -78,9 +78,9 @@
             top: 25%;
             color: black;
         }
-       .title{
-           position: relative;
-           align-content: center;
+        .title{
+            position: relative;
+            align-content: center;
             height: 65px;
             background-color: rgb(230,230,0);
             color: black;
@@ -123,12 +123,13 @@
         </ul>
     </div>
 </body>
+
 <script>
     const one = document.querySelectorAll('.one');
     const two = document.querySelectorAll('.two');
     const three = document.querySelectorAll('.three');
     const title = document.querySelectorAll('.title');
-    let buttonInfo;
+    var choiceOne;
     // For each parent element it adds an event listener
     title.forEach(element => {
         element.addEventListener('click' , () => {
@@ -154,18 +155,18 @@
             else{
             three.forEach(element => {
             
-            if (element.classList.contains('active')){
-                element.classList.remove('active');
-            } else{
-                element.classList.add('active');
-            }
-        
-        })}
-    })
-});
-// function is passed in the html content text of the child element and sets it to button info which can then be filtered.
+                if (element.classList.contains('active')){
+                    element.classList.remove('active');
+                } else{
+                    element.classList.add('active');
+                }
+            })}
+        })
+    });
+
+    // function is passed in the html content text of the child element and sets it to button info which can then be filtered.
     function readData(type){
-        buttonInfo = type;
+        choiceOne = type;
     }
     
     /* *** MAP STUFF *** */
