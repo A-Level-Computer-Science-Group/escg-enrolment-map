@@ -115,20 +115,20 @@
             <div class="title , titleOne">
                 <i class="fas fa-arrow-down"
                     style="position: relative;padding-right: 5px;padding-left: 5px;top: 25%;"></i>
-                <a href="#">Main Example</a></div>
-            <li class="border , active , one" onclick="readData('BTEC')"><a href="#">BTEC</a></li>
-            <li class="border , active , one" onclick="readData('A-levels')"><a href="#">A-levels</a></li>
-            <li class="active , one" onclick="readData()"><a href="#">Example</a></li>
+                <a href="#">Filter</a></div>
+            <li class="border , active , one" onclick="setFilterOne('total')"><a href="#">Totals</a></li>
+            <li class="border , active , one" onclick="setFilterOne('btec')"><a href="#">BTEC</a></li>
+            <li class="active , one" onclick="setFilterOne('A-levels')"><a href="#">A-levels</a></li>
         </ul>
 
         <ul>
             <div class="title , titleTwo">
                 <i class="fas fa-arrow-down"
                     style="position: relative;padding-right: 5px;padding-left: 5px;top: 25%;"></i>
-                <a href="#">Main Example</a></div>
-            <li class="border , active , two" onclick="readData()"><a href="#">Example</a></li>
-            <li class="border , active , two" onclick="readData()"><a href="#">Example</a></li>
-            <li class="active , two" onclick="readData()"><a href="#">Example</a></li>
+                <a href="#">Radius Type</a></div>
+            <li class="border , active , two" onclick="setFilterTwo('real')"><a href="#">Real</a></li>
+            <li class="border , active , two" onclick="setFilterTwo('percentage')"><a href="#">Percentage</a></li>
+            <li class="active , two" onclick="setFilterTwo()"><a href="#">Example</a></li>
         </ul>
 
         <ul>
@@ -136,9 +136,9 @@
                 <i class="fas fa-arrow-down"
                     style="position: relative;padding-right: 5px;padding-left: 5px;padding-top:5px ;top: 25%;"></i>
                 <a href="#">Main Example</a></div>
-            <li class="border , active , three" onclick="readData()"><a href="#">Example</a></li>
-            <li class="border , active , three" onclick="readData()"><a href="#">Example</a></li>
-            <li class="active , three" onclick="readData()"><a href="#">Example</a></li>
+            <li class="border , active , three" onclick="setFilterOne()"><a href="#">Example</a></li>
+            <li class="border , active , three" onclick="setFilterOne()"><a href="#">Example</a></li>
+            <li class="active , three" onclick="setFilterOne()"><a href="#">Example</a></li>
         </ul>
     </div>
 </body>
@@ -186,9 +186,23 @@
         })
     });
 
+    /* FILTER BY BUTTON STUFF */
     // function is passed in the html content text of the child element and sets it to button info which can then be filtered.
-    function readData(type) {
+    function setFilterOne(type) {
         choiceOne = type;
+        setFilter(1, choiceOne);
+    }
+
+    function setFilter(n, newFilter) {
+        for (let i = 0; i < schoolMarkers; i++) {
+            let newStudents = getStudents(schoolMarkers[i][0], newFilter);
+            schoolMarkers[i][1]._mRadius = getRadius(newStudents, newFilter);
+        };
+
+        function getStudents(schoolName, filter) {
+            let school = schools.find(s => s.name == schoolName);
+            return school.students[filter];
+        }
     }
 
     /* *** MAP STUFF *** */
@@ -201,8 +215,7 @@
     // radius calculation type, such as "percentage" or "real"
     var radiusCalc = 'real';
     // variable from filter drop-down menu
-    // var filter = 'btec'; // temporary
-    var filter = choiceOne; // temporary
+    var defaultFilter = 'total';
 
     // can't use this commercially without buying an access key
     L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
@@ -217,7 +230,6 @@
 
     // each school must be added to school array as object
     var schools = [];
-
     // example school. Will be recieved from college as JSON file hopefully
     schools.push({
         name: 'Parklands',
@@ -230,17 +242,16 @@
 
     // array of markers
     var schoolMarkers = [];
-
     // creates a marker (circle) for each school and adds that marker to the marker array
     schools.forEach(school => {
         var newMarker = L.circle(school.coords, {
             color: 'red',
             fillColor: '#f03',
             fillOpacity: 0.5,
-            radius: getRadius(school.students),
+            radius: getRadius(school.students, defaultFilter),
         }).addTo(mymap);
-        newMarker.bindPopup("<b>" + school.name + "</b><br>" + filter.slice(0, 1).toUpperCase() + filter.slice(1) + " Students: " + school.students[filter]);
-        schoolMarkers.push(newMarker);
+        newMarker.bindPopup("<b>" + school.name + "</b><br>" + defaultFilter.slice(0, 1).toUpperCase() + defaultFilter.slice(1) + " Students: " + school.students[defaultFilter]);
+        schoolMarkers.push([school.name, newMarker]);
     });
 
     // coords wont be in the college's database, so we'll need to return those manually.
@@ -251,7 +262,7 @@
         }
     };
 
-    function getRadius(students) {
+    function getRadius(students, filter) {
         let radius = new Number;
         switch (radiusCalc) {
             case 'percentage':
