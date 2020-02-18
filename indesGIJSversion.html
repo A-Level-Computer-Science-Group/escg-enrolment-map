@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Style circles with a data-driven property</title>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map"></div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoibGF5dG9uZ2IiLCJhIjoiY2s2aHZtandrMjkybTNrbXYzbzdvN3NtaCJ9.3iCAYC_Jxjf77q4-osWKzA';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/light-v10',
+            zoom: 14,
+            center: [0.271392, 50.788290]
+        });
+
+        map.on('load', function () {
+            map.addSource('courseType', {
+                "type": "Feature",
+                "properties": {
+                    "courseType": "btec"
+                },
+                "geometry": {
+                    "type": "Point",
+                    "coordinates": [0.271392, 50.788290]
+                }
+            });
+            map.addLayer({
+                'id': 'population',
+                'type': 'circle',
+                'source': 'courseType',
+                'source-layer': 'sf2010',
+                'paint': {
+                    // make circles larger as the user zooms from z12 to z22
+                    'circle-radius': {
+                        'base': 500,
+                        'stops': [[12, 2], [22, 180]]
+                    },
+                    // color circles by courseType, using a match expression
+                    // https://docs.mapbox.com/mapbox-gl-js/style-spec/#expressions-match
+                    'circle-color': [
+                        'match',
+                        ['get', 'courseType'],
+                        'btec',
+                        '#fbb03b',
+                        'a-level',
+                        '#223b53',
+/* other */ '#ccc'
+                    ]
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
