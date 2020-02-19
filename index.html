@@ -194,10 +194,12 @@
     }
 
     function setFilter(n, newFilter) {
-        for (let i = 0; i < schoolMarkers; i++) {
-            let newStudents = getStudents(schoolMarkers[i][0], newFilter);
-            schoolMarkers[i][1]._mRadius = getRadius(newStudents, newFilter);
-        };
+        schoolMarkers.forEach(school => {
+            let newStudents = getStudents(school[0], newFilter);
+            school[1].setStyle({
+                radius: getRadius(newStudents, newFilter)
+            });
+        });
 
         function getStudents(schoolName, filter) {
             let school = schools.find(s => s.name == schoolName);
