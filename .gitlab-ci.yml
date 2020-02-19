@@ -5,8 +5,8 @@ cache:
     - node_modules/
 
 stages:
-  - lint
   - build
+  - lint
 
 lint:
   stage: lint
