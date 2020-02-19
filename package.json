@@ -19,12 +19,18 @@
   },
   "homepage": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map#readme",
   "devDependencies": {
+    "autoprefixer": "^9.7.4",
     "copy-webpack-plugin": "^5",
+    "extract-loader": "^4.0.3",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "styles-loader": "^1.0.2",
+    "ts-loader": "^6",
+    "typescript": "^3",
     "webpack": "^4",
     "webpack-cli": "^3",
-    "webpack-merge": "^4",
-    "ts-loader": "^6",
-    "typescript": "^3"
+    "webpack-merge": "^4"
   },
   "dependencies": {
     "@types/leaflet": "^1.5.8",
