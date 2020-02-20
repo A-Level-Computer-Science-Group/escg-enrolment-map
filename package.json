@@ -7,8 +7,8 @@
     "watch": "webpack --config webpack/webpack.dev.js --watch",
     "build": "webpack --config webpack/webpack.prod.js",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "format": "prettier --write src/**.ts",
-    "check:format": "prettier -c src/**.ts",
+    "format": "prettier --write 'src/**/*.ts' 'src/**/*.scss' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
+    "check:format": "prettier -c 'src/**/*.ts' 'src/**/*.scss' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
