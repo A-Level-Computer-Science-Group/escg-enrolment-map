@@ -29,13 +29,13 @@ enum College {
   Lewes
 }
 enum SchoolName {
-  Parklands,
-  Ocklynge
+  Parklands = "Parklands",
+  Ocklynge = "Ocklynge"
 }
 enum CourseType {
-  alevel,
-  vocational,
-  appgeneral
+  alevel = "A-Level",
+  vocational = "Vocational",
+  appgeneral = "Applied General"
 }
 enum Gender {
   Male,
@@ -74,8 +74,42 @@ const studentInfo: Student[] = [
     course: CourseType.vocational,
     school: SchoolName.Ocklynge,
     college: College.Eastbourne
+  },
+  {
+    gender: Gender.Male,
+    course: CourseType.vocational,
+    school: SchoolName.Ocklynge,
+    college: College.Eastbourne
+  },
+  {
+    gender: Gender.Female,
+    course: CourseType.alevel,
+    school: SchoolName.Ocklynge,
+    college: College.Eastbourne
+  },
+  {
+    gender: Gender.Male,
+    course: CourseType.alevel,
+    school: SchoolName.Parklands,
+    college: College.Eastbourne
+  },
+  {
+    gender: Gender.Female,
+    course: CourseType.alevel,
+    school: SchoolName.Parklands,
+    college: College.Eastbourne
+  },
+  {
+    gender: Gender.Female,
+    course: CourseType.vocational,
+    school: SchoolName.Parklands,
+    college: College.Eastbourne
   }
 ];
+
+// map variables
+const filter: "total" | CourseType = "total";
+const maxRadius: number = 1000;
 
 // create a marker for each school, add marker to array of markers
 interface SchoolMarker {
@@ -88,16 +122,32 @@ schools.forEach(school => {
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5,
-    radius: 500 // need to change this dynamically later
+    radius: calcRadius(studentsAtThisSchool(school.name))
   }).addTo(mymap);
   newMarker.bindPopup(
     "<b>" +
       school.name +
       "</b><br>" +
-      "total".slice(0, 1).toUpperCase() +
-      "total".slice(1) +
+      filter.slice(0, 1).toUpperCase() +
+      filter.slice(1) +
       " Students: " +
-      500
+      studentInfo.filter(s => {
+        if (filter === "total") {
+          return s.school === school.name;
+        } else {
+          return s.school === school.name && s.course === filter;
+        }
+      }).length
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
+
+  function studentsAtThisSchool(schoolName: SchoolName) {
+    return studentInfo.filter(s => {
+      return s.school === schoolName;
+    }).length;
+  }
+
+  function calcRadius(students: number) {
+    return (students / studentInfo.length) * maxRadius;
+  }
 });
