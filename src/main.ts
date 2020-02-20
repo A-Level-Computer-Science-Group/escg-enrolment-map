@@ -108,7 +108,7 @@ const studentInfo: Student[] = [
 ];
 
 // map variables
-const courseFilter: "any" | CourseType = "any";
+const courseFilter: "total" | CourseType = "total";
 const maxRadius: number = 1500;
 
 // create a marker for each school, add marker to array of markers
@@ -141,7 +141,7 @@ schools.forEach(school => {
   }
 
   function filterStudents() {
-    if (courseFilter === "any") {
+    if (courseFilter === "total") {
       return schoolStudents();
     } else {
       return schoolStudents().filter(s => {
