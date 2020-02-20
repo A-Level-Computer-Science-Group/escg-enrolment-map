@@ -10,7 +10,7 @@ If you run into any issues with this add-on please email [incoming+a-level-compu
 
 Always start by installing npm modules after a fresh clone.
 
-```
+```console
 npm install
 ```
 
