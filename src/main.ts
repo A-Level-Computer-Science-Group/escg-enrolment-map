@@ -108,8 +108,8 @@ const studentInfo: Student[] = [
 ];
 
 // map variables
-const filter: "total" | CourseType = "total";
-const maxRadius: number = 1000;
+const courseFilter: "any" | CourseType = CourseType.alevel;
+const maxRadius: number = 1500;
 
 // create a marker for each school, add marker to array of markers
 interface SchoolMarker {
@@ -118,36 +118,39 @@ interface SchoolMarker {
 }
 const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
+  const studentCount = studentsAtThisSchool(school.name);
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5,
-    radius: calcRadius(studentsAtThisSchool(school.name))
+    radius: calcRadius(studentCount)
   }).addTo(mymap);
   newMarker.bindPopup(
     "<b>" +
       school.name +
       "</b><br>" +
-      filter.slice(0, 1).toUpperCase() +
-      filter.slice(1) +
+      courseFilter.slice(0, 1).toUpperCase() +
+      courseFilter.slice(1) +
       " Students: " +
-      studentInfo.filter(s => {
-        if (filter === "total") {
-          return s.school === school.name;
-        } else {
-          return s.school === school.name && s.course === filter;
-        }
-      }).length
+      studentCount
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
 
   function studentsAtThisSchool(schoolName: SchoolName) {
-    return studentInfo.filter(s => {
-      return s.school === schoolName;
-    }).length;
+    return filterStudents(schoolName).length;
   }
 
   function calcRadius(students: number) {
     return (students / studentInfo.length) * maxRadius;
+  }
+
+  function filterStudents(schoolName: SchoolName) {
+    return studentInfo.filter(s => {
+      if (courseFilter === "any") {
+        return s.school === schoolName;
+      } else {
+        return s.school === schoolName && s.course === courseFilter;
+      }
+    })
   }
 });
