@@ -2,7 +2,7 @@ import { Marker, LatLngExpression, LatLng, Circle } from "leaflet";
 import * as L from "leaflet";
 
 /* *** MAP STUFF *** */
-var mymap = L.map('map').setView([50.78829, 0.271392], 14);
+const mymap = L.map('map').setView([50.78829, 0.271392], 14);
 
 // add map tiles (can't use this commercially without buying an access key)
 L.tileLayer(
@@ -20,8 +20,8 @@ L.tileLayer(
 ).addTo(mymap);
 
 // add Eastbourne College
-var ESCG_eastbourne = L.marker([50.78829, 0.271392]).addTo(mymap);
-ESCG_eastbourne.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
+const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
+ESCG_EASTBOURNE.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
 
 // create schools array
 enum College {
@@ -30,29 +30,34 @@ enum College {
   Lewes
 }
 
-interface school {
+interface School {
   name: string;
   coords: LatLng;
 }
 
-var schools: school[] = [];
+const schools: School[] = [];
 
 // PULL IN SUPPLIED INFO
-//example
-var parklands: school = {
+// example
+const parklands: School = {
   name: "Parklands",
-  coords: new LatLng(50.798761, 0.269415)
+  coords: new LatLng(50.798574, 0.268420)
 };
 schools.push(parklands);
+const ocklynge: School = {
+  name: "Ocklynge",
+  coords: new LatLng(50.785854, 0.255762)
+};
+schools.push(ocklynge);
 
 // create a marker for each school, add marker to array of markers
 interface SchoolMarker {
   name: string;
   marker: Marker | Circle;
 }
-var schoolMarkers: SchoolMarker[] = [];
+const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
-  var newMarker = L.circle(school.coords, {
+  const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5,
