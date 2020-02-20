@@ -10,7 +10,7 @@ If you run into any issues with this add-on please email [incoming+a-level-compu
 
 Run these commands.
 
-```
+```console
 npm install
 npm run build
 ```
