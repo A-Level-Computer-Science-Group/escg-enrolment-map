@@ -20,7 +20,13 @@ build:
       - public
 
 lint:
-  stage: lint
+  stage: tslint
   script:
     - npm i
     - npm run lint
+
+lint:
+  stage: prettier
+  script:
+    - npm i
+    - npm run check:format
