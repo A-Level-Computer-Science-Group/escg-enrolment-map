@@ -18,7 +18,7 @@ npm install
 
 Builds files to production files.       
 
-```
+```console
 npm run build
 ```
 
@@ -26,7 +26,7 @@ npm run build
 
 Builds files in development mode then watches for changes updating each time you save.
 
-```
+```console
 npm run watch
 ```
 
@@ -34,7 +34,7 @@ npm run watch
 
 Runs tslint to find typescript code smells.
 
-```
+```console
 npm run lint
 ```
 
@@ -42,7 +42,7 @@ npm run lint
 
 Runs prettier to clean up code formatting.
 
-```
+```console
 npm run format
 ```
 
