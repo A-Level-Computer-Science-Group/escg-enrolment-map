@@ -1,5 +1,5 @@
-import { Marker, LatLngExpression, LatLng, Circle } from "leaflet";
 import * as L from "leaflet";
+import { Marker, LatLngExpression, LatLng, Circle } from "leaflet";
 
 /* *** MAP STUFF *** */
 const mymap = L.map("map").setView([50.78829, 0.271392], 14);
@@ -108,7 +108,7 @@ const studentInfo: Student[] = [
 ];
 
 // map variables
-const courseFilter: "total" | CourseType = "total";
+const courseFilter: "total" | CourseType = CourseType.vocational;
 const maxRadius: number = 1500;
 
 // create a marker for each school, add marker to array of markers
@@ -118,7 +118,7 @@ interface SchoolMarker {
 }
 const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
-  const schoolCount = filterCount();
+  const schoolCount = filterStudents().length;
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
@@ -136,16 +136,17 @@ schools.forEach(school => {
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
 
-  function filterCount() {
-    return filterStudents().length;
+  function filterStudents() {
+    return applyCourseFilter(schoolStudents());
   }
 
-  function filterStudents() {
+  function applyCourseFilter(studentsArr?: Student[]) {
+    studentsArr = studentsArr ? studentsArr : studentInfo; // if no students array was supplied, use the full array
     if (courseFilter === "total") {
-      return schoolStudents();
+      return studentsArr;
     } else {
-      return schoolStudents().filter(s => {
-        return s.course === courseFilter;
+      return studentsArr.filter(s => {
+        s.course === courseFilter;
       });
     }
   }
@@ -157,6 +158,6 @@ schools.forEach(school => {
   }
 
   function calcRadius(students: number) {
-    return (students / studentInfo.length) * maxRadius;
+    return (students / applyCourseFilter().length) * maxRadius;
   }
 });
