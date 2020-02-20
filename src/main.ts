@@ -118,7 +118,7 @@ interface SchoolMarker {
 }
 const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
-  const studentCount = studentsAtThisSchool(school.name);
+  const studentCount = filterCount(school.name);
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
@@ -136,7 +136,7 @@ schools.forEach(school => {
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
 
-  function studentsAtThisSchool(schoolName: SchoolName) {
+  function filterCount(schoolName: SchoolName) {
     return filterStudents(schoolName).length;
   }
 
