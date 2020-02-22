@@ -146,7 +146,7 @@ schools.forEach(school => {
       return studentsArr;
     } else {
       return studentsArr.filter(s => {
-        s.course === courseFilter;
+        return s.course === courseFilter;
       });
     }
   }
