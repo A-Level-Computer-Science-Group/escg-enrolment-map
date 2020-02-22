@@ -21,10 +21,6 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-// add Eastbourne College
-const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
-ESCG_EASTBOURNE.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
-
 enum College {
   eastbourne,
   hastings,
@@ -135,7 +131,13 @@ const collegeFilter: Filter = {
 const filtersArr = [genderFilter, courseFilter, collegeFilter];
 
 // map variables
-const maxRadius: number = 1050;
+const maxRadius: number = 1500;
+
+// add Eastbourne College
+const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
+ESCG_EASTBOURNE.bindPopup(
+  "<b>ESCG<br>Eastbourne</b><br>Total Students: " + studentInfo.length
+).openPopup();
 
 // create a marker for each school, add marker to array of markers
 interface SchoolMarker {
@@ -169,12 +171,14 @@ schools.forEach(school => {
         descriptors += formatter.Capitalize(f.filter) + " ";
       }
     });
-    return descriptors;
+    if (descriptors === "") {
+      return "Total ";
+    } else {
+      return descriptors;
+    }
   }
 
   function applyFilters(studentsArr: Student[]) {
-    // if no students array was supplied, use the full array
-    // studentsArr = studentsArr ? studentsArr : studentInfo;
     if (
       // if any filters are defined
       filtersArr.findIndex(f => {
@@ -200,6 +204,6 @@ schools.forEach(school => {
   }
 
   function calcRadius(students: number) {
-    return (students / applyFilters(studentInfo).length) * maxRadius;
+    return (students / studentInfo.length) * maxRadius;
   }
 });
