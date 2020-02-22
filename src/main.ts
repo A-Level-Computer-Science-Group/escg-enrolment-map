@@ -1,5 +1,7 @@
 import * as L from "leaflet";
 import { Marker, LatLngExpression, LatLng, Circle } from "leaflet";
+import { FormatText } from "./formatter";
+const formatter = new FormatText();
 
 /* *** MAP STUFF *** */
 const mymap = L.map("map").setView([50.78829, 0.271392], 14);
@@ -24,9 +26,9 @@ const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup("<b>ESCG<br>Eastbourne</b>").openPopup();
 
 enum College {
-  Eastbourne,
-  Hastings,
-  Lewes
+  eastbourne,
+  hastings,
+  lewes
 }
 enum SchoolName {
   Parklands = "Parklands",
@@ -38,8 +40,13 @@ enum CourseType {
   appgeneral = "Applied General"
 }
 enum Gender {
-  Male,
-  Female
+  male = "Male",
+  female = "Female"
+}
+enum Filters {
+  college = "college",
+  course = "course",
+  gender = "gender"
 }
 
 interface School {
@@ -70,46 +77,65 @@ const schools: School[] = [
 // example students
 const studentInfo: Student[] = [
   {
-    gender: Gender.Male,
+    gender: Gender.male,
     course: CourseType.vocational,
     school: SchoolName.Ocklynge,
-    college: College.Eastbourne
+    college: College.eastbourne
   },
   {
-    gender: Gender.Male,
+    gender: Gender.male,
     course: CourseType.vocational,
     school: SchoolName.Ocklynge,
-    college: College.Eastbourne
+    college: College.eastbourne
   },
   {
-    gender: Gender.Female,
+    gender: Gender.male,
     course: CourseType.alevel,
     school: SchoolName.Ocklynge,
-    college: College.Eastbourne
+    college: College.eastbourne
   },
   {
-    gender: Gender.Male,
+    gender: Gender.female,
     course: CourseType.alevel,
     school: SchoolName.Parklands,
-    college: College.Eastbourne
+    college: College.eastbourne
   },
   {
-    gender: Gender.Female,
+    gender: Gender.female,
     course: CourseType.alevel,
     school: SchoolName.Parklands,
-    college: College.Eastbourne
+    college: College.eastbourne
   },
   {
-    gender: Gender.Female,
+    gender: Gender.female,
     course: CourseType.vocational,
     school: SchoolName.Parklands,
-    college: College.Eastbourne
+    college: College.eastbourne
   }
 ];
 
+interface Filter {
+  type: Filters;
+  filter: CourseType | Gender | "";
+}
+
+// filters
+const courseFilter: Filter = {
+  type: Filters.course,
+  filter: CourseType.vocational
+};
+const genderFilter: Filter = {
+  type: Filters.gender,
+  filter: ""
+};
+const collegeFilter: Filter = {
+  type: Filters.college,
+  filter: ""
+};
+const filtersArr = [genderFilter, courseFilter, collegeFilter];
+
 // map variables
-const courseFilter: "total" | CourseType = CourseType.vocational;
-const maxRadius: number = 1500;
+const maxRadius: number = 1050;
 
 // create a marker for each school, add marker to array of markers
 interface SchoolMarker {
@@ -118,7 +144,7 @@ interface SchoolMarker {
 }
 const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
-  const schoolCount = filterStudents().length;
+  const schoolCount = applyFilters(schoolStudents()).length;
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
@@ -129,26 +155,42 @@ schools.forEach(school => {
     "<b>" +
       school.name +
       "</b><br>" +
-      courseFilter.slice(0, 1).toUpperCase() +
-      courseFilter.slice(1) +
-      " Students: " +
+      getDescriptors() +
+      "Students: " +
       schoolCount
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
 
-  function filterStudents() {
-    return applyCourseFilter(schoolStudents());
+  function getDescriptors() {
+    let descriptors = "";
+    // capitalize the first letter of each filter and add it to the string
+    filtersArr.forEach(f => {
+      if (f.filter !== "") {
+        descriptors += formatter.Capitalize(f.filter) + " ";
+      }
+    });
+    return descriptors;
   }
 
-  function applyCourseFilter(studentsArr?: Student[]) {
-    studentsArr = studentsArr ? studentsArr : studentInfo; // if no students array was supplied, use the full array
-    if (courseFilter === "total") {
-      return studentsArr;
-    } else {
-      return studentsArr.filter(s => {
-        return s.course === courseFilter;
+  function applyFilters(studentsArr: Student[]) {
+    // if no students array was supplied, use the full array
+    // studentsArr = studentsArr ? studentsArr : studentInfo;
+    if (
+      // if any filters are defined
+      filtersArr.findIndex(f => {
+        return f.filter !== "";
+      }) !== -1
+    ) {
+      // apply each filter to the incoming array and then re-assign the array
+      filtersArr.forEach(f => {
+        if (f.filter !== "") {
+          studentsArr = studentsArr.filter(s => {
+            return s[f.type] === f.filter;
+          });
+        }
       });
     }
+    return studentsArr;
   }
 
   function schoolStudents() {
@@ -158,6 +200,6 @@ schools.forEach(school => {
   }
 
   function calcRadius(students: number) {
-    return (students / applyCourseFilter().length) * maxRadius;
+    return (students / applyFilters(studentInfo).length) * maxRadius;
   }
 });
