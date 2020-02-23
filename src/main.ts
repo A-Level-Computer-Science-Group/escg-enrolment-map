@@ -22,7 +22,7 @@ L.tileLayer(
 ).addTo(mymap);
 
 // PULL IN SUPPLIED INFO AND FILTERS
-import { studentInfo } from "./studentInfo";
+import { studentInfo } from "./student";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
 
