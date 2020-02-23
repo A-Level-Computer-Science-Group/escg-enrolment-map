@@ -1,5 +1,5 @@
 import * as L from "leaflet";
-import { Marker, LatLngExpression, LatLng, Circle } from "leaflet";
+import { SchoolMarker } from "./interfaces";
 import { FormatText } from "./formatter";
 const formatter = new FormatText();
 
@@ -21,129 +21,20 @@ L.tileLayer(
   }
 ).addTo(mymap);
 
-enum College {
-  eastbourne,
-  hastings,
-  lewes
-}
-enum SchoolName {
-  Parklands = "Parklands",
-  Ocklynge = "Ocklynge"
-}
-enum CourseType {
-  alevel = "A-Level",
-  vocational = "Vocational",
-  appgeneral = "Applied General"
-}
-enum Gender {
-  male = "Male",
-  female = "Female"
-}
-enum Filters {
-  college = "college",
-  course = "course",
-  gender = "gender"
-}
-
-interface School {
-  name: SchoolName;
-  coords: LatLng;
-}
-interface Student {
-  gender: Gender;
-  course: CourseType;
-  school: SchoolName;
-  college: College;
-  postcode?: string;
-  year?: number;
-}
-
-// PULL IN SUPPLIED INFO
-// example schools
-const schools: School[] = [
-  {
-    name: SchoolName.Parklands,
-    coords: new LatLng(50.798574, 0.26842)
-  },
-  {
-    name: SchoolName.Ocklynge,
-    coords: new LatLng(50.785854, 0.255762)
-  }
-];
-// example students
-const studentInfo: Student[] = [
-  {
-    gender: Gender.male,
-    course: CourseType.vocational,
-    school: SchoolName.Ocklynge,
-    college: College.eastbourne
-  },
-  {
-    gender: Gender.male,
-    course: CourseType.vocational,
-    school: SchoolName.Ocklynge,
-    college: College.eastbourne
-  },
-  {
-    gender: Gender.male,
-    course: CourseType.alevel,
-    school: SchoolName.Ocklynge,
-    college: College.eastbourne
-  },
-  {
-    gender: Gender.female,
-    course: CourseType.alevel,
-    school: SchoolName.Parklands,
-    college: College.eastbourne
-  },
-  {
-    gender: Gender.female,
-    course: CourseType.alevel,
-    school: SchoolName.Parklands,
-    college: College.eastbourne
-  },
-  {
-    gender: Gender.female,
-    course: CourseType.vocational,
-    school: SchoolName.Parklands,
-    college: College.eastbourne
-  }
-];
-
-interface Filter {
-  type: Filters;
-  filter: CourseType | Gender | "";
-}
-
-// filters
-const courseFilter: Filter = {
-  type: Filters.course,
-  filter: CourseType.vocational
-};
-const genderFilter: Filter = {
-  type: Filters.gender,
-  filter: ""
-};
-const collegeFilter: Filter = {
-  type: Filters.college,
-  filter: ""
-};
-const filtersArr = [genderFilter, courseFilter, collegeFilter];
+// PULL IN SUPPLIED INFO AND FILTERS
+import { studentInfo } from "./studentInfo";
+import { schools } from "./schools";
+import { filtersArr, applyFilters } from "./FILTERS";
 
 // map variables
 const maxRadius: number = 1500;
 
-// add Eastbourne College
+// add ESCG Eastbourne to map
 const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
   "<b>ESCG<br>Eastbourne</b><br>Total Students: " + studentInfo.length
 ).openPopup();
-
 // create a marker for each school, add marker to array of markers
-interface SchoolMarker {
-  name: SchoolName;
-  marker: Marker | Circle;
-}
 const schoolMarkers: SchoolMarker[] = [];
 schools.forEach(school => {
   const schoolCount = applyFilters(schoolStudents()).length;
@@ -176,25 +67,6 @@ schools.forEach(school => {
     } else {
       return descriptors;
     }
-  }
-
-  function applyFilters(studentsArr: Student[]) {
-    if (
-      // if any filters are defined
-      filtersArr.findIndex(f => {
-        return f.filter !== "";
-      }) !== -1
-    ) {
-      // apply each filter to the incoming array and then re-assign the array
-      filtersArr.forEach(f => {
-        if (f.filter !== "") {
-          studentsArr = studentsArr.filter(s => {
-            return s[f.type] === f.filter;
-          });
-        }
-      });
-    }
-    return studentsArr;
   }
 
   function schoolStudents() {
