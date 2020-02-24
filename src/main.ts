@@ -32,7 +32,12 @@ const maxRadius: number = 1500;
 // add ESCG Eastbourne to map
 const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
-  "<b>ESCG<br>Eastbourne</b><br>Total Students: " + studentInfo.length
+  "<b>ESCG<br>Eastbourne</b><br>Total Students: " +
+    studentInfo.length +
+    "<br>" +
+    getDescriptors() +
+    "Students: " +
+    applyFilters(studentInfo).length
 ).openPopup();
 // create a marker for each school, add marker to array of markers
 const schoolMarkers: SchoolMarker[] = [];
@@ -54,21 +59,6 @@ schools.forEach(school => {
   );
   schoolMarkers.push({ name: school.name, marker: newMarker });
 
-  function getDescriptors() {
-    let descriptors = "";
-    // capitalize the first letter of each filter and add it to the string
-    filtersArr.forEach(f => {
-      if (f.filter !== "") {
-        descriptors += formatter.Capitalize(f.filter) + " ";
-      }
-    });
-    if (descriptors === "") {
-      return "Total ";
-    } else {
-      return descriptors;
-    }
-  }
-
   function schoolStudents() {
     return studentInfo.filter(s => {
       return s.school === school.name;
@@ -79,3 +69,18 @@ schools.forEach(school => {
     return (students / studentInfo.length) * maxRadius;
   }
 });
+
+function getDescriptors() {
+  let descriptors = "";
+  // capitalize the first letter of each filter and add it to the string
+  filtersArr.forEach(f => {
+    if (f.filter !== "") {
+      descriptors += formatter.Capitalize(f.filter) + " ";
+    }
+  });
+  if (descriptors === "") {
+    return "Total ";
+  } else {
+    return descriptors;
+  }
+}
