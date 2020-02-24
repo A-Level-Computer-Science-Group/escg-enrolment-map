@@ -1,0 +1,32 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+
+stages:
+  - build
+  - lint
+
+build:
+  stage: build
+  script:
+    - npm ci
+    - npm run build
+    - mv public public-source
+    - mv dist public
+  artifacts:
+    paths:
+      - public
+
+tslint:
+  stage: lint
+  script:
+    - npm i
+    - npm run lint
+
+prettier:
+  stage: lint
+  script:
+    - npm i
+    - npm run check:format
