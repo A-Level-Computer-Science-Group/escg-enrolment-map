@@ -1,10 +1,5 @@
 import { College, CourseType, Filters, Gender, SchoolName } from "./enums";
-import { LatLng, Marker, Circle } from "leaflet";
-
-export interface School {
-  name: SchoolName;
-  coords: LatLng;
-}
+import { Marker, Circle } from "leaflet";
 
 export interface Student {
   gender: Gender;
