@@ -18,25 +18,28 @@
         display: grid;
         grid-template-columns: 80vw auto;
         grid-template-rows: auto;
-        grid-template-areas: 
-          "map sidebar";
+        grid-template-areas: "map sidebar";
+        position: absolute;
       }
       section {
         grid-area: sidebar;
       }
-      details {
-        grid-area: "sidebar";
-      }
       summary {
-
         cursor: pointer;
         margin: 0;
+      }
+      #map {
+        width: 80vw;
+        height: 100vh;
+        margin: 0px;
+        padding: 0px;
+        grid-area: map;
       }
     </style>
   </head>
   <body>
-    <div id="map"></div>
     <main>
+      <div id="map"></div>
       <section>
         <details>
           <summary> Gender</summary>
