@@ -1,6 +1,10 @@
 import { SchoolName } from "./enums";
-import { School } from "./interfaces";
 import { LatLng } from "leaflet";
+
+export interface School {
+  name: SchoolName;
+  coords: LatLng;
+}
 
 // example schools
 export const schools: School[] = [
