@@ -9,33 +9,60 @@
       crossorigin=""
     />
     <link rel="stylesheet" href="css/style.css" />
-  </head>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 80vw auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+          "map sidebar";
+      }
+      section {
+        grid-area: sidebar;
+      }
+      details {
+        grid-area: "sidebar";
+      }
+      summary {
 
+        cursor: pointer;
+        margin: 0;
+      }
+    </style>
+  </head>
   <body>
     <div id="map"></div>
-    <details>
-      <summary> Gender</summary>
-      <select>
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-    </details>
-    <details>
-      <summary> Course</summary>
-      <select>
-        <option>A-level</option>
-        <option>Vocational</option>
-        <option>Applied General</option>
-      </select>
-    </details>
-    <details>
-      <summary> College</summary>
-      <select>
-        <option>Eastbourne</option>
-        <option>Lewes</option>
-        <option>Hastings</option>
-      </select>
-    </details>
+    <main>
+      <section>
+        <details>
+          <summary> Gender</summary>
+          <select>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </details>
+        <details>
+          <summary> Course</summary>
+          <select>
+            <option>A-level</option>
+            <option>Vocational</option>
+            <option>Applied General</option>
+          </select>
+        </details>
+        <details>
+          <summary> College</summary>
+          <select>
+            <option>Eastbourne</option>
+            <option>Lewes</option>
+            <option>Hastings</option>
+          </select>
+        </details>
+      </section>
+    </main>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>
