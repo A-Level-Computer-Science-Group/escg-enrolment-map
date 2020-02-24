@@ -5,8 +5,8 @@ export enum College {
 }
 
 export enum SchoolName {
-  Parklands = "Parklands",
-  Ocklynge = "Ocklynge"
+  parklands = "Parklands",
+  ocklynge = "Ocklynge"
 }
 
 export enum CourseType {

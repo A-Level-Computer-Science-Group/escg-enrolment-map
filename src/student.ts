@@ -14,37 +14,37 @@ export const studentInfo: Student[] = [
   {
     gender: Gender.male,
     course: CourseType.vocational,
-    school: SchoolName.Ocklynge,
+    school: SchoolName.ocklynge,
     college: College.eastbourne
   },
   {
     gender: Gender.male,
     course: CourseType.vocational,
-    school: SchoolName.Ocklynge,
+    school: SchoolName.ocklynge,
     college: College.eastbourne
   },
   {
     gender: Gender.male,
     course: CourseType.alevel,
-    school: SchoolName.Ocklynge,
+    school: SchoolName.ocklynge,
     college: College.eastbourne
   },
   {
     gender: Gender.female,
     course: CourseType.alevel,
-    school: SchoolName.Parklands,
+    school: SchoolName.parklands,
     college: College.eastbourne
   },
   {
     gender: Gender.female,
     course: CourseType.alevel,
-    school: SchoolName.Parklands,
+    school: SchoolName.parklands,
     college: College.eastbourne
   },
   {
     gender: Gender.female,
     course: CourseType.vocational,
-    school: SchoolName.Parklands,
+    school: SchoolName.parklands,
     college: College.eastbourne
   }
 ];
