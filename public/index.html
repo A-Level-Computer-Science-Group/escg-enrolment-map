@@ -42,14 +42,15 @@
       <div id="map"></div>
       <section>
         <details>
-          <summary> Gender</summary>
-          <select>
-            <option>Male</option>
-            <option>Female</option>
+          <label for="gender">Gender</label>
+          <select id="gender" oninput="setGenderFilter(value)">
+            <option value="none">None</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
         </details>
         <details>
-          <summary> Course</summary>
+          <label>Course</label>
           <select>
             <option>A-level</option>
             <option>Vocational</option>
@@ -57,7 +58,7 @@
           </select>
         </details>
         <details>
-          <summary> College</summary>
+          <label>College</label>
           <select>
             <option>Eastbourne</option>
             <option>Lewes</option>
