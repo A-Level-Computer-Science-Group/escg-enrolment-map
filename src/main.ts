@@ -8,18 +8,24 @@ import {
   CollegeMarker
 } from "./interfaces";
 
-const gender = document.getElementById("gender") as HTMLSelectElement;
-
-function setGenderFilter(newFilter: string) {
-  // if the new value is amongst the filters
-  if (checkFilter(newFilter)) {
-    // adjust the popups of colleges
-    collegeMarkers.forEach(c => {
-      c.marker.bindPopup(PopupText(c.name, filtersArr));
-    });
-    // adjust the radius and popups of all schools
+module.exports = {
+  setGenderFilter: function(newFilter: string) {
+    // if the new value is amongst the filters
+    if (checkFilter(newFilter)) {
+      // adjust the popups of colleges
+      collegeMarkers.forEach(c => {
+        c.marker.bindPopup(PopupText(c.name, filtersArr));
+      });
+      // adjust the radius and popups of all schools
+      schoolMarkers.forEach(c => {
+        c.marker.setRadius(calcRadius(applyFilters(LocalStudents(c.name)).length))
+        c.marker.bindPopup(PopupText(c.name, filtersArr));
+      });
+    }
   }
-}
+};
+
+const gender = document.getElementById("gender") as HTMLSelectElement;
 
 function checkFilter(filter: string): boolean {
   return (

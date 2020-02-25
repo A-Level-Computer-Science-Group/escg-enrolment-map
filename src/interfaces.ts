@@ -19,12 +19,12 @@ export interface Filter {
 
 export interface CollegeMarker {
   name: College;
-  marker: Marker | Circle;
+  marker: Marker;
 }
 
 export interface SchoolMarker {
   name: SchoolName;
-  marker: Marker | Circle;
+  marker: Circle;
 }
 
 export function PopupText(
