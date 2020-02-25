@@ -1,3 +1,4 @@
+import * as _ from "lodash";
 import * as L from "leaflet";
 import { CourseType, SchoolName, Gender, College } from "./enums";
 import {
