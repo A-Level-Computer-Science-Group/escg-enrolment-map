@@ -1,7 +1,33 @@
+import * as _ from "lodash";
 import * as L from "leaflet";
-import { SchoolMarker } from "./interfaces";
-import { FormatText } from "./formatter";
-const formatter = new FormatText();
+import { CourseType, SchoolName, Gender, College } from "./enums";
+import {
+  SchoolMarker,
+  PopupText,
+  LocalStudents,
+  CollegeMarker
+} from "./interfaces";
+
+const gender = document.getElementById("gender") as HTMLSelectElement;
+
+function setGenderFilter(newFilter: string) {
+  // if the new value is amongst the filters
+  if (checkFilter(newFilter)) {
+    // adjust the popups of colleges
+    collegeMarkers.forEach(c => {
+      c.marker.bindPopup(PopupText(c.name, filtersArr));
+    });
+    // adjust the radius and popups of all schools
+  }
+}
+
+function checkFilter(filter: string): boolean {
+  return (
+    (Object as any).values(CourseType).includes(filter) ||
+    (Object as any).values(SchoolName).includes(filter) ||
+    (Object as any).values(Gender).includes(filter)
+  );
+}
 
 /* *** MAP STUFF *** */
 const mymap = L.map("map").setView([50.78829, 0.271392], 14);
@@ -30,57 +56,27 @@ import { filtersArr, applyFilters } from "./FILTERS";
 const maxRadius: number = 1500;
 
 // add ESCG Eastbourne to map
+const collegeMarkers = new Array<CollegeMarker>();
 const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
-  "<b>ESCG<br>Eastbourne</b><br>Total Students: " +
-    studentInfo.length +
-    "<br>" +
-    getDescriptors() +
-    "Students: " +
-    applyFilters(studentInfo).length
+  PopupText(College.eastbourne, filtersArr, true)
 ).openPopup();
+collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
+
 // create a marker for each school, add marker to array of markers
-const schoolMarkers: SchoolMarker[] = [];
+const schoolMarkers = new Array<SchoolMarker>();
 schools.forEach(school => {
-  const schoolCount = applyFilters(schoolStudents()).length;
+  const schoolCount = applyFilters(LocalStudents(school.name)).length;
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5,
     radius: calcRadius(schoolCount)
   }).addTo(mymap);
-  newMarker.bindPopup(
-    "<b>" +
-      school.name +
-      "</b><br>" +
-      getDescriptors() +
-      "Students: " +
-      schoolCount
-  );
+  newMarker.bindPopup(PopupText(school.name, filtersArr));
   schoolMarkers.push({ name: school.name, marker: newMarker });
-
-  function schoolStudents() {
-    return studentInfo.filter(s => {
-      return s.school === school.name;
-    });
-  }
-
-  function calcRadius(students: number) {
-    return (students / studentInfo.length) * maxRadius;
-  }
 });
 
-function getDescriptors() {
-  let descriptors = "";
-  // capitalize the first letter of each filter and add it to the string
-  filtersArr.forEach(f => {
-    if (f.filter !== "") {
-      descriptors += formatter.Capitalize(f.filter) + " ";
-    }
-  });
-  if (descriptors === "") {
-    return "Total ";
-  } else {
-    return descriptors;
-  }
+function calcRadius(students: number) {
+  return (students / studentInfo.length) * maxRadius;
 }
