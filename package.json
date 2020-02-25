@@ -30,9 +30,9 @@
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
     "styles-loader": "^1.0.2",
-    "ts-loader": "^6",
+    "ts-loader": "^6.2.1",
     "tslint": "^6.0.0",
-    "typescript": "^3",
+    "typescript": "^3.8.2",
     "webpack": "^4",
     "webpack-cli": "^3",
     "webpack-merge": "^4"
