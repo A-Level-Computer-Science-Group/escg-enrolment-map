@@ -43,7 +43,7 @@
       <section>
         <details>
           <label for="gender">Gender</label>
-          <select id="gender" oninput="setGenderFilter(value)">
+          <select id="gender" oninput="setGender(value)">
             <option value="none">None</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -69,5 +69,11 @@
     </main>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/2.js"></script>
+    <script>
+      function setGender(val) {
+        EntryPoint.run(val);
+      }
+    </script>
   </body>
 </html>

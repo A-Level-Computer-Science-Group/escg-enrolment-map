@@ -8,24 +8,33 @@ import {
   CollegeMarker
 } from "./interfaces";
 
-module.exports = {
-  setGenderFilter: function(newFilter: string) {
-    // if the new value is amongst the filters
-    if (checkFilter(newFilter)) {
-      // adjust the popups of colleges
-      collegeMarkers.forEach(c => {
-        c.marker.bindPopup(PopupText(c.name, filtersArr));
-      });
-      // adjust the radius and popups of all schools
-      schoolMarkers.forEach(c => {
-        c.marker.setRadius(calcRadius(applyFilters(LocalStudents(c.name)).length))
-        c.marker.bindPopup(PopupText(c.name, filtersArr));
-      });
-    }
-  }
-};
+/*
+  This section exports the code as a library to be used by the HTML.
+  The issue is that when the code is active, all other code stops working. */
+// module.exports = {
+//   run: () => {
+//     // do things
+//   }
+// };
 
 const gender = document.getElementById("gender") as HTMLSelectElement;
+
+function setGenderFilter(newFilter: string) {
+  // if the new value is amongst the filters
+  if (checkFilter(newFilter)) {
+    // adjust the popups of colleges
+    collegeMarkers.forEach(c => {
+      c.marker.bindPopup(PopupText(c.name, filtersArr));
+    });
+    // adjust the radius and popups of all schools
+    schoolMarkers.forEach(c => {
+      c.marker.setRadius(
+        calcRadius(applyFilters(LocalStudents(c.name)).length)
+      );
+      c.marker.bindPopup(PopupText(c.name, filtersArr));
+    });
+  }
+}
 
 function checkFilter(filter: string): boolean {
   return (
