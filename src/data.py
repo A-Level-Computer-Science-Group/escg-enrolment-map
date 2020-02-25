@@ -4,7 +4,7 @@ schools = ["Ockylnge", "Ratton", "Cavendish"]
 gender = ["Male", "Female"]
 courseType = ["A-Level", "Vocational", "Special Needs"]
 collegeAttending = ["Eastbourne", "Hastings", "Lewes"]
-dataFile = open("examples.ts", "w")
+dataFile = open("randomData.ts", "w")
 
 for currentNumber in range(1,10):
     schoolsRandom = random.randint(1,len(schools))
