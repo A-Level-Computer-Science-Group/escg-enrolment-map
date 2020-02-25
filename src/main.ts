@@ -2,18 +2,19 @@ import * as L from "leaflet";
 import { CourseType, SchoolName, Gender, College } from "./enums";
 import {
   SchoolMarker,
-  SchoolPopupText,
-  getDescriptors,
-  collegeStudents,
-  CollegePopupText
+  PopupText,
+  LocalStudents,
+  CollegeMarker
 } from "./interfaces";
+
+const gender = document.getElementById("gender") as HTMLSelectElement;
 
 function setGenderFilter(newFilter: string) {
   // if the new value is amongst the filters
   if (checkFilter(newFilter)) {
     // adjust the popups of colleges
     collegeMarkers.forEach(c => {
-      c.marker.bindPopup(CollegePopupText(c.name, filtersArr));
+      c.marker.bindPopup(PopupText(c.name, filtersArr));
     });
     // adjust the radius and popups of all schools
   }
@@ -54,31 +55,25 @@ import { filtersArr, applyFilters } from "./FILTERS";
 const maxRadius: number = 1500;
 
 // add ESCG Eastbourne to map
-const collegeMarkers = new Array<SchoolMarker>();
+const collegeMarkers = new Array<CollegeMarker>();
 const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
-  "<b>ESCG<br>Eastbourne</b><br>Total Students: " +
-    collegeStudents(College.eastbourne)
+  PopupText(College.eastbourne, filtersArr, true)
 ).openPopup();
 collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
+
 // create a marker for each school, add marker to array of markers
 const schoolMarkers = new Array<SchoolMarker>();
 schools.forEach(school => {
-  const schoolCount = applyFilters(schoolStudents()).length;
+  const schoolCount = applyFilters(LocalStudents(school.name)).length;
   const newMarker = L.circle(school.coords, {
     color: "red",
     fillColor: "#f03",
     fillOpacity: 0.5,
     radius: calcRadius(schoolCount)
   }).addTo(mymap);
-  newMarker.bindPopup(SchoolPopupText(school.name, filtersArr));
+  newMarker.bindPopup(PopupText(school.name, filtersArr));
   schoolMarkers.push({ name: school.name, marker: newMarker });
-
-  function schoolStudents() {
-    return studentInfo.filter(s => {
-      return s.school === school.name;
-    });
-  }
 });
 
 function calcRadius(students: number) {

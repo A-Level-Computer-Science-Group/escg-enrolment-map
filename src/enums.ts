@@ -1,7 +1,7 @@
 export enum College {
-  eastbourne = "Eastbourne",
-  hastings = "Hastings",
-  lewes = "Lewes"
+  eastbourne = "ESCG Eastbourne",
+  hastings = "ESCG Hastings",
+  lewes = "ESCG Lewes"
 }
 
 export enum SchoolName {
