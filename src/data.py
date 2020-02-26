@@ -11,7 +11,7 @@ dataFile = open("./src/RandomData.ts", "w")
 dataFile.write('import { CourseType, Gender, SchoolName, College } from "./enums";\nimport { Student } from "./student";\n\nexport const studentInfo:\nStudent[] = [\n')
 #loops until condition is met and prints random data
 
-for currentNumber in range(1,100):
+for currentNumber in range(0,1000):
     schoolsRandom = random.randint(1,len(schools))
     genderRandom = random.randint(1,len(gender))
     courseTypeGender = random.randint(1,len(courseType))
