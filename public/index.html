@@ -1,19 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>escg-enrolment-map</title>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-      crossorigin=""
-    />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
 
-  <body>
+<head>
+  <title>escg-enrolment-map</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    main {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    section {
+      position: absolute;
+      z-index: 4;
+
+    }
+
+    summary {
+      border-color: rgb(230, 230, 0);
+      border-style: solid;
+      border-width: 10px;
+      cursor: pointer;
+      border-bottom-color: rgba(0, 0, 0, .3);
+      border-bottom-style: solid;
+      border-bottom-width: .5px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 20px;
+      height: 65px;
+      background-color: rgb(230, 230, 0);
+      width: 200px;
+
+    }
+
+    #map {
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      z-index: -1;
+    }
+
+    #noborder {
+      border-color: rgb(230, 230, 0);
+      border-style: solid;
+      border-width: 10px;
+      border-bottom: none;
+    }
+
+    select {
+      font-family: Arial, Helvetica, sans-serif;
+      color: black;
+      width: 100%;
+      height: 50px;
+      background-color: white;
+    }
+
+    summary:hover {
+      color: rgba(0, 0, 0, 0.61);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
     <div id="map"></div>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
-  </body>
+    <section>
+      <details>
+        <summary><span>Gender</span></summary>
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </details>
+      <details>
+        <summary><span>Course</span></summary>
+        <select>
+          <option>A-level</option>
+          <option>Vocational</option>
+          <option>Applied General</option>
+        </select>
+      </details>
+      <details>
+        <summary id="noborder"><span>College</span></summary>
+        <select>
+          <option>Eastbourne</option>
+          <option>Lewes</option>
+          <option>Hastings</option>
+        </select>
+      </details>
+    </section>
+  </main>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
 </html>
