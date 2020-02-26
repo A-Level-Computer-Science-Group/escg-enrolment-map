@@ -63,7 +63,7 @@ L.tileLayer(
 ).addTo(mymap);
 
 // PULL IN SUPPLIED INFO AND FILTERS
-import { studentInfo } from "./student";
+import { studentInfo } from "./RandomData";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
 
