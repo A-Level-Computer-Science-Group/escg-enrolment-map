@@ -14,7 +14,7 @@ export interface Student {
 
 export interface Filter {
   type: Filters;
-  filter: CourseType | Gender | "";
+  filter: CourseType | Gender | College | "";
 }
 
 export interface CollegeMarker {

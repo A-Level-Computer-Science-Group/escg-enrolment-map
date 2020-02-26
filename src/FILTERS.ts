@@ -1,4 +1,4 @@
-import { CourseType, Filters } from "./enums";
+import { CourseType, Gender, College, Filters } from "./enums";
 import { Filter, Student } from "./interfaces";
 
 const courseFilter: Filter = {
