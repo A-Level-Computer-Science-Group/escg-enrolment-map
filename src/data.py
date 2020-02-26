@@ -8,7 +8,7 @@ collegeAttending = ["College.eastbourne", "College.hastings", "College.lewes"]
 #opens a .ts file and then writes to it
 
 dataFile = open("./src/RandomData.ts", "w")
-dataFile.write('import { CourseType, Filters, Gender, SchoolName, College } from "./enums"\n\nexport const studentInfo:\nStudent[] = [\n')
+dataFile.write('import { CourseType, Gender, SchoolName, College } from "./enums";\nimport { Student } from "./student";\n\nexport const studentInfo:\nStudent[] = [\n')
 #loops until condition is met and prints random data
 
 for currentNumber in range(1,100):
@@ -16,8 +16,8 @@ for currentNumber in range(1,100):
     genderRandom = random.randint(1,len(gender))
     courseTypeGender = random.randint(1,len(courseType))
     collegeAttendingRandom = random.randint(1,len(collegeAttending))
-    dataFile.write("   {\n      school: " + schools[schoolsRandom - 1] + "," + "\n      college: " + collegeAttending[collegeAttendingRandom - 1] + "," + "\n      gender: " + 
-    gender[genderRandom - 1] + ","+ " \n      course: " + courseType[courseTypeGender - 1] + "," + "\n   },\n");dataFile.write("\n")
+    dataFile.write("  {\n    school: " + schools[schoolsRandom - 1] + "," + "\n    college: " + collegeAttending[collegeAttendingRandom - 1] + "," + "\n    gender: " + 
+    gender[genderRandom - 1] + ","+ " \n    course: " + courseType[courseTypeGender - 1] + "," + "\n  },\n");dataFile.write("\n")
 
 dataFile.write("]")
 #closes file
