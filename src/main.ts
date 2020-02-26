@@ -1,4 +1,3 @@
-import * as _ from "lodash";
 import * as L from "leaflet";
 import { CourseType, SchoolName, Gender, College } from "./enums";
 import {
@@ -16,8 +15,8 @@ import {
 //     // do things
 //   }
 // };
-
-const gender = document.getElementById("gender") as HTMLSelectElement;
+//
+// const gender = document.getElementById("gender") as HTMLSelectElement;
 
 function setGenderFilter(newFilter: string) {
   // if the new value is amongst the filters
@@ -28,10 +27,8 @@ function setGenderFilter(newFilter: string) {
     });
     // adjust the radius and popups of all schools
     schoolMarkers.forEach(c => {
-      c.marker.setRadius(
-        calcRadius(applyFilters(LocalStudents(c.name)).length)
-      );
-      c.marker.bindPopup(PopupText(c.name, filtersArr));
+      c.total.setRadius(calcRadius(applyFilters(LocalStudents(c.name)).length));
+      c.total.bindPopup(PopupText(c.name, filtersArr));
     });
   }
 }
@@ -77,19 +74,32 @@ ESCG_EASTBOURNE.bindPopup(
   PopupText(College.eastbourne, filtersArr, true)
 ).openPopup();
 collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
-
-// create a marker for each school, add marker to array of markers
+/*  create 2 markers for each school -
+      - marker 1 total students - transparent radius
+      - marker 2 filtered students - stroke only
+*/
 const schoolMarkers = new Array<SchoolMarker>();
 schools.forEach(school => {
-  const schoolCount = applyFilters(LocalStudents(school.name)).length;
-  const newMarker = L.circle(school.coords, {
+  const schoolCount = LocalStudents(school.name).length;
+  const filterCount = applyFilters(LocalStudents(school.name)).length;
+  const transparentMarker = L.circle(school.coords, {
     color: "red",
+    stroke: false,
     fillColor: "#f03",
     fillOpacity: 0.5,
+    radius: calcRadius(filterCount)
+  }).addTo(mymap);
+  const outlineMarker = L.circle(school.coords, {
+    color: "red",
+    fillOpacity: 0,
     radius: calcRadius(schoolCount)
   }).addTo(mymap);
-  newMarker.bindPopup(PopupText(school.name, filtersArr));
-  schoolMarkers.push({ name: school.name, marker: newMarker });
+  outlineMarker.bindPopup(PopupText(school.name, filtersArr, true));
+  schoolMarkers.push({
+    name: school.name,
+    total: outlineMarker,
+    filtered: transparentMarker
+  });
 });
 
 function calcRadius(students: number) {

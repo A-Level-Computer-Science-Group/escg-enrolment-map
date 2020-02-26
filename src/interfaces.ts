@@ -1,7 +1,7 @@
 import { College, CourseType, Filters, Gender, SchoolName } from "./enums";
 import { Marker, Circle } from "leaflet";
 import { applyFilters } from "./FILTERS";
-import { studentInfo } from "./student";
+import { studentInfo } from "./RandomData";
 
 export interface Student {
   gender: Gender;
@@ -24,7 +24,8 @@ export interface CollegeMarker {
 
 export interface SchoolMarker {
   name: SchoolName;
-  marker: Circle;
+  total: Circle;
+  filtered: Circle;
 }
 
 export function PopupText(
