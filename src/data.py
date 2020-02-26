@@ -7,7 +7,7 @@ courseType = ["CourseType.alevel", "CourseType.vocational", "CourseType.appgener
 collegeAttending = ["College.eastbourne", "College.hastings", "College.lewes"]
 #opens a .ts file and then writes to it
 
-dataFile = open("src\RandomData.ts", "w")
+dataFile = open("./src/RandomData.ts", "w")
 dataFile.write('import { CourseType, Filters, Gender, SchoolName, College } from "./enums"\n\nexport const studentInfo:\nStudent[] = [\n')
 #loops until condition is met and prints random data
 
