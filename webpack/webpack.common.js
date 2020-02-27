@@ -4,19 +4,17 @@ const CopyPlugin = require("copy-webpack-plugin");
 const srcDir = "../src/";
 
 module.exports = {
+  mode: "development",
   entry: {
     main: path.join(__dirname, srcDir + "main.ts"),
     style: path.join(__dirname, srcDir + "style.scss")
   },
   output: {
     path: path.join(__dirname, "../dist/js"),
-    filename: "[name].js"
-  },
-  optimization: {
-    splitChunks: {
-      name: "vendor",
-      chunks: "initial"
-    }
+    filename: "[name].js",
+    publicPath: "./dist/",
+    library: "EntryPoint",
+    libraryTarget: "var"
   },
   module: {
     rules: [
@@ -25,6 +23,10 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/
       },
+      // {
+      //   test: /main.ts/,
+      //   use: "expose-loader"
+      // },
       {
         test: /\.scss$/,
         use: [
@@ -49,6 +51,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      name: "vendor",
+      chunks: "initial"
+    }
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
