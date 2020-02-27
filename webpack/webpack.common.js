@@ -11,10 +11,13 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "../dist/js"),
-    filename: "[name].js",
+    chunkFilename: "[name].js",
     publicPath: "./dist/",
-    library: "EntryPoint",
+    library: "funcs",
     libraryTarget: "var"
+  },
+  node: {
+    net: "empty"
   },
   module: {
     rules: [
@@ -23,10 +26,6 @@ module.exports = {
         use: "ts-loader",
         exclude: /node_modules/
       },
-      // {
-      //   test: /main.ts/,
-      //   use: "expose-loader"
-      // },
       {
         test: /\.scss$/,
         use: [

@@ -1,6 +1,3 @@
-// require("expose-loader?Filters!/main.ts");
-// var Functions = require("./main");
-
 import * as L from "leaflet";
 import { CourseType, SchoolName, Gender, College } from "./enums";
 import {
@@ -10,17 +7,11 @@ import {
   CollegeMarker
 } from "./interfaces";
 
-/*
-This section exports the code as a library to be used by the HTML.
-The issue is that when the code is active, all other code stops working. 
-*/
-// module.exports = {
-//   run: (val: string) => {
-//     setGenderFilter(val);
-//   }
-// };
+export function test(val: string) {
+  console.log(val);
+}
 
-function setGenderFilter(newFilter: string) {
+export function setGenderFilter(newFilter: string) {
   // if the new value is amongst the filters
   if (checkFilter(newFilter)) {
     // adjust the popups of colleges
