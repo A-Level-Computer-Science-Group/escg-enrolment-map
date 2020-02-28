@@ -1,44 +1,27 @@
 {
   "name": "escg-enrolment-map",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "[![pipeline status](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/badges/master/pipeline.svg)](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/commits/master)",
   "main": "index.js",
   "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "format": "prettier --write 'src/**/*.ts' 'src/**/*.scss' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
-    "check:format": "prettier -c 'src/**/*.ts' 'src/**/*.scss' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/a-level-computer-science-group/escg-enrolment-map.git"
   },
-  "author": "Ethan Brierley",
+  "keywords": [],
+  "author": "Layton Burchell, Ethan Briarly, and Mehran & Arman Sattar of the ESCG Eastbourne Year 1 Computer Science students",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/issues"
   },
   "homepage": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map#readme",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "copy-webpack-plugin": "^5",
-    "extract-loader": "^4.0.3",
-    "postcss-loader": "^3.0.0",
-    "prettier": "1.19.1",
-    "sass": "^1.25.0",
-    "sass-loader": "^8.0.2",
-    "styles-loader": "^1.0.2",
-    "ts-loader": "^6",
-    "tslint": "^6.0.0",
-    "typescript": "^3",
-    "webpack": "^4",
-    "webpack-cli": "^3",
-    "webpack-merge": "^4"
+    "typescript": "^3.8.2"
   },
   "dependencies": {
-    "@types/leaflet": "^1.5.8",
+    "@types/leaflet": "^1.5.9",
     "leaflet": "^1.6.0"
   }
 }
