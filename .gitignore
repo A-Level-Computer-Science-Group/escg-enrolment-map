@@ -1,5 +1,7 @@
 .cache/
+.vscode/
 npm-debug.log
 node_modules/
 dist/
 tmp/
+src/RandomData.ts

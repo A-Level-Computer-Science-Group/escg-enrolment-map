@@ -1,15 +1,15 @@
 import { CourseType, Gender, College, Filters } from "./enums";
 import { Filter, Student } from "./interfaces";
 
-const courseFilter: Filter = {
+export const courseFilter: Filter = {
   type: Filters.course,
-  filter: CourseType.alevel
+  filter: ""
 };
-const genderFilter: Filter = {
+export const genderFilter: Filter = {
   type: Filters.gender,
   filter: ""
 };
-const collegeFilter: Filter = {
+export const collegeFilter: Filter = {
   type: Filters.college,
   filter: ""
 };
