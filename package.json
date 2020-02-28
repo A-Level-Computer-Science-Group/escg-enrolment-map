@@ -4,6 +4,10 @@
   "description": "[![pipeline status](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/badges/master/pipeline.svg)](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/commits/master)",
   "main": "index.js",
   "scripts": {
+    "build": "parcel public/index.html",
+    "lint": "tslint -c tslint.json 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.ts' 'src/**/*.scss' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
+    "check:format": "prettier -c 'src/**/*.ts' 'src/**/*.scss' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -11,7 +15,7 @@
     "url": "git+https://gitlab.com/a-level-computer-science-group/escg-enrolment-map.git"
   },
   "keywords": [],
-  "author": "Layton Burchell, Ethan Briarly, and Mehran & Arman Sattar of the ESCG Eastbourne Year 1 Computer Science students",
+  "author": "Layton Burchell, Ethan Brierley, and Mehran & Arman Sattarzadeh of the ESCG Eastbourne Year 1 Computer Science students",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/issues"
@@ -22,6 +26,8 @@
   },
   "dependencies": {
     "@types/leaflet": "^1.5.9",
-    "leaflet": "^1.6.0"
+    "leaflet": "^1.6.0",
+    "prettier": "^1.19.1",
+    "tslint": "^6.0.0"
   }
 }
