@@ -22,10 +22,8 @@
   },
   "homepage": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map#readme",
   "devDependencies": {
-    "@types/lodash": "^4.14.149",
     "autoprefixer": "^9.7.4",
-    "commonjs": "0.0.1",
-    "copy-webpack-plugin": "^5",
+    "copy-webpack-plugin": "^5.1.1",
     "expose-loader": "^0.7.5",
     "extract-loader": "^4.0.3",
     "postcss-loader": "^3.0.0",

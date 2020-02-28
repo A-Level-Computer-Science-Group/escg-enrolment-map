@@ -14,7 +14,8 @@ module.exports = {
     chunkFilename: "[name].js",
     publicPath: "./dist/",
     library: "funcs",
-    libraryTarget: "var"
+    libraryTarget: "umd",
+    umdNamedDefine: true
   },
   node: {
     net: "empty"

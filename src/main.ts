@@ -11,7 +11,7 @@ export function test(val: string) {
   console.log(val);
 }
 
-export function setGenderFilter(newFilter: string) {
+function setGenderFilter(newFilter: string) {
   // if the new value is amongst the filters
   if (checkFilter(newFilter)) {
     // adjust the popups of colleges
