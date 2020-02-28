@@ -1,4 +1,4 @@
-import { CourseType, Filters } from "./enums";
+import { CourseType, Gender, College, Filters } from "./enums";
 import { Filter, Student } from "./interfaces";
 
 const courseFilter: Filter = {
@@ -15,15 +15,18 @@ const collegeFilter: Filter = {
 };
 export const filtersArr = [genderFilter, courseFilter, collegeFilter];
 
-export function applyFilters(studentsArr: Student[]) {
+export function applyFilters(studentsArr: Student[], filters?: Filter[]) {
+  if (!filters) {
+    filters = filtersArr;
+  }
   if (
     // if any filters are defined
-    filtersArr.findIndex(f => {
+    filters.findIndex(f => {
       return f.filter !== "";
     }) !== -1
   ) {
     // apply each filter to the incoming array and then re-assign the array
-    filtersArr.forEach(f => {
+    filters.forEach(f => {
       if (f.filter !== "") {
         studentsArr = studentsArr.filter(s => {
           return s[f.type] === f.filter;

@@ -8,6 +8,7 @@
       integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
       crossorigin=""
     />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <style>
       body {
         margin: 0;
@@ -41,14 +42,18 @@
       <div id="map"></div>
       <section>
         <details>
-          <summary> Gender</summary>
-          <select>
-            <option>Male</option>
-            <option>Female</option>
+          <a id="testButton" href="javascript:testActivate('Successful Test')"
+            >PRESS ME</a
+          >
+          <label for="gender">Gender</label>
+          <select id="gender">
+            <option value="none">None</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
           </select>
         </details>
         <details>
-          <summary> Course</summary>
+          <label>Course</label>
           <select>
             <option>A-level</option>
             <option>Vocational</option>
@@ -56,7 +61,7 @@
           </select>
         </details>
         <details>
-          <summary> College</summary>
+          <label>College</label>
           <select>
             <option>Eastbourne</option>
             <option>Lewes</option>
@@ -66,5 +71,10 @@
       </section>
     </main>
     <script src="../src/main.ts"></script>
+    <script>
+      function testActivate(val) {
+        test(val);
+      }
+    </script>
   </body>
 </html>
