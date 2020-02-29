@@ -4,7 +4,6 @@ const CopyPlugin = require("copy-webpack-plugin");
 const srcDir = "../src/";
 
 module.exports = {
-  mode: "development",
   entry: {
     main: path.join(__dirname, srcDir + "main.ts"),
     style: path.join(__dirname, srcDir + "style.scss")
