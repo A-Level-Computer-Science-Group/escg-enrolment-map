@@ -10,13 +10,14 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "../dist/js"),
-    filename: "[name].js"
+    chunkFilename: "[name].js",
+    publicPath: "./dist/",
+    library: "funcs",
+    libraryTarget: "umd",
+    umdNamedDefine: true
   },
-  optimization: {
-    splitChunks: {
-      name: "vendor",
-      chunks: "initial"
-    }
+  node: {
+    net: "empty"
   },
   module: {
     rules: [
@@ -49,6 +50,12 @@ module.exports = {
         ]
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      name: "vendor",
+      chunks: "initial"
+    }
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js"]
