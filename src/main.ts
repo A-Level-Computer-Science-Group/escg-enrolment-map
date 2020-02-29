@@ -15,7 +15,7 @@ import {
  * @param filter Must contain "course", "gender", or "college" else the command shall fail.
  * @param newVal Must contain an enum from the appropriate category.
  */
-(window as any).setFilter = function(filter: string, newVal: string): boolean {
+(window as any).setFilter = (filter: string, newVal: string): boolean => {
   let myFilter: Filter;
   let myType;
   switch (filter) {
@@ -35,7 +35,7 @@ import {
       return false;
   }
   if (newVal in myType) {
-    let finalVal = (myType as any)[newVal];
+    const finalVal = (myType as any)[newVal];
     myFilter.filter = finalVal;
     // for each school, adjust the filtered radius and popups
     schoolMarkers.forEach(s => {
