@@ -3,59 +3,59 @@ import { Student } from "./student";
 
 export const studentInfo: Student[] = [
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
@@ -66,23 +66,30 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -96,8 +103,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -105,13 +112,20 @@ export const studentInfo: Student[] = [
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -122,16 +136,23 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -139,18 +160,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -159,7 +180,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -171,21 +192,28 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -195,14 +223,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -216,7 +244,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -227,10 +255,10 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -241,7 +269,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -256,6 +284,13 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -269,16 +304,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -292,19 +327,26 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -320,26 +362,26 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -348,21 +390,21 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -370,14 +412,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
@@ -390,21 +432,21 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -412,28 +454,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -444,38 +486,38 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -489,20 +531,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -510,13 +552,6 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -524,60 +559,53 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -587,18 +615,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -608,35 +636,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -656,8 +670,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -670,43 +684,50 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -717,24 +738,24 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -745,7 +766,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -754,49 +775,42 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -804,11 +818,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -818,7 +832,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -831,7 +845,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -839,13 +853,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -860,98 +881,91 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -962,17 +976,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -992,29 +1006,29 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -1028,77 +1042,77 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -1109,17 +1123,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -1133,13 +1147,6 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -1154,21 +1161,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -1182,31 +1189,24 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
-  },
-
-  {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
@@ -1216,7 +1216,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -1224,21 +1224,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -1249,7 +1249,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -1259,27 +1259,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -1292,20 +1278,13 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -1314,50 +1293,50 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -1370,56 +1349,56 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -1427,13 +1406,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -1441,11 +1420,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -1454,50 +1433,43 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -1509,30 +1481,16 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -1540,13 +1498,6 @@ export const studentInfo: Student[] = [
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
   },
 
   {
@@ -1557,7 +1508,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -1574,13 +1525,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -1588,32 +1539,32 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -1622,7 +1573,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -1630,20 +1581,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -1651,7 +1602,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -1669,38 +1620,38 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -1711,37 +1662,44 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -1749,13 +1707,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -1776,12 +1734,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -1791,70 +1749,70 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -1865,16 +1823,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -1882,35 +1840,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -1928,10 +1879,10 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -1942,29 +1893,43 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
@@ -1973,21 +1938,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -2000,47 +1965,40 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -2050,13 +2008,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -2068,17 +2026,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -2096,21 +2054,21 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -2124,16 +2082,9 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -2145,7 +2096,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -2154,7 +2105,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -2162,18 +2113,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -2182,8 +2126,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
@@ -2194,16 +2138,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -2211,25 +2155,25 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -2246,13 +2190,6 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -2260,25 +2197,25 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -2292,73 +2229,73 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -2385,12 +2322,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -2399,26 +2336,26 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -2427,28 +2364,35 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -2467,9 +2411,9 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -2477,27 +2421,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -2505,119 +2449,126 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -2630,15 +2581,15 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -2652,35 +2603,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -2693,7 +2637,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -2701,20 +2645,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -2722,20 +2666,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -2747,17 +2698,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -2768,14 +2719,14 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -2784,8 +2735,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -2798,22 +2749,22 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
@@ -2831,14 +2782,28 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -2852,30 +2817,30 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -2887,9 +2852,16 @@ export const studentInfo: Student[] = [
   },
 
   {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
+  },
+
+  {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -2897,35 +2869,35 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -2933,13 +2905,20 @@ export const studentInfo: Student[] = [
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -2959,14 +2938,14 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -2978,17 +2957,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -3015,8 +2994,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -3034,13 +3013,20 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.vocational
+  },
+
+  {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
@@ -3049,6 +3035,13 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -3057,14 +3050,14 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -3076,7 +3069,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -3084,8 +3077,22 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -3097,21 +3104,21 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -3120,22 +3127,36 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -3146,30 +3167,30 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -3190,40 +3211,40 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -3240,14 +3261,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -3260,29 +3281,29 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -3296,14 +3317,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -3314,16 +3335,9 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -3331,41 +3345,41 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -3384,7 +3398,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -3394,14 +3408,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -3414,28 +3428,28 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -3450,18 +3464,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -3477,12 +3491,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -3492,11 +3506,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -3505,22 +3519,22 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -3531,59 +3545,59 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -3603,8 +3617,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
@@ -3615,73 +3629,73 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -3701,36 +3715,36 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -3741,23 +3755,23 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -3765,42 +3779,42 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -3813,7 +3827,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -3821,14 +3835,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -3839,49 +3853,49 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -3891,35 +3905,35 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -3933,20 +3947,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -3954,34 +3968,34 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -3995,50 +4009,50 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
@@ -4056,28 +4070,21 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -4091,10 +4098,10 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -4108,28 +4115,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -4147,31 +4154,31 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -4184,12 +4191,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -4199,14 +4206,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -4220,11 +4227,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -4232,6 +4239,13 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -4241,39 +4255,46 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -4282,12 +4303,19 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -4304,13 +4332,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -4324,15 +4366,15 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
@@ -4350,44 +4392,37 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -4395,13 +4430,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -4416,28 +4451,42 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -4457,7 +4506,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -4472,27 +4521,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -4500,35 +4542,35 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -4541,40 +4583,40 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -4583,21 +4625,21 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -4609,16 +4651,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -4632,8 +4674,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
@@ -4646,15 +4688,15 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -4668,28 +4710,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
@@ -4704,24 +4746,10 @@ export const studentInfo: Student[] = [
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -4731,27 +4759,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -4759,7 +4780,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -4772,19 +4793,19 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -4798,14 +4819,21 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -4822,7 +4850,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
@@ -4836,60 +4864,60 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -4898,7 +4926,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -4906,62 +4934,62 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -4969,14 +4997,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -4987,9 +5015,9 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -4997,34 +5025,34 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -5036,70 +5064,77 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -5108,35 +5143,35 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -5144,21 +5179,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -5171,14 +5206,14 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -5190,14 +5225,14 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -5205,41 +5240,34 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -5248,8 +5276,8 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
@@ -5263,55 +5291,55 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -5319,21 +5347,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
@@ -5347,7 +5382,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -5361,7 +5396,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -5372,38 +5407,38 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -5414,17 +5449,17 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
@@ -5435,7 +5470,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -5444,12 +5479,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -5459,42 +5494,42 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -5506,51 +5541,37 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
@@ -5561,7 +5582,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -5570,15 +5591,15 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -5592,13 +5613,6 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -5617,9 +5631,9 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -5627,20 +5641,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -5648,13 +5662,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -5662,14 +5676,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -5687,79 +5694,79 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -5767,13 +5774,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -5781,11 +5788,11 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -5799,24 +5806,24 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -5827,16 +5834,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -5844,13 +5851,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -5858,20 +5865,20 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -5879,53 +5886,53 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -5933,13 +5940,6 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -5949,49 +5949,49 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
@@ -6004,19 +6004,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -6025,12 +6018,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -6047,13 +6040,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -6061,41 +6054,41 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -6110,13 +6103,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -6124,28 +6117,28 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -6159,34 +6152,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -6194,13 +6180,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
@@ -6208,18 +6194,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
@@ -6229,7 +6215,14 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
@@ -6243,7 +6236,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
@@ -6256,12 +6249,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -6282,28 +6275,14 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -6311,22 +6290,15 @@ export const studentInfo: Student[] = [
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
@@ -6340,19 +6312,19 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -6362,18 +6334,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -6382,21 +6354,21 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -6404,7 +6376,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -6412,31 +6384,24 @@ export const studentInfo: Student[] = [
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.ocklynge,
-    college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -6452,19 +6417,12 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.appgeneral
-  },
-
-  {
-    school: SchoolName.parklands,
-    college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -6474,32 +6432,32 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
@@ -6516,48 +6474,48 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -6565,27 +6523,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -6593,7 +6551,7 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
@@ -6607,6 +6565,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
+    course: CourseType.vocational
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -6614,42 +6579,49 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.vocational
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
@@ -6669,7 +6641,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -6683,35 +6655,35 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.alevel
+    gender: Gender.female,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.appgeneral
   },
 
@@ -6719,21 +6691,21 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.vocational
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
@@ -6746,15 +6718,15 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
@@ -6765,16 +6737,16 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.alevel
   },
 
@@ -6782,18 +6754,18 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.male,
-    course: CourseType.appgeneral
+    gender: Gender.female,
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
@@ -6814,21 +6786,28 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
+    course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
@@ -6838,13 +6817,13 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
   },
 
@@ -6852,39 +6831,46 @@ export const studentInfo: Student[] = [
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.parklands,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
@@ -6912,7 +6898,7 @@ export const studentInfo: Student[] = [
   },
 
   {
-    school: SchoolName.ocklynge,
+    school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
@@ -6921,7 +6907,7 @@ export const studentInfo: Student[] = [
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
-    gender: Gender.male,
+    gender: Gender.female,
     course: CourseType.appgeneral
   },
 
@@ -6929,49 +6915,56 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
-    course: CourseType.alevel
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.female,
-    course: CourseType.alevel
+    course: CourseType.appgeneral
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.appgeneral
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.appgeneral
   },
 
   {
@@ -6985,20 +6978,27 @@ export const studentInfo: Student[] = [
     school: SchoolName.parklands,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.appgeneral
+    course: CourseType.vocational
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
     gender: Gender.male,
-    course: CourseType.vocational
+    course: CourseType.alevel
   },
 
   {
-    school: SchoolName.parklands,
+    school: SchoolName.ocklynge,
     college: College.eastbourne,
-    gender: Gender.female,
+    gender: Gender.male,
     course: CourseType.alevel
+  },
+
+  {
+    school: SchoolName.ocklynge,
+    college: College.eastbourne,
+    gender: Gender.male,
+    course: CourseType.vocational
   }
 ];

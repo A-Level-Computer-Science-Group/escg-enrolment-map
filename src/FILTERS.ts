@@ -3,7 +3,7 @@ import { Filter, Student } from "./interfaces";
 
 export const courseFilter: Filter = {
   type: Filters.course,
-  filter: CourseType.alevel
+  filter: ""
 };
 export const genderFilter: Filter = {
   type: Filters.gender,
