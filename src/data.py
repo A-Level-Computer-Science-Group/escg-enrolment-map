@@ -4,7 +4,8 @@ import random
 schools = ["SchoolName.ocklynge", "SchoolName.parklands"]
 gender = ["Gender.male", "Gender.female"]
 courseType = ["CourseType.alevel", "CourseType.vocational", "CourseType.appgeneral"]
-collegeAttending = ["College.eastbourne", "College.hastings", "College.lewes"]
+# collegeAttending = ["College.eastbourne", "College.hastings", "College.lewes"]
+collegeAttending = ["College.eastbourne"]
 #opens a .ts file and then writes to it
 
 dataFile = open("./src/RandomData.ts", "w")
