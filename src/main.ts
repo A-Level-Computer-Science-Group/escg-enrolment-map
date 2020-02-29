@@ -1,14 +1,56 @@
 import * as L from "leaflet";
 import { CourseType, SchoolName, Gender, College } from "./enums";
+import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
 import {
   SchoolMarker,
   PopupText,
   LocalStudents,
-  CollegeMarker
+  CollegeMarker,
+  Filter
 } from "./interfaces";
 
-(window as any).test = (filter: string, value: string) => {
-  console.log("test success");
+/**
+ * Returns a boolean to represent success.
+ * The two parameters shall set the specified filter equal to the supplied value.
+ * @param filter Must contain "course", "gender", or "college" else the command shall fail.
+ * @param newVal Must contain an enum from the appropriate category.
+ */
+(window as any).setFilter = function(filter: string, newVal: string): boolean {
+  let myFilter: Filter;
+  let myType;
+  switch (filter) {
+    case "course":
+      myFilter = courseFilter;
+      myType = CourseType;
+      break;
+    case "gender":
+      myFilter = genderFilter;
+      myType = Gender;
+      break;
+    case "college":
+      myFilter = collegeFilter;
+      myType = College;
+      break;
+    default:
+      return false;
+  }
+  if (newVal in myType) {
+    let finalVal = (myType as any)[newVal];
+    myFilter.filter = finalVal;
+    // for each school, adjust the filtered radius and popups
+    schoolMarkers.forEach(s => {
+      s.filtered.setRadius(
+        calcRadius(applyFilters(LocalStudents(s.name)).length)
+      );
+      s.total.bindPopup(PopupText(s.name, filtersArr, true));
+    });
+    // for each college, adjust the popups
+    collegeMarkers.forEach(c => {
+      c.marker.bindPopup(PopupText(c.name, filtersArr, true));
+    });
+    return true;
+  }
+  return false;
 };
 
 /* *** MAP STUFF *** */
@@ -45,8 +87,8 @@ ESCG_EASTBOURNE.bindPopup(
 ).openPopup();
 collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
 /*  create 2 markers for each school -
-      - marker 1 total students - transparent radius
-      - marker 2 filtered students - stroke only
+    - marker 1 total students - transparent radius
+    - marker 2 filtered students - stroke only
 */
 const schoolMarkers = new Array<SchoolMarker>();
 schools.forEach(school => {

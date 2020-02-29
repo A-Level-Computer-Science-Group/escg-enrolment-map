@@ -2,7 +2,6 @@
   "name": "escg-enrolment-map",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "watch": "webpack --config webpack/webpack.dev.js --watch",
     "build": "webpack --config webpack/webpack.prod.js",
@@ -15,7 +14,7 @@
     "type": "git",
     "url": "git+https://gitlab.com/a-level-computer-science-group/escg-enrolment-map.git"
   },
-  "author": "Ethan Brierley",
+  "author": "Ethan Brierley, Layton Burchell, and Mehran and Arman Sattarzadeh of the ESCG Eastbourne Year 1 Computer Science students",
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/issues"
