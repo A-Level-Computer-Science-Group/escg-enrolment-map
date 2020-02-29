@@ -42,7 +42,7 @@
       <div id="map"></div>
       <section>
         <details>
-          <a href="javascript:setGender('yellow');">PRESS ME</a>
+          <a href="javascript:setGender('gender', 'male');">PRESS ME</a>
           <label for="gender">Gender</label>
           <select id="gender">
             <option value="none">None</option>
@@ -71,8 +71,8 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
-      function setGender(val) {
-        funcs.test(val);
+      function setGender(f, v) {
+        console.log("Result: " + setFilter(f, v));
       }
     </script>
   </body>
