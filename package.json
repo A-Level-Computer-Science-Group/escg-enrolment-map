@@ -4,7 +4,8 @@
   "description": "[![pipeline status](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/badges/master/pipeline.svg)](https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/commits/master)",
   "main": "index.js",
   "scripts": {
-    "build": "parcel public/index.html",
+    "build": "parcel build public/index.html",
+    "preview": "parcel public/index.html",
     "lint": "tslint -c tslint.json 'src/**/*.ts'",
     "format": "prettier --write 'src/**/*.ts' 'src/**/*.scss' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
     "check:format": "prettier -c 'src/**/*.ts' 'src/**/*.scss' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
@@ -22,6 +23,7 @@
   },
   "homepage": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map#readme",
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "typescript": "^3.8.2"
   },
   "dependencies": {
