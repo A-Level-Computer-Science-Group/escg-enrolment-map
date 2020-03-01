@@ -89,43 +89,52 @@
       <div id="map"></div>
       <section>
         <details>
-          <summary><span>Gender</span></summary>
-          <a href="javascript:setGender('gender', 'male');">PRESS ME</a>
-          <label for="gender">Gender</label>
-          <select id="gender">
-            <option value="">None</option>
+          <summary id="summary-one"><span>Gender</span></summary>
+          <select onchange="setGender()" id="gender">
+            <option onclick="setGender()" value="none">None</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </details>
         <details>
           <summary id="norounded"><span>Course</span></summary>
-          <label>Course</label>
-          <select>
-            <option>None</option>
-            <option>A-level</option>
-            <option>Vocational</option>
-            <option>Applied General</option>
+          <select onchange="setCourse()" id="course">
+            <option value="none">None</option>
+            <option value="a-level">A-level</option>
+            <option value="vocational">Vocational</option>
+            <option value="applied general">Applied General</option>
           </select>
         </details>
         <details>
           <summary id="borderbottom"><span>College</span></summary>
-          <label>College</label>
-          <select>
-            <option>None</option>
-            <option>Eastbourne</option>
-            <option>Lewes</option>
-            <option>Hastings</option>
+          <select onchange="setCollege()" id="college">
+            <option value="none">None</option>
+            <option value="eastbourne">Eastbourne</option>
+            <option value="lewes">Lewes</option>
+            <option value="hastings">Hastings</option>
           </select>
         </details>
       </section>
     </main>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
     <script>
-      function setGender(fil, val) {
-        test(fil, val);
+      console.log("hello");
+      function setGender() {
+        const x = document.getElementById("gender");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
+      }
+      function setCourse() {
+        const x = document.getElementById("course");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
+      }
+      function setCollege() {
+        const x = document.getElementById("college");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
       }
     </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
