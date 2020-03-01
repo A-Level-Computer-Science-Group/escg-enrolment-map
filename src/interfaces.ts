@@ -42,10 +42,10 @@ export function PopupText(
   }
   if (filters) {
     output +=
-    "<br>" +
-    getDescriptors(filters) +
-    "Students: " +
-    applyFilters(LocalStudents(name), filters).length;
+      "<br>" +
+      getDescriptors(filters) +
+      "Students: " +
+      applyFilters(LocalStudents(name), filters).length;
   }
   return output;
 }
