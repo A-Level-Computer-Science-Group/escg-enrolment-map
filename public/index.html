@@ -15,25 +15,72 @@
         padding: 0;
       }
       main {
-        display: grid;
-        grid-template-columns: 80vw auto;
-        grid-template-rows: auto;
-        grid-template-areas: "map sidebar";
-        position: absolute;
+        display: flex;
+        justify-content: flex-end;
       }
       section {
-        grid-area: sidebar;
+        position: absolute;
+        z-index: 4;
+        width: 180px;
+        right: 25px;
+        top: 25px;
       }
       summary {
+        border-color: rgb(150, 0, 150);
+        border-style: solid;
+        border-width: 10px;
+        border-radius: 3px 3px 0px 0px;
         cursor: pointer;
-        margin: 0;
+        border-bottom-color: rgba(0, 0, 0, 0.3);
+        border-bottom-style: solid;
+        border-bottom-width: 0.5px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+        height: 65px;
+        background-color: rgb(150, 0, 150);
+        color: white;
       }
       #map {
-        width: 80vw;
+        width: 100vw;
         height: 100vh;
-        margin: 0px;
-        padding: 0px;
-        grid-area: map;
+        position: absolute;
+        z-index: -1;
+      }
+      #noborder {
+        border-color: rgb(150, 0, 150);
+        border-style: solid;
+        border-width: 10px;
+        border-bottom: none;
+      }
+
+      select {
+        font-family: Arial, Helvetica, sans-serif;
+        width: 100%;
+        height: 50px;
+        background-color: white;
+      }
+
+      summary:hover {
+        color: rgba(0, 0, 0, 0.61);
+      }
+      label {
+        display: none;
+      }
+      a {
+        display: none;
+      }
+      #norounded {
+        border-radius: 0px;
+      }
+      #borderbottom {
+        border-radius: 0px 0px 3px 3px;
+      }
+
+      option {
+        border-width: 2px;
+        border-style: solid;
+        border-color: auto;
+        border-radius: 5px;
       }
     </style>
   </head>
@@ -42,38 +89,52 @@
       <div id="map"></div>
       <section>
         <details>
-          <a href="javascript:setGender('yellow');">PRESS ME</a>
-          <label for="gender">Gender</label>
-          <select id="gender">
-            <option value="none">None</option>
+          <summary id="summary-one"><span>Gender</span></summary>
+          <select onchange="setGender()" id="gender">
+            <option onclick="setGender()" value="none">None</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </details>
         <details>
-          <label>Course</label>
-          <select>
-            <option>A-level</option>
-            <option>Vocational</option>
-            <option>Applied General</option>
+          <summary id="norounded"><span>Course</span></summary>
+          <select onchange="setCourse()" id="course">
+            <option value="none">None</option>
+            <option value="a-level">A-level</option>
+            <option value="vocational">Vocational</option>
+            <option value="applied general">Applied General</option>
           </select>
         </details>
         <details>
-          <label>College</label>
-          <select>
-            <option>Eastbourne</option>
-            <option>Lewes</option>
-            <option>Hastings</option>
+          <summary id="borderbottom"><span>College</span></summary>
+          <select onchange="setCollege()" id="college">
+            <option value="none">None</option>
+            <option value="eastbourne">Eastbourne</option>
+            <option value="lewes">Lewes</option>
+            <option value="hastings">Hastings</option>
           </select>
         </details>
       </section>
     </main>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js"></script>
     <script>
-      function setGender(val) {
-        funcs.test(val);
+      console.log("hello");
+      function setGender() {
+        const x = document.getElementById("gender");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
+      }
+      function setCourse() {
+        const x = document.getElementById("course");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
+      }
+      function setCollege() {
+        const x = document.getElementById("college");
+        const value = x.options[x.selectedIndex].value;
+        console.log(value);
       }
     </script>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

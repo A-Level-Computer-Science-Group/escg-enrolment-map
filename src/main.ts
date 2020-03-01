@@ -7,11 +7,9 @@ import {
   CollegeMarker
 } from "./interfaces";
 
-/**
- * Takes two strings (filter, newValue) and sets the filter to filter students with newVal, then updates all school markers and popups.
- * Returns a boolean to represent success.
- */
-// function setFilter(filter: string, newVal: string): boolean {};
+(window as any).test = (filter: string, value: string) => {
+  console.log("test success");
+};
 
 /* *** MAP STUFF *** */
 const mymap = L.map("map").setView([50.78829, 0.271392], 14);
