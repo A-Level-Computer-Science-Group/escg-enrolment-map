@@ -34,8 +34,9 @@ import {
     default:
       return false;
   }
-  if (newVal in myType) {
-    const finalVal = (myType as any)[newVal];
+  if (newVal in myType || "none") {
+    // finalVal = the appropriate enumerator or an empty string if not found
+    const finalVal = (myType as any)[newVal] ? (myType as any)[newVal] : "";
     myFilter.filter = finalVal;
     // for each school, adjust the filtered radius and popups
     schoolMarkers.forEach(s => {
