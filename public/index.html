@@ -90,24 +90,24 @@
       <section>
         <details>
           <summary id="summary-one"><span>Gender</span></summary>
-          <select onchange="setGender()" id="gender">
-            <option onclick="setGender()" value="none">None</option>
+          <select onchange="setFilter('gender', this.value)" id="gender">
+            <option value="none">None</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </details>
         <details>
           <summary id="norounded"><span>Course</span></summary>
-          <select onchange="setCourse()" id="course">
+          <select onchange="setFilter('course', this.value)" id="course">
             <option value="none">None</option>
-            <option value="a-level">A-level</option>
+            <option value="alevel">A-level</option>
             <option value="vocational">Vocational</option>
-            <option value="applied general">Applied General</option>
+            <option value="appgeneral">Applied General</option>
           </select>
         </details>
         <details>
           <summary id="borderbottom"><span>College</span></summary>
-          <select onchange="setCollege()" id="college">
+          <select onchange="setFilter('college', this.value)" id="college">
             <option value="none">None</option>
             <option value="eastbourne">Eastbourne</option>
             <option value="lewes">Lewes</option>
@@ -117,22 +117,10 @@
       </section>
     </main>
     <script>
-      console.log("hello");
-      function setGender() {
-        const x = document.getElementById("gender");
-        const value = x.options[x.selectedIndex].value;
-        console.log(value);
-      }
-      function setCourse() {
-        const x = document.getElementById("course");
-        const value = x.options[x.selectedIndex].value;
-        console.log(value);
-      }
-      function setCollege() {
-        const x = document.getElementById("college");
-        const value = x.options[x.selectedIndex].value;
-        console.log(value);
-      }
+      const menus = document.getElementsByTagName("select");
+      Object.values(menus).forEach(e => {
+        e.value = "none";
+      });
     </script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
