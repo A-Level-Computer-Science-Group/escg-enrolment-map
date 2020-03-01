@@ -37,15 +37,15 @@ export function PopupText(
   if (name) {
     output += "<b>" + name + "</b>";
   }
-  if (totalLine) {
+  if (totalLine && getDescriptors(filters) !== "Total ") {
     output += "<br>" + "Total Students: " + LocalStudents(name).length;
   }
   if (filters) {
     output +=
-      "<br>" +
-      getDescriptors(filters) +
-      "Students: " +
-      applyFilters(LocalStudents(name), filters).length;
+    "<br>" +
+    getDescriptors(filters) +
+    "Students: " +
+    applyFilters(LocalStudents(name), filters).length;
   }
   return output;
 }
