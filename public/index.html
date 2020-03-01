@@ -90,7 +90,7 @@
       <section>
         <details>
           <summary id="summary-one"><span>Gender</span></summary>
-          <select onchange="set(this, 'gender')" id="gender">
+          <select onchange="setFilter('gender', this.value)" id="gender">
             <option value="none">None</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -98,7 +98,7 @@
         </details>
         <details>
           <summary id="norounded"><span>Course</span></summary>
-          <select onchange="set(this, 'course')" id="course">
+          <select onchange="setFilter('course', this.value)" id="course">
             <option value="none">None</option>
             <option value="alevel">A-level</option>
             <option value="vocational">Vocational</option>
@@ -107,7 +107,7 @@
         </details>
         <details>
           <summary id="borderbottom"><span>College</span></summary>
-          <select onchange="set(this, 'college')" id="college">
+          <select onchange="setFilter('college', this.value)" id="college">
             <option value="none">None</option>
             <option value="eastbourne">Eastbourne</option>
             <option value="lewes">Lewes</option>
@@ -117,10 +117,6 @@
       </section>
     </main>
     <script>
-      function set(e, filter) {
-        const val = e.options[e.selectedIndex].value;
-        setFilter(filter, val);
-      }
     </script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
