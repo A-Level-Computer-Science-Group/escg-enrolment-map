@@ -55,7 +55,7 @@ import {
     // for each college, adjust the popups
     collegeMarkers.forEach(c => {
       let setFilters = filtersArr.filter(f => {
-        f.filter !== "";
+        return f.filter !== "";
       });
       let totalLine =
         setFilters.length === 1 && setFilters[0].filter in College;
