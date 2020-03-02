@@ -20,4 +20,9 @@ Filters:
 Over 5 Year time period.
     whole 5 years and specified ranges
 
-PURPLE
+George wants lots of purple.
+
+College Colors:
+    Eastbourne: Orange
+    Lewes: Blue
+    Hastings: Green
