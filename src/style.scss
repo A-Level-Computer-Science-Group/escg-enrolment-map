@@ -85,9 +85,11 @@ section div {
 
 button {
   padding: 0px;
+  background-color: rgb(155, 0, 155);
+  color: white;
 }
 .tick::before {
-  content: '✔';
+  content: "✔";
   color: green;
   float: left;
   padding-left: 3px;

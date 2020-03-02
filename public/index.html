@@ -56,19 +56,34 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
+      const greyBackground = (number) => {
+        const x = document.querySelectorAll("button");
+        x.forEach(element => {
+          if(!element.classList.contains("tick")){
+                element.style.backgroundColor = "rgb(155,0,155)";
+          }else {
+            element.style.backgroundColor = "#DDDDDD";
+            element.style.color = "black";
+          }
+        })
+      }
       const setFilter = (college, collegeName) => {
         switch (collegeName) {
           case "none":
             document.getElementById("button-one").classList.toggle("tick");
+            greyBackground("none");
             break;
           case "eastbourne":
             document.getElementById("button-two").classList.toggle("tick");
+            greyBackground("one");
             break;
           case "lewes":
             document.getElementById("button-three").classList.toggle("tick");
+            greyBackground("two");
             break;
           case "hastings":
             document.getElementById("button-four").classList.toggle("tick");
+            greyBackground("three");
             break;
           default:;
         }
