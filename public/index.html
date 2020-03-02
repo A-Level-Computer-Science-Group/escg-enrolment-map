@@ -32,10 +32,18 @@
           </select>
         </details>
         <div>
-          <button onclick="setFilter('college', 'none')">None</button>
-          <button onclick="setFilter('college', 'eastbourne')">Eastbourne</button>
-          <button onclick="setFilter('college', 'lewes')">Lewes</button>
-          <button onclick="setFilter('college', 'hastings')">Hastings</button>
+          <button id="button-one" onclick="setFilter('college', 'none')">
+            None
+          </button>
+          <button id="button-two" onclick="setFilter('college', 'eastbourne')">
+            Eastbourne
+          </button>
+          <button id="button-three" onclick="setFilter('college', 'lewes')">
+            Lewes
+          </button>
+          <button id="button-four" onclick="setFilter('college', 'hastings')">
+            Hastings
+          </button>
         </div>
       </section>
     </main>
@@ -47,5 +55,24 @@
     </script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      const setFilter = (college, collegeName) => {
+        switch (collegeName) {
+          case "none":
+            document.getElementById("button-one").classList.toggle("tick");
+            break;
+          case "eastbourne":
+            document.getElementById("button-two").classList.toggle("tick");
+            break;
+          case "lewes":
+            document.getElementById("button-three").classList.toggle("tick");
+            break;
+          case "hastings":
+            document.getElementById("button-four").classList.toggle("tick");
+            break;
+          default:;
+        }
+      };
+    </script>
   </body>
 </html>
