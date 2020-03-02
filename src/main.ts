@@ -1,5 +1,5 @@
 import * as L from "leaflet";
-import { CourseType, SchoolName, Gender, College } from "./enums";
+import { CourseType, SchoolName, Gender, College, Filters } from "./enums";
 import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
 import {
   SchoolMarker,
@@ -40,24 +40,31 @@ import {
     myFilter.filter = finalVal;
     // for each school, adjust the filtered radius and popups
     schoolMarkers.forEach(s => {
-      let studentArr =
+      const studentArr =
         LocalStudents(collegeFilter.filter as College).length !== 0
           ? LocalStudents(collegeFilter.filter as College)
           : studentInfo;
       s.filtered.setRadius(
         calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
       );
+      // Applies school and college filters to outline radius
       s.total.setRadius(
-        calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
+        calcRadius(
+          LocalStudents(
+            s.name,
+            LocalStudents(collegeFilter.filter as Filters.college)
+          ).length,
+          studentArr
+        )
       );
       s.total.bindPopup(PopupText(s.name, filtersArr, true));
     });
     // for each college, adjust the popups
     collegeMarkers.forEach(c => {
-      let setFilters = filtersArr.filter(f => {
+      const setFilters = filtersArr.filter(f => {
         return f.filter !== "";
       });
-      let totalLine =
+      const totalLine =
         setFilters.length === 1 && setFilters[0].filter in College;
       c.marker.bindPopup(PopupText(c.name, filtersArr, totalLine));
     });
