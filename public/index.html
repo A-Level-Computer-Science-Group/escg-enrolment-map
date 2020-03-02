@@ -9,80 +9,6 @@
       crossorigin=""
     />
     <link rel="stylesheet" href="css/style.css" />
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-      }
-      main {
-        display: flex;
-        justify-content: flex-end;
-      }
-      section {
-        position: absolute;
-        z-index: 4;
-        width: 180px;
-        right: 25px;
-        top: 25px;
-      }
-      summary {
-        border-color: rgb(150, 0, 150);
-        border-style: solid;
-        border-width: 10px;
-        border-radius: 3px 3px 0px 0px;
-        cursor: pointer;
-        border-bottom-color: rgba(0, 0, 0, 0.3);
-        border-bottom-style: solid;
-        border-bottom-width: 0.5px;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        height: 65px;
-        background-color: rgb(150, 0, 150);
-        color: white;
-      }
-      #map {
-        width: 100vw;
-        height: 100vh;
-        position: absolute;
-        z-index: -1;
-      }
-      #noborder {
-        border-color: rgb(150, 0, 150);
-        border-style: solid;
-        border-width: 10px;
-        border-bottom: none;
-      }
-
-      select {
-        font-family: Arial, Helvetica, sans-serif;
-        width: 100%;
-        height: 50px;
-        background-color: white;
-      }
-
-      summary:hover {
-        color: rgba(0, 0, 0, 0.61);
-      }
-      label {
-        display: none;
-      }
-      a {
-        display: none;
-      }
-      #norounded {
-        border-radius: 0px;
-      }
-      #borderbottom {
-        border-radius: 0px 0px 3px 3px;
-      }
-
-      option {
-        border-width: 2px;
-        border-style: solid;
-        border-color: auto;
-        border-radius: 5px;
-      }
-    </style>
   </head>
   <body>
     <main>
@@ -97,7 +23,7 @@
           </select>
         </details>
         <details>
-          <summary id="norounded"><span>Course</span></summary>
+          <summary><span>Course</span></summary>
           <select onchange="setFilter('course', this.value)" id="course">
             <option value="none">None</option>
             <option value="alevel">A-level</option>
@@ -105,15 +31,12 @@
             <option value="appgeneral">Applied General</option>
           </select>
         </details>
-        <details>
-          <summary id="borderbottom"><span>College</span></summary>
-          <select onchange="setFilter('college', this.value)" id="college">
-            <option value="none">None</option>
-            <option value="eastbourne">Eastbourne</option>
-            <option value="lewes">Lewes</option>
-            <option value="hastings">Hastings</option>
-          </select>
-        </details>
+        <div>
+          <button onclick="setFilter('college', 'none')">None</button>
+          <button onclick="setFilter('college', 'eastbourne')">Eastbourne</button>
+          <button onclick="setFilter('college', 'lewes')">Lewes</button>
+          <button onclick="setFilter('college', 'hastings')">Hastings</button>
+        </div>
       </section>
     </main>
     <script>
