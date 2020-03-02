@@ -86,7 +86,17 @@ section div {
 button {
   padding: 0px;
   background-color: rgb(155, 0, 155);
+  border: rgb(155, 0, 155) 2px solid;
   color: white;
+  border-bottom-color: rgba(0, 0, 0, 0.3);
+  border-bottom-style: solid;
+  border-bottom-width: 0.5px;
+  cursor: pointer;
+  height: 60px;
+}
+
+button:last-child {
+  border-bottom: none;
 }
 .tick::before {
   content: "✔";
