@@ -41,7 +41,7 @@ import {
     // for each school, adjust the filtered radius and popups
     schoolMarkers.forEach(s => {
       s.filtered.setRadius(
-        calcRadius(applyFilters(LocalStudents(s.name)).length)
+        calcRadius(applyFilters(LocalStudents(s.name)).length, studentInfo)
       );
       s.total.bindPopup(PopupText(s.name, filtersArr, true));
     });
@@ -76,6 +76,7 @@ L.tileLayer(
 import { studentInfo } from "./RandomData";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
+import { Student } from "./student";
 
 // map variables
 const maxRadius: number = 1500;
@@ -100,12 +101,12 @@ schools.forEach(school => {
     stroke: false,
     fillColor: "#f03",
     fillOpacity: 0.5,
-    radius: calcRadius(filterCount)
+    radius: calcRadius(filterCount, studentInfo)
   }).addTo(mymap);
   const outlineMarker = L.circle(school.coords, {
     color: "red",
     fillOpacity: 0,
-    radius: calcRadius(schoolCount)
+    radius: calcRadius(schoolCount, studentInfo)
   }).addTo(mymap);
   outlineMarker.bindPopup(PopupText(school.name, filtersArr, true));
   schoolMarkers.push({
@@ -115,6 +116,6 @@ schools.forEach(school => {
   });
 });
 
-function calcRadius(students: number) {
-  return (students / studentInfo.length) * maxRadius;
+function calcRadius(filteredS: number, studentArr: Student[]) {
+  return (filteredS / studentArr.length) * maxRadius;
 }
