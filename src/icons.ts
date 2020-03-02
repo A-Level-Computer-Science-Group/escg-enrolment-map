@@ -12,7 +12,7 @@ export enum Colour {
  * @param colour Orange, green, blue, or purple.
  */
 export function newIcon(colour: Colour): L.Icon {
-  var newIcon = new L.Icon({
+  const i = new L.Icon({
     iconUrl:
       "https://cdn.rawgit.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-" +
       colour +
@@ -24,5 +24,5 @@ export function newIcon(colour: Colour): L.Icon {
     popupAnchor: [1, -34],
     shadowSize: [41, 41]
   });
-  return newIcon;
+  return i;
 }
