@@ -109,14 +109,14 @@ schools.forEach(school => {
   const schoolCount = LocalStudents(school.name).length;
   const filterCount = applyFilters(LocalStudents(school.name)).length;
   const transparentMarker = L.circle(school.coords, {
-    color: "red",
+    color: "purple",
     stroke: false,
-    fillColor: "#f03",
+    fillColor: "#960096",
     fillOpacity: 0.5,
     radius: calcRadius(filterCount, studentInfo)
   }).addTo(mymap);
   const outlineMarker = L.circle(school.coords, {
-    color: "red",
+    color: "purple",
     fillOpacity: 0,
     radius: calcRadius(schoolCount, studentInfo)
   }).addTo(mymap);
