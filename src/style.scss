@@ -93,11 +93,14 @@ button {
   border-bottom-width: 0.5px;
   cursor: pointer;
   height: 60px;
+  &:last-child {
+    border-bottom: none;
+  }
+  &:hover {
+    color: rgba(0, 0, 0, 0.61);
+  }
 }
 
-button:last-child {
-  border-bottom: none;
-}
 .tick::before {
   content: "✔";
   color: green;

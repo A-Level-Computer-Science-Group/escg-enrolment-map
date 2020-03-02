@@ -33,26 +33,22 @@
         </details>
         <div>
           <button
-            id="button-one"
-            onclick="tickToggle(this); setFilter('college', 'none')"
-          >
-            None
-          </button>
-          <button
+            onchange="buttonTick(this)"
             id="button-two"
-            onclick="tickToggle(this); setFilter('college', 'eastbourne')"
+            onclick="tickToggle(this); setFilter('college', 'eastbourne');buttonTick(this);"
           >
             Eastbourne
           </button>
           <button
             id="button-three"
-            onclick="tickToggle(this); setFilter('college', 'lewes')"
+            onclick="tickToggle(this); setFilter('college', 'lewes');buttonTick(this);"
           >
             Lewes
           </button>
           <button
+            onchange="buttonTick(this)"
             id="button-four"
-            onclick="tickToggle(this); setFilter('college', 'hastings')"
+            onclick="tickToggle(this); setFilter('college', 'hastings');buttonTick(this);"
           >
             Hastings
           </button>
@@ -83,6 +79,9 @@
       const tickToggle = element => {
         element.classList.toggle("tick");
         greyBackground();
+      };
+      const buttonTick = e => {
+        console.log("I just got ticked");
       };
     </script>
   </body>
