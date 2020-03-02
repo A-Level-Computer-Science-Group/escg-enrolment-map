@@ -38,7 +38,7 @@ import {
     // finalVal = the appropriate enumerator or an empty string if not found
     const finalVal = (myType as any)[newVal] ? (myType as any)[newVal] : "";
     myFilter.filter = finalVal;
-    // for each school, adjust the filtered radius and popups
+    // for each school, adjust the radius, colours and popups
     schoolMarkers.forEach(s => {
       const studentArr =
         LocalStudents(collegeFilter.filter as College).length !== 0
@@ -57,6 +57,35 @@ import {
           studentArr
         )
       );
+      // when college filter is changed set colours for all schools
+      if (filter === "college") {
+        let newColour: "purple" | "orange" | "green" | "blue";
+        let newHash: string | "#CB8427";
+        switch (newVal) {
+          case "eastbourne":
+            newColour = "orange";
+            newHash = "#dea400";
+            break;
+          case "lewes":
+            newColour = "blue";
+            newHash = "#0094ee";
+            break;
+          case "hastings":
+            newColour = "green";
+            newHash = "#5ede00";
+            break;
+          default:
+            newColour = "purple";
+            newHash = "#960096";
+            break;
+        }
+        [s.filtered, s.total].forEach(m => {
+          m.setStyle({
+            color: newColour,
+            fillColor: newHash
+          });
+        });
+      }
       s.total.bindPopup(PopupText(s.name, filtersArr, true));
     });
     // for each college, adjust the popups
