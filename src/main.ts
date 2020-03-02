@@ -125,13 +125,16 @@ import { studentInfo } from "./RandomData";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
 import { Student } from "./student";
+import * as I from "./icons";
 
 // map variables
 const maxRadius: number = 1500;
 
 // add ESCG Eastbourne to map
 const collegeMarkers = new Array<CollegeMarker>();
-const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
+const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392], {
+  icon: I.newIcon(I.Colour.orange)
+}).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
   PopupText(College.eastbourne, filtersArr, true)
 ).openPopup();
