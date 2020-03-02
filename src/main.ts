@@ -40,14 +40,26 @@ import {
     myFilter.filter = finalVal;
     // for each school, adjust the filtered radius and popups
     schoolMarkers.forEach(s => {
+      let studentArr =
+        LocalStudents(collegeFilter.filter as College).length !== 0
+          ? LocalStudents(collegeFilter.filter as College)
+          : studentInfo;
       s.filtered.setRadius(
-        calcRadius(applyFilters(LocalStudents(s.name)).length, studentInfo)
+        calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
+      );
+      s.total.setRadius(
+        calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
       );
       s.total.bindPopup(PopupText(s.name, filtersArr, true));
     });
     // for each college, adjust the popups
     collegeMarkers.forEach(c => {
-      c.marker.bindPopup(PopupText(c.name, filtersArr, true));
+      let setFilters = filtersArr.filter(f => {
+        f.filter !== "";
+      });
+      let totalLine =
+        setFilters.length === 1 && setFilters[0].filter in College;
+      c.marker.bindPopup(PopupText(c.name, filtersArr, totalLine));
     });
     return true;
   }
