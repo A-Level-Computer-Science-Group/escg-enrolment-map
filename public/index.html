@@ -32,16 +32,28 @@
           </select>
         </details>
         <div>
-          <button id="button-one" onclick="setFilter('college', 'none')">
+          <button
+            id="button-one"
+            onclick="tickToggle(this); setFilter('college', 'none')"
+          >
             None
           </button>
-          <button id="button-two" onclick="setFilter('college', 'eastbourne')">
+          <button
+            id="button-two"
+            onclick="tickToggle(this); setFilter('college', 'eastbourne')"
+          >
             Eastbourne
           </button>
-          <button id="button-three" onclick="setFilter('college', 'lewes')">
+          <button
+            id="button-three"
+            onclick="tickToggle(this); setFilter('college', 'lewes')"
+          >
             Lewes
           </button>
-          <button id="button-four" onclick="setFilter('college', 'hastings')">
+          <button
+            id="button-four"
+            onclick="tickToggle(this); setFilter('college', 'hastings')"
+          >
             Hastings
           </button>
         </div>
@@ -56,37 +68,21 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
-      const greyBackground = (number) => {
+      const greyBackground = () => {
         const x = document.querySelectorAll("button");
         x.forEach(element => {
-          if(!element.classList.contains("tick")){
-                element.style.backgroundColor = "rgb(155,0,155)";
-          }else {
+          if (!element.classList.contains("tick")) {
+            element.style.backgroundColor = "rgb(155,0,155)";
+            element.style.color = "white";
+          } else {
             element.style.backgroundColor = "#DDDDDD";
             element.style.color = "black";
           }
-        })
-      }
-      const setFilter = (college, collegeName) => {
-        switch (collegeName) {
-          case "none":
-            document.getElementById("button-one").classList.toggle("tick");
-            greyBackground("none");
-            break;
-          case "eastbourne":
-            document.getElementById("button-two").classList.toggle("tick");
-            greyBackground("one");
-            break;
-          case "lewes":
-            document.getElementById("button-three").classList.toggle("tick");
-            greyBackground("two");
-            break;
-          case "hastings":
-            document.getElementById("button-four").classList.toggle("tick");
-            greyBackground("three");
-            break;
-          default:;
-        }
+        });
+      };
+      const tickToggle = element => {
+        element.classList.toggle("tick");
+        greyBackground();
       };
     </script>
   </body>
