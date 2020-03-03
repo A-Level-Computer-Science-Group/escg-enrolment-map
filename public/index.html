@@ -107,6 +107,9 @@
           console.log(`I'm ticked`);
         } else {
           console.log(`I'm not ticked`);
+          e.classList.toggle("tick");
+          setFilter("college" , "none");
+          greyBackground();
         }
       };
     </script>
