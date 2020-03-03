@@ -26,3 +26,7 @@ To take best advantage of caching and to reduce the amount of data that has to b
 - To process the big data filtering the students and returning the number of students.
 - To cache the results of processing to greatly increase speeds of repeat requests.
 - To store and provide the coordinates of schools.
+
+## Language choice.
+
+The server will be written in typescript so that existing client side code can be easily moved to the server.
