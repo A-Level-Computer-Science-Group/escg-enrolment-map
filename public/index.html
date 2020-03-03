@@ -33,22 +33,23 @@
         </details>
         <div>
           <button
-            onchange="buttonTick(this)"
             id="button-two"
-            onclick="tickToggle(this); setFilter('college', 'eastbourne');buttonTick(this);"
+            onclick="tickToggle(this);buttonTick(this);"
+            value="Eastbourne"
           >
-            Eastbourne
+            Eastbournes
           </button>
           <button
             id="button-three"
-            onclick="tickToggle(this); setFilter('college', 'lewes');buttonTick(this);"
+            onclick="tickToggle(this);buttonTick(this);"
+            value="Lewes"
           >
             Lewes
           </button>
           <button
-            onchange="buttonTick(this)"
             id="button-four"
-            onclick="tickToggle(this); setFilter('college', 'hastings');buttonTick(this);"
+            onclick="tickToggle(this); buttonTick(this);"
+            value="Hastings"
           >
             Hastings
           </button>
@@ -64,7 +65,8 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
-      const greyBackground = () => {
+      let counter = 0;
+      const greyBackground = e => {
         const x = document.querySelectorAll("button");
         x.forEach(element => {
           if (!element.classList.contains("tick")) {
@@ -74,17 +76,36 @@
             element.style.backgroundColor = "#DDDDDD";
             element.style.color = "black";
           }
+          if (e) {
+            element.style.backgroundColor = "rgb(155,0,155)";
+            element.style.color = "white";
+          }
         });
       };
       const tickToggle = element => {
+        let counter = 0;
+        document.querySelectorAll("button").forEach(x => {
+          if (x.classList.contains("tick")) {
+            x.classList.toggle("tick");
+            setFilter("college", "none");
+            counter += 1;
+            if (counter > 1) {
+              x.classList.remove("tick");
+              greyBackground("none");
+            }
+          }
+        });
+        console.log(element.value);
+        setFilter("college", element.value.toLowerCase());
         element.classList.toggle("tick");
         element.classList.toggle("imticked");
         greyBackground();
+        counter = 0;
       };
       const buttonTick = e => {
-        if (e.classList.contains("imticked")){
+        if (e.classList.contains("imticked")) {
           console.log(`I'm ticked`);
-        }else {
+        } else {
           console.log(`I'm not ticked`);
         }
       };
