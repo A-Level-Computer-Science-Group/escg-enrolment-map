@@ -72,6 +72,7 @@
           if (!element.classList.contains("tick")) {
             element.style.backgroundColor = "rgb(155,0,155)";
             element.style.color = "white";
+            element.style.border = "rgb(155,0,155) 0.5px solid";
           } else {
             element.style.backgroundColor = "#DDDDDD";
             element.style.color = "black";
@@ -108,7 +109,7 @@
         } else {
           console.log(`I'm not ticked`);
           e.classList.toggle("tick");
-          setFilter("college" , "none");
+          setFilter("college", "none");
           greyBackground();
         }
       };
