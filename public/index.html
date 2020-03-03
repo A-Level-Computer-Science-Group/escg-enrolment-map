@@ -78,10 +78,15 @@
       };
       const tickToggle = element => {
         element.classList.toggle("tick");
+        element.classList.toggle("imticked");
         greyBackground();
       };
       const buttonTick = e => {
-        console.log("I just got ticked");
+        if (e.classList.contains("imticked")){
+          console.log(`I'm ticked`);
+        }else {
+          console.log(`I'm not ticked`);
+        }
       };
     </script>
   </body>
