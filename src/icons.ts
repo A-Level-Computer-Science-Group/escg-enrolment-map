@@ -9,6 +9,7 @@ export enum Colour {
 
 /**
  * Returns a high-quality marker with the specified colour.
+ * https://github.com/pointhi/leaflet-color-markers
  * @param colour Orange, green, blue, or purple.
  */
 export function newIcon(colour: Colour): L.Icon {
