@@ -1,4 +1,5 @@
 import * as L from "leaflet";
+import * as INIT from "./initialize";
 import { CourseType, SchoolName, Gender, College, Filters } from "./enums";
 import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
 import {
@@ -105,6 +106,12 @@ import {
 /* *** MAP STUFF *** */
 const mymap = L.map("map").setView([50.78829, 0.271392], 14);
 
+// get an array of all colleges as markers and add them to the map
+const collegeMarkers = INIT.Colleges();
+collegeMarkers.forEach(c => {
+  c.marker.addTo(mymap);
+});
+
 // add map tiles (can't use this commercially without buying an access key)
 L.tileLayer(
   "https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}",
@@ -125,20 +132,10 @@ import { studentInfo } from "./RandomData";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
 import { Student } from "./student";
-import * as I from "./icons";
 
 // map variables
 const maxRadius: number = 1500;
 
-// add ESCG Eastbourne to map
-const collegeMarkers = new Array<CollegeMarker>();
-const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392], {
-  icon: I.newIcon(I.Colour.orange)
-}).addTo(mymap);
-ESCG_EASTBOURNE.bindPopup(
-  PopupText(College.eastbourne, filtersArr, true)
-).openPopup();
-collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
 /*  create 2 markers for each school -
     - marker 1 total students - transparent radius
     - marker 2 filtered students - stroke only
