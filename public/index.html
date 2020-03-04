@@ -65,10 +65,11 @@
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
     <script>
-      let counter = 0;
+      // Takes HTML element
+      // Runs greyBackground function
+      // foreach button change style if ticked or not.
       const greyBackground = e => {
-        const x = document.querySelectorAll("button");
-        x.forEach(element => {
+        document.querySelectorAll("button").forEach(element => {
           if (!element.classList.contains("tick")) {
             element.style.backgroundColor = "rgb(155,0,155)";
             element.style.color = "white";
@@ -83,6 +84,10 @@
           }
         });
       };
+      /* Takes HTML element
+      foeach button if contains tick toggle tick class and setFilter to none. Increment counter.
+      If counter is > 1 then remove tick class.
+      */
       const tickToggle = element => {
         let counter = 0;
         document.querySelectorAll("button").forEach(x => {
@@ -96,6 +101,9 @@
             }
           }
         });
+        /*
+        when tickToggle called, setsFilter and toggles classes.
+        */
         console.log(element.value);
         setFilter("college", element.value.toLowerCase());
         element.classList.toggle("tick");
@@ -103,6 +111,11 @@
         greyBackground();
         counter = 0;
       };
+      /*
+      buttonTick called
+      logs to console I'm ticked or I'm not ticked.
+      If not ticked then toggles tick.
+      */
       const buttonTick = e => {
         if (e.classList.contains("imticked")) {
           console.log(`I'm ticked`);
