@@ -30,3 +30,5 @@ To take best advantage of caching and to reduce the amount of data that has to b
 ## Language choice.
 
 The server will be written in typescript so that existing client side code can be easily moved to the server.
+
+##### A more specific specification on particular technologies will be needed once this is approved.
