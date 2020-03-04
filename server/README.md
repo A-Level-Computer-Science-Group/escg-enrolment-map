@@ -2,7 +2,7 @@
 
 ## API example.
 
-`/api/student-data?gender=male&course=applied-general` should return.
+`/api/student-data?gender=male&course=applied-general,a-level` should return.
 
 ```json
 [
