@@ -1,5 +1,5 @@
 import * as L from "leaflet";
-import { CourseType, SchoolName, Gender, College } from "./enums";
+import { CourseType, SchoolName, Gender, College, Filters } from "./enums";
 import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
 import {
   SchoolMarker,
@@ -38,16 +38,64 @@ import {
     // finalVal = the appropriate enumerator or an empty string if not found
     const finalVal = (myType as any)[newVal] ? (myType as any)[newVal] : "";
     myFilter.filter = finalVal;
-    // for each school, adjust the filtered radius and popups
+    // for each school, adjust the radius, colours and popups
     schoolMarkers.forEach(s => {
+      const studentArr =
+        LocalStudents(collegeFilter.filter as College).length !== 0
+          ? LocalStudents(collegeFilter.filter as College)
+          : studentInfo;
       s.filtered.setRadius(
-        calcRadius(applyFilters(LocalStudents(s.name)).length)
+        calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
       );
+      // Applies school and college filters to outline radius
+      s.total.setRadius(
+        calcRadius(
+          LocalStudents(
+            s.name,
+            LocalStudents(collegeFilter.filter as Filters.college)
+          ).length,
+          studentArr
+        )
+      );
+      // when college filter is changed set colours for all schools
+      if (filter === "college") {
+        let newColour: "purple" | "orange" | "green" | "blue";
+        let newHash: string | "#CB8427";
+        switch (newVal) {
+          case "eastbourne":
+            newColour = "orange";
+            newHash = "#dea400";
+            break;
+          case "lewes":
+            newColour = "blue";
+            newHash = "#0094ee";
+            break;
+          case "hastings":
+            newColour = "green";
+            newHash = "#5ede00";
+            break;
+          default:
+            newColour = "purple";
+            newHash = "#960096";
+            break;
+        }
+        [s.filtered, s.total].forEach(m => {
+          m.setStyle({
+            color: newColour,
+            fillColor: newHash
+          });
+        });
+      }
       s.total.bindPopup(PopupText(s.name, filtersArr, true));
     });
     // for each college, adjust the popups
     collegeMarkers.forEach(c => {
-      c.marker.bindPopup(PopupText(c.name, filtersArr, true));
+      const setFilters = filtersArr.filter(f => {
+        return f.filter !== "";
+      });
+      const totalLine =
+        setFilters.length === 1 && setFilters[0].filter in College;
+      c.marker.bindPopup(PopupText(c.name, filtersArr, totalLine));
     });
     return true;
   }
@@ -76,13 +124,17 @@ L.tileLayer(
 import { studentInfo } from "./RandomData";
 import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
+import { Student } from "./student";
+import * as I from "./icons";
 
 // map variables
 const maxRadius: number = 1500;
 
 // add ESCG Eastbourne to map
 const collegeMarkers = new Array<CollegeMarker>();
-const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392]).addTo(mymap);
+const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392], {
+  icon: I.newIcon(I.Colour.orange)
+}).addTo(mymap);
 ESCG_EASTBOURNE.bindPopup(
   PopupText(College.eastbourne, filtersArr, true)
 ).openPopup();
@@ -96,16 +148,16 @@ schools.forEach(school => {
   const schoolCount = LocalStudents(school.name).length;
   const filterCount = applyFilters(LocalStudents(school.name)).length;
   const transparentMarker = L.circle(school.coords, {
-    color: "red",
+    color: "purple",
     stroke: false,
-    fillColor: "#f03",
+    fillColor: "#960096",
     fillOpacity: 0.5,
-    radius: calcRadius(filterCount)
+    radius: calcRadius(filterCount, studentInfo)
   }).addTo(mymap);
   const outlineMarker = L.circle(school.coords, {
-    color: "red",
+    color: "purple",
     fillOpacity: 0,
-    radius: calcRadius(schoolCount)
+    radius: calcRadius(schoolCount, studentInfo)
   }).addTo(mymap);
   outlineMarker.bindPopup(PopupText(school.name, filtersArr, true));
   schoolMarkers.push({
@@ -115,6 +167,6 @@ schools.forEach(school => {
   });
 });
 
-function calcRadius(students: number) {
-  return (students / studentInfo.length) * maxRadius;
+function calcRadius(filteredS: number, studentArr: Student[]) {
+  return (filteredS / studentArr.length) * maxRadius;
 }

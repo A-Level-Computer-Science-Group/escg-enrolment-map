@@ -69,16 +69,25 @@ export function Capitalize(s: string) {
   return s.slice(0, 1).toUpperCase() + s.slice(1);
 }
 
-export function LocalStudents(name: College | SchoolName): Student[] {
+/**
+ * Returns a student array that is filtered based on the name input.
+ * @param name Name of a school or college.
+ * @param students Optional. A student array to filter. Filters all students if not defined.
+ */
+export function LocalStudents(
+  name: College | SchoolName | Filters.college,
+  students?: Student[] | string
+): Student[] {
+  const studentArr = students && students !== "" ? students : studentInfo;
   if ((Object as any).values(SchoolName).includes(name)) {
-    return studentInfo.filter(s => {
+    return (studentArr as Student[]).filter(s => {
       return s.school === name;
     });
   } else if ((Object as any).values(College).includes(name)) {
-    return studentInfo.filter(s => {
+    return (studentArr as Student[]).filter(s => {
       return s.college === name;
     });
   } else {
-    return new Array<Student>();
+    return studentArr as Student[];
   }
 }
