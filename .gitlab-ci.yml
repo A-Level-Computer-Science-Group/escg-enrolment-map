@@ -20,7 +20,7 @@ build:
     - mv dist public
   artifacts:
     paths:
-      - public
+      - client/public
 
 tslint:
   stage: lint
