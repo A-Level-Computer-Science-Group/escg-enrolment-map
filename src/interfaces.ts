@@ -1,5 +1,5 @@
 import { College, CourseType, Filters, Gender, SchoolName } from "./enums";
-import { Marker, Circle } from "leaflet";
+import { Marker, Circle, LatLng } from "leaflet";
 import { applyFilters } from "./FILTERS";
 import { studentInfo } from "./RandomData";
 
@@ -10,6 +10,11 @@ export interface Student {
   college: College;
   postcode?: string;
   year?: number;
+}
+
+export interface School {
+  name: SchoolName;
+  coords: LatLng;
 }
 
 export interface Filter {

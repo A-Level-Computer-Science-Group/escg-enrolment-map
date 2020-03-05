@@ -1,5 +1,6 @@
 import * as L from "leaflet";
-import { CourseType, SchoolName, Gender, College, Filters } from "./enums";
+import * as INIT from "./initialize";
+import { CourseType, Gender, College, Filters } from "./enums";
 import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
 import {
   SchoolMarker,
@@ -90,12 +91,7 @@ import {
     });
     // for each college, adjust the popups
     collegeMarkers.forEach(c => {
-      const setFilters = filtersArr.filter(f => {
-        return f.filter !== "";
-      });
-      const totalLine =
-        setFilters.length === 1 && setFilters[0].filter in College;
-      c.marker.bindPopup(PopupText(c.name, filtersArr, totalLine));
+      c.marker.bindPopup(PopupText(c.name, filtersArr, true));
     });
     return true;
   }
@@ -122,51 +118,25 @@ L.tileLayer(
 
 // PULL IN SUPPLIED INFO AND FILTERS
 import { studentInfo } from "./RandomData";
-import { schools } from "./schools";
 import { filtersArr, applyFilters } from "./FILTERS";
 import { Student } from "./student";
-import * as I from "./icons";
 
 // map variables
 const maxRadius: number = 1500;
 
-// add ESCG Eastbourne to map
-const collegeMarkers = new Array<CollegeMarker>();
-const ESCG_EASTBOURNE = L.marker([50.78829, 0.271392], {
-  icon: I.newIcon(I.Colour.orange)
-}).addTo(mymap);
-ESCG_EASTBOURNE.bindPopup(
-  PopupText(College.eastbourne, filtersArr, true)
-).openPopup();
-collegeMarkers.push({ name: College.eastbourne, marker: ESCG_EASTBOURNE });
-/*  create 2 markers for each school -
-    - marker 1 total students - transparent radius
-    - marker 2 filtered students - stroke only
-*/
-const schoolMarkers = new Array<SchoolMarker>();
-schools.forEach(school => {
-  const schoolCount = LocalStudents(school.name).length;
-  const filterCount = applyFilters(LocalStudents(school.name)).length;
-  const transparentMarker = L.circle(school.coords, {
-    color: "purple",
-    stroke: false,
-    fillColor: "#960096",
-    fillOpacity: 0.5,
-    radius: calcRadius(filterCount, studentInfo)
-  }).addTo(mymap);
-  const outlineMarker = L.circle(school.coords, {
-    color: "purple",
-    fillOpacity: 0,
-    radius: calcRadius(schoolCount, studentInfo)
-  }).addTo(mymap);
-  outlineMarker.bindPopup(PopupText(school.name, filtersArr, true));
-  schoolMarkers.push({
-    name: school.name,
-    total: outlineMarker,
-    filtered: transparentMarker
-  });
+// get an array of all colleges as markers and add them to the map
+const collegeMarkers = INIT.Colleges();
+collegeMarkers.forEach(c => {
+  c.marker.addTo(mymap);
 });
 
-function calcRadius(filteredS: number, studentArr: Student[]) {
+// get an array of all schools as markers and add them to the map
+const schoolMarkers = INIT.Schools();
+schoolMarkers.forEach(s => {
+  s.filtered.addTo(mymap);
+  s.total.addTo(mymap);
+});
+
+export function calcRadius(filteredS: number, studentArr: Student[]) {
   return (filteredS / studentArr.length) * maxRadius;
 }
