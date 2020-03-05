@@ -1,5 +1,7 @@
 # ESCG Enrolment Map client
 
+To work on the client you must ensure that your working directory is pointing to the client folder. This can be achieved with the command `cd client`.
+
 ## Commands
 
 Always start by installing npm modules after a fresh clone.
@@ -10,7 +12,7 @@ npm install
 
 ### build
 
-Builds files to production files.       
+Builds files to production files.
 
 ```console
 npm run build
