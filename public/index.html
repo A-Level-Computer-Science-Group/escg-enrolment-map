@@ -31,18 +31,33 @@
             <option value="appgeneral">Applied General</option>
           </select>
         </details>
-        <details>
-          <summary><span>College</span></summary>
-          <select onchange="setFilter('college', this.value)" id="college">
-            <option value="none">None</option>
-            <option value="eastbourne">Eastbourne</option>
-            <option value="lewes">Lewes</option>
-            <option value="hastings">Hastings</option>
-          </select>
-        </details>
+        <div>
+          <button
+            id="button-two"
+            onclick="buttonToggle(this, true);"
+            value="Eastbourne"
+          >
+            Eastbourne
+          </button>
+          <button
+            id="button-three"
+            onclick="buttonToggle(this, true);"
+            value="Lewes"
+          >
+            Lewes
+          </button>
+          <button
+            id="button-four"
+            onclick="buttonToggle(this, true);"
+            value="Hastings"
+          >
+            Hastings
+          </button>
+        </div>
       </section>
     </main>
     <script>
+      // resets all filter visuals to "none"
       const menus = document.getElementsByTagName("select");
       Object.values(menus).forEach(e => {
         e.value = "none";
@@ -50,5 +65,64 @@
     </script>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // when a button is clicked it toggles ticked and grey and set specific filter
+      // if any other buttons are ticked, they are unticked
+      const buttonToggle = (e, filter) => {
+        toggleTick(e);
+        toggleGrey(e);
+        if (filter) {
+          updateFilter(e);
+        }
+        removeTicks(e);
+      };
+
+      // makes this button tick / untick
+      // has an optional override
+      const toggleTick = (e, forceUntick) => {
+        if (forceUntick) {
+          if (e.classList.contains("tick")) {
+            e.classList.remove("tick");
+          }
+        } else {
+          e.classList.toggle("tick");
+        }
+      };
+
+      // make this button grey / not grey
+      // has an optional override
+      const toggleGrey = (e, forceGrey) => {
+        // if ticked, make grey. else make purple
+        if (
+          (e.classList.contains("tick") && forceGrey !== false) ||
+          forceGrey
+        ) {
+          e.style.backgroundColor = "#DDDDDD";
+          e.style.color = "black";
+        } else {
+          e.style.backgroundColor = "rgb(155,0,155)";
+          e.style.color = "white";
+        }
+      };
+
+      // removes ticks of all but the supplied element
+      const removeTicks = e => {
+        document.querySelectorAll("button").forEach(elem => {
+          if (elem !== e) {
+            toggleTick(elem, true);
+            toggleGrey(elem, false);
+          }
+        });
+      };
+
+      // sets this buttons filter based on whether it was ticked / unticked
+      const updateFilter = e => {
+        if (e.classList.contains("tick")) {
+          setFilter("college", e.value.toLowerCase());
+        } else {
+          setFilter("college", "none");
+        }
+      };
+    </script>
   </body>
 </html>

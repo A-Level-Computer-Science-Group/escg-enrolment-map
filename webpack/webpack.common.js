@@ -6,7 +6,7 @@ const srcDir = "../src/";
 module.exports = {
   entry: {
     main: path.join(__dirname, srcDir + "main.ts"),
-    style: path.join(__dirname, srcDir + "style.scss")
+    style: path.join(__dirname, srcDir + "style.sass")
   },
   output: {
     path: path.join(__dirname, "../dist/js"),
@@ -27,7 +27,7 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.scss$/,
+        test: /\.sass$/,
         use: [
           {
             loader: "file-loader",
