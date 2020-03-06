@@ -25,12 +25,13 @@ export const toggleGrey = (e: HTMLButtonElement, forceGrey?: boolean) => {
 
 // removes ticks of all but the supplied element
 export const removeTicks = (e: HTMLButtonElement) => {
-  document.querySelectorAll("button").forEach(elem => {
-    if (elem !== e) {
-      toggleTick(elem, true);
-      toggleGrey(elem, false);
+  const allButtons = document.getElementsByClassName("collegeFilter");
+  for (let i = 0; i < allButtons.length; i++) {
+    if (allButtons[i] !== e) {
+      toggleTick(allButtons[i] as HTMLButtonElement, true);
+      toggleGrey(allButtons[i] as HTMLButtonElement, false);
     }
-  });
+  }
 };
 
 // sets this buttons filter based on whether it was ticked / unticked
