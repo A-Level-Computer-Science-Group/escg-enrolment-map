@@ -19,6 +19,7 @@ module.exports = {
     // Makes the bad front end work.
     //TODO
     //FIXME
-    "no-use-before-define": "warn"
+    "no-use-before-define": "warn",
+    "no-console": "warn"
   }
 };
