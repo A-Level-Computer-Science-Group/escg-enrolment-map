@@ -25,21 +25,24 @@
       </details>
       <div>
         <button
-          id="button-two" class="collegeFilter"
+          id="button-two"
+          class="collegeFilter"
           onclick="buttonToggle(this, true);"
           value="Eastbourne"
         >
           Eastbourne
         </button>
         <button
-          id="button-three" class="collegeFilter"
+          id="button-three"
+          class="collegeFilter"
           onclick="buttonToggle(this, true);"
           value="Lewes"
         >
           Lewes
         </button>
         <button
-          id="button-four" class="collegeFilter"
+          id="button-four"
+          class="collegeFilter"
           onclick="buttonToggle(this, true);"
           value="Hastings"
         >
