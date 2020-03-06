@@ -63,7 +63,6 @@ export default Vue.extend({
   mounted() {
     init();
 
-    console.log("hi");
     // resets all filter visuals to "none"
     const menus = document.getElementsByTagName("select");
     Object.values(menus).forEach(e => {
