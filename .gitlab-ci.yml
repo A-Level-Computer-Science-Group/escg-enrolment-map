@@ -23,7 +23,7 @@ build:
       - client/public
 
 lint:
-  stage: npm run lint --no-fix
+  stage: lint
   script:
     - npm i
-    - npm run lint
+    - npm run lint --no-fix
