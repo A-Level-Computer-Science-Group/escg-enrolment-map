@@ -15,9 +15,25 @@ import { studentInfo } from "./RandomData";
 import { filtersArr, applyFilters } from "./FILTERS";
 import { Student } from "./student";
 
+import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
+
 // map variables
 const maxRadius = 1500;
 export function init() {
+  /**
+   * When a button is clicked it toggles ticked and grey and set specific filter.
+   * If any other buttons are ticked, they are unticked.
+   * @param e The referenced HTML button.
+   * @param filter The string filter the button references.
+   */
+  (window as any).buttonToggle = (e: HTMLButtonElement, filter: string) => {
+    toggleTick(e);
+    toggleGrey(e);
+    if (filter) {
+      updateFilter(e);
+    }
+    removeTicks(e);
+  };
   /**
    * Returns a boolean to represent success.
    * The two parameters shall set the specified filter equal to the supplied value.
