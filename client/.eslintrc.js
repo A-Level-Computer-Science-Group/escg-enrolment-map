@@ -20,6 +20,7 @@ module.exports = {
     //TODO
     //FIXME
     "no-use-before-define": "warn",
-    "no-console": "warn"
+    "no-console": "warn",
+    "no-use-before-define": "warn"
   }
 };
