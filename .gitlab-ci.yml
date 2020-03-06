@@ -22,14 +22,8 @@ build:
     paths:
       - client/public
 
-tslint:
-  stage: lint
+lint:
+  stage: npm run lint --no-fix
   script:
     - npm i
     - npm run lint
-
-prettier:
-  stage: lint
-  script:
-    - npm i
-    - npm run check:format
