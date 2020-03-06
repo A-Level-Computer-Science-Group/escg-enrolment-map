@@ -9,6 +9,22 @@ import {
   CollegeMarker,
   Filter
 } from "./interfaces";
+import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
+
+/**
+ * When a button is clicked it toggles ticked and grey and set specific filter.
+ * If any other buttons are ticked, they are unticked.
+ * @param e The referenced HTML button.
+ * @param filter The string filter the button references.
+ */
+(window as any).buttonToggle = (e: HTMLButtonElement, filter: string) => {
+  toggleTick(e);
+  toggleGrey(e);
+  if (filter) {
+    updateFilter(e);
+  }
+  removeTicks(e);
+};
 
 /**
  * Returns a boolean to represent success.
