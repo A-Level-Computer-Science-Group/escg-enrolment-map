@@ -16,8 +16,10 @@ module.exports = {
   rules: {
     "no-console": process.env.NODE_ENV === "production" ? "error" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "error" : "off",
-    "no-use-before-define": "warn",
-    "no-console": "warn",
-    "no-use-before-define": "warn"
+    "no-use-before-define": ["warn"],
+    "no-console": ["warn"],
+    "no-use-before-define": ["warn"],
+    "@typescript-eslint/no-use-before-define": ["warn"],
+    "no-constant-condition": ["warn"]
   }
 };
