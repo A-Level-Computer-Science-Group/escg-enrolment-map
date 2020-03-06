@@ -24,9 +24,27 @@
         </select>
       </details>
       <div>
-        <button id="button-two" onclick="buttonToggle(this, true);" value="Eastbourne">Eastbourne</button>
-        <button id="button-three" onclick="buttonToggle(this, true);" value="Lewes">Lewes</button>
-        <button id="button-four" onclick="buttonToggle(this, true);" value="Hastings">Hastings</button>
+        <button
+          id="button-two"
+          onclick="buttonToggle(this, true);"
+          value="Eastbourne"
+        >
+          Eastbourne
+        </button>
+        <button
+          id="button-three"
+          onclick="buttonToggle(this, true);"
+          value="Lewes"
+        >
+          Lewes
+        </button>
+        <button
+          id="button-four"
+          onclick="buttonToggle(this, true);"
+          value="Hastings"
+        >
+          Hastings
+        </button>
       </div>
     </section>
   </div>
@@ -34,7 +52,7 @@
 
 <script lang="ts">
 import Vue from "vue";
-import {init} from "./scripts/main";
+import { init } from "./scripts/main";
 
 export default Vue.extend({
   name: "App",
