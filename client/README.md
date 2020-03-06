@@ -2,42 +2,26 @@
 
 To work on the client you must ensure that your working directory is pointing to the client folder. This can be achieved with the command `cd client`.
 
-## Commands
+## Project setup
 
-Always start by installing npm modules after a fresh clone.
-
-```console
-npm install
+```
+npm run install
 ```
 
-### build
+### Compiles and hot-reloads for development
 
-Builds files to production files.
+```
+npm run serve
+```
 
-```console
+### Compiles and minifies for production
+
+```
 npm run build
 ```
 
-### watch
+### Lints and fixes files
 
-Builds files in development mode then watches for changes updating each time you save.
-
-```console
-npm run watch
 ```
-
-### lint
-
-Runs tslint to find typescript code smells.
-
-```console
 npm run lint
-```
-
-### format
-
-Runs prettier to clean up code formatting.
-
-```console
-npm run format
 ```
