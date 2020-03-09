@@ -1,44 +1,34 @@
 {
-  "name": "escg-enrolment-map",
-  "version": "0.0.1",
-  "description": "",
+  "name": "escg-enrolment-map-client",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
-    "build": "webpack --config webpack/webpack.prod.js",
-    "lint": "tslint -c tslint.json 'src/**/*.ts'",
-    "format": "prettier --write 'src/**/*.ts' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
-    "check:format": "prettier -c 'src/**/*.ts' 'webpack/**/*.js' 'public/**/*.html' 'package.json' 'postcss.config.json' 'tsconfig.json' 'tslint.json' '.gitlab-ci.yaml'",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/a-level-computer-science-group/escg-enrolment-map.git"
-  },
-  "author": "Ethan Brierley, Layton Burchell, and Mehran and Arman Sattarzadeh of the ESCG Eastbourne Year 1 Computer Science students",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map/issues"
-  },
-  "homepage": "https://gitlab.com/a-level-computer-science-group/escg-enrolment-map#readme",
-  "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "copy-webpack-plugin": "^5.1.1",
-    "expose-loader": "^0.7.5",
-    "extract-loader": "^4.0.3",
-    "postcss-loader": "^3.0.0",
-    "prettier": "1.19.1",
-    "sass": "^1.25.0",
-    "sass-loader": "^8.0.2",
-    "styles-loader": "^1.0.2",
-    "ts-loader": "^6",
-    "tslint": "^6.0.0",
-    "typescript": "^3",
-    "webpack": "^4",
-    "webpack-cli": "^3",
-    "webpack-merge": "^4"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11",
     "@types/leaflet": "^1.5.8",
     "leaflet": "^1.6.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-plugin-eslint": "^4.2.0",
+    "@vue/cli-plugin-typescript": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^5.0.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-vue": "^6.1.2",
+    "prettier": "^1.19.1",
+    "sass": "^1.25.0",
+    "sass-loader": "^8.0.2",
+    "typescript": "~3.7.5",
+    "vue-template-compiler": "^2.6.11"
   }
 }
