@@ -4,6 +4,9 @@ cache:
   paths:
     - node_modules/
 
+before_script:
+  - cd client
+
 stages:
   - build
   - lint
@@ -17,7 +20,7 @@ build:
     - mv dist public
   artifacts:
     paths:
-      - public
+      - client/public
 
 tslint:
   stage: lint
