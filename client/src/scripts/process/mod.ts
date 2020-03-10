@@ -80,6 +80,27 @@ const getStudents = (
       console.log(o.name + ": " + o.population + " | " + o.filteredPop);
     });
     return output;
+  },
+
+  /**
+   * Returns an array of college names, relevant map coordinates,
+   * a colour, and two numbers - one a total and the other filtered.
+   * @param filterArr An array of filters to apply.
+   */
+  getColleges: (filterArr: Filter[]): CollegeObject[] => {
+    const output = new Array<CollegeObject>();
+    Colleges.forEach(c => {
+      filterArr.push({ type: Filters.college, filter: c.name });
+      output.push({
+        name: c.name,
+        coords: c.coords,
+        colour: c.colour,
+        // filter by college name only
+        population: localStudents(c.name).length,
+        filteredPop: proFilter(filterArr).length
+      });
+    });
+    return output;
   }
   return new Array<LocationObject>();
 };
