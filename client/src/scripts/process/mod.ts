@@ -7,7 +7,7 @@ import { LatLngExpression } from "leaflet";
 
 export const FILTER = {
   /**
-   * Returns an array of school names, relevant map coordinates, 
+   * Returns an array of school names, relevant map coordinates,
    * and a filtered count of students attending the school.
    * @param filterArr An array of filters to apply.
    */
