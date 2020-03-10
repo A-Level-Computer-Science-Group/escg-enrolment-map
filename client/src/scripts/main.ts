@@ -132,13 +132,13 @@ export function init() {
   }).addTo(mymap);
 
   // get an array of all colleges as markers and add them to the map
-  const collegeMarkers = INIT.Colleges();
+  const collegeMarkers = INIT.CollegesOld();
   collegeMarkers.forEach(c => {
     c.marker.addTo(mymap);
   });
 
   // get an array of all schools as markers and add them to the map
-  const schoolMarkers = INIT.Schools();
+  const schoolMarkers = INIT.SchoolsOld();
   schoolMarkers.forEach(s => {
     s.filtered.addTo(mymap);
     s.total.addTo(mymap);
