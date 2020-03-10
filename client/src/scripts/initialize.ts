@@ -3,14 +3,16 @@ import * as I from "./icons";
 import { filtersArr, applyFiltersOld } from "./process/mod";
 import {
   CollegeMarker,
-  PopupText,
+  PopupTextOld,
   Student,
   SchoolMarker,
-  LocalStudents
+  LocalStudentsOld
 } from "./interfaces";
 import { CollegeName, SchoolName } from "./enums";
 import { Students } from "./process/students";
 import { calcRadius } from "./main";
+
+import { FILTER } from "./process/mod";
 
 /**
  * Returns an array of CollegeMarker objects that are not yet added to the map.
@@ -31,7 +33,7 @@ function makeCollege(
   const newCol = L.marker(coords, {
     icon: I.newIcon(colour)
   });
-  newCol.bindPopup(PopupText(colName, filtersArr, true));
+  newCol.bindPopup(PopupTextOld(colName, filtersArr, true));
   return { name: colName, marker: newCol };
 }
 
@@ -47,8 +49,8 @@ export function SchoolsOld() {
 
 function makeSchool(schName: SchoolName, coords: L.LatLngExpression) {
   // create 2 markers for each school -
-  const schoolCount = LocalStudents(schName).length;
-  const filterCount = applyFiltersOld(LocalStudents(schName)).length;
+  const schoolCount = LocalStudentsOld(schName).length;
+  const filterCount = applyFiltersOld(LocalStudentsOld(schName)).length;
   // total students - transparent radius
   const transparentMarker = L.circle(coords, {
     color: "purple",
@@ -63,7 +65,7 @@ function makeSchool(schName: SchoolName, coords: L.LatLngExpression) {
     fillOpacity: 0,
     radius: calcRadius(schoolCount, Students)
   });
-  outlineMarker.bindPopup(PopupText(schName, filtersArr, true));
+  outlineMarker.bindPopup(PopupTextOld(schName, filtersArr, true));
   return {
     name: schName,
     filtered: transparentMarker,

@@ -4,8 +4,8 @@ import { CourseType, Gender, CollegeName, Filters } from "./enums";
 import { courseFilter, genderFilter, collegeFilter } from "./process/mod";
 import {
   SchoolMarker,
-  PopupText,
-  LocalStudents,
+  PopupTextOld,
+  LocalStudentsOld,
   CollegeMarker,
   Filter
 } from "./interfaces";
@@ -66,18 +66,18 @@ export function init() {
       // for each school, adjust the radius, colours and popups
       schoolMarkers.forEach(s => {
         const studentArr =
-          LocalStudents(collegeFilter.filter as CollegeName).length !== 0
-            ? LocalStudents(collegeFilter.filter as CollegeName)
+          LocalStudentsOld(collegeFilter.filter as CollegeName).length !== 0
+            ? LocalStudentsOld(collegeFilter.filter as CollegeName)
             : Students;
         s.filtered.setRadius(
-          calcRadius(applyFiltersOld(LocalStudents(s.name)).length, studentArr)
+          calcRadius(applyFiltersOld(LocalStudentsOld(s.name)).length, studentArr)
         );
         // Applies school and college filters to outline radius
         s.total.setRadius(
           calcRadius(
-            LocalStudents(
+            LocalStudentsOld(
               s.name,
-              LocalStudents(collegeFilter.filter as Filters.college)
+              LocalStudentsOld(collegeFilter.filter as Filters.college)
             ).length,
             studentArr
           )
@@ -111,11 +111,11 @@ export function init() {
             });
           });
         }
-        s.total.bindPopup(PopupText(s.name, filtersArr, true));
+        s.total.bindPopup(PopupTextOld(s.name, filtersArr, true));
       });
       // for each college, adjust the popups
       collegeMarkers.forEach(c => {
-        c.marker.bindPopup(PopupText(c.name, filtersArr, true));
+        c.marker.bindPopup(PopupTextOld(c.name, filtersArr, true));
       });
       return true;
     }

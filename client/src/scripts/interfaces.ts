@@ -44,7 +44,7 @@ export const Capitalize = (s: string) => {
   return s.slice(0, 1).toUpperCase() + s.slice(1);
 };
 
-const getDescriptors = (filtersArr: Filter[]) => {
+const getDescriptorsOld = (filtersArr: Filter[]) => {
   let descriptors = "";
   // capitalize the first letter of each filter and add it to the string
   filtersArr.forEach(f => {
@@ -64,7 +64,7 @@ const getDescriptors = (filtersArr: Filter[]) => {
  * @param name Name of a school or college.
  * @param students Optional. A student array to filter. Filters all students if not defined.
  */
-export const LocalStudents = (
+export const LocalStudentsOld = (
   name: CollegeName | SchoolName | Filters.college,
   students?: Student[] | string
 ): Student[] => {
@@ -82,7 +82,7 @@ export const LocalStudents = (
   }
 };
 
-export const PopupText = (
+export const PopupTextOld = (
   name: CollegeName | SchoolName,
   filters: Filter[],
   totalLine?: boolean
@@ -91,15 +91,15 @@ export const PopupText = (
   if (name) {
     output += "<b>" + name + "</b>";
   }
-  if (totalLine && getDescriptors(filters) !== "Total ") {
-    output += "<br>" + "Total Students: " + LocalStudents(name).length;
+  if (totalLine && getDescriptorsOld(filters) !== "Total ") {
+    output += "<br>" + "Total Students: " + LocalStudentsOld(name).length;
   }
   if (filters) {
     output +=
       "<br>" +
-      getDescriptors(filters) +
+      getDescriptorsOld(filters) +
       "Students: " +
-      applyFiltersOld(LocalStudents(name), filters).length;
+      applyFiltersOld(LocalStudentsOld(name), filters).length;
   }
   return output;
 };
