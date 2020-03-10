@@ -87,18 +87,44 @@ const getStudents = (
    * a colour, and two numbers - one a total and the other filtered.
    * @param filterArr An array of filters to apply.
    */
-  getColleges: (filterArr: Filter[]): CollegeObject[] => {
-    const output = new Array<CollegeObject>();
-    Colleges.forEach(c => {
-      filterArr.push({ type: Filters.college, filter: c.name });
+  getColleges: (filterArr: Filter[]): LocationObject[] => {
+    return getStudents(filterArr, "college");
+  }
+};
+
+/**
+ * Returns an array of objects, each with a location name, relevant map coordinates,
+ * two counts of students attending the school (one a total and the other
+ * filtered), and optionally a colour.
+ * @param filterArr An array of filters to be applied.
+ * @param location A string to define which location is having its students listed.
+ */
+const getStudents = (
+  filterArr: Filter[],
+  location: "school" | "college"
+): LocationObject[] => {
+  const output = new Array<LocationObject>();
+  const locations =
+    location === "school"
+      ? Schools
+      : location === "college"
+      ? Colleges
+      : undefined;
+  if (locations !== undefined) {
+    locations.forEach((l: College | School) => {
+      // add location to filters
+      filterArr.push({ type: Filters[location], filter: l.name });
+      const colour: Colour | undefined = (l as College).colour;
       output.push({
-        name: c.name,
-        coords: c.coords,
-        colour: c.colour,
-        // filter by college name only
-        population: localStudents(c.name).length,
-        filteredPop: proFilter(filterArr).length
+        name: l.name,
+        coords: l.coords,
+        // filter by location name only
+        population: localStudents(l.name).length,
+        filteredPop: applyFilters(filterArr).length,
+        colour: colour
       });
+      // remove location from filters
+      filterArr.pop();
     });
     return output;
   }
