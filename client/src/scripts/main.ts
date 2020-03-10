@@ -1,7 +1,7 @@
 import * as L from "leaflet";
 import * as INIT from "./initialize";
-import { CourseType, Gender, College, Filters } from "./enums";
-import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
+import { CourseType, Gender, CollegeName, Filters } from "./enums";
+import { courseFilter, genderFilter, collegeFilter } from "./process/mod";
 import {
   SchoolMarker,
   PopupText,
@@ -11,9 +11,9 @@ import {
 } from "./interfaces";
 
 // PULL IN SUPPLIED INFO AND FILTERS
-import { studentInfo } from "./RandomData";
-import { filtersArr, applyFilters } from "./FILTERS";
-import { Student } from "./student";
+import { Students } from "./process/students";
+import { filtersArr, applyFilters } from "./process/mod";
+import { Student } from "./interfaces";
 
 import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
 
@@ -54,7 +54,7 @@ export function init() {
         break;
       case "college":
         myFilter = collegeFilter;
-        myType = College;
+        myType = CollegeName;
         break;
       default:
         return false;
@@ -66,9 +66,9 @@ export function init() {
       // for each school, adjust the radius, colours and popups
       schoolMarkers.forEach(s => {
         const studentArr =
-          LocalStudents(collegeFilter.filter as College).length !== 0
-            ? LocalStudents(collegeFilter.filter as College)
-            : studentInfo;
+          LocalStudents(collegeFilter.filter as CollegeName).length !== 0
+            ? LocalStudents(collegeFilter.filter as CollegeName)
+            : Students;
         s.filtered.setRadius(
           calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
         );

@@ -1,29 +1,36 @@
-import { College, CourseType, Filters, Gender, SchoolName } from "./enums";
-import { Marker, Circle, LatLng } from "leaflet";
-import { applyFilters } from "./FILTERS";
-import { studentInfo } from "./RandomData";
+import { CollegeName, CourseType, Filters, Gender, SchoolName } from "./enums";
+import { Marker, Circle, LatLng, LatLngExpression } from "leaflet";
+import { applyFilters } from "./process/mod";
+import { Students } from "./process/students";
+import { Colour } from "./icons";
 
 export interface Student {
   gender: Gender;
   course: CourseType;
   school: SchoolName;
-  college: College;
+  college: CollegeName;
   postcode?: string;
   year?: number;
 }
 
 export interface School {
   name: SchoolName;
-  coords: LatLng;
+  coords: LatLngExpression;
+}
+
+export interface College {
+  name: CollegeName;
+  coords: LatLngExpression;
+  colour: Colour;
 }
 
 export interface Filter {
   type: Filters;
-  filter: CourseType | Gender | College | "";
+  filter: CourseType | Gender | CollegeName | SchoolName | "";
 }
 
 export interface CollegeMarker {
-  name: College;
+  name: CollegeName;
   marker: Marker;
 }
 
@@ -34,7 +41,7 @@ export interface SchoolMarker {
 }
 
 export function PopupText(
-  name: College | SchoolName,
+  name: CollegeName | SchoolName,
   filters: Filter[],
   totalLine?: boolean
 ): string {
@@ -80,15 +87,15 @@ export function Capitalize(s: string) {
  * @param students Optional. A student array to filter. Filters all students if not defined.
  */
 export function LocalStudents(
-  name: College | SchoolName | Filters.college,
+  name: CollegeName | SchoolName | Filters.college,
   students?: Student[] | string
 ): Student[] {
-  const studentArr = students && students !== "" ? students : studentInfo;
+  const studentArr = students && students !== "" ? students : Students;
   if ((Object as any).values(SchoolName).includes(name)) {
     return (studentArr as Student[]).filter(s => {
       return s.school === name;
     });
-  } else if ((Object as any).values(College).includes(name)) {
+  } else if ((Object as any).values(CollegeName).includes(name)) {
     return (studentArr as Student[]).filter(s => {
       return s.college === name;
     });

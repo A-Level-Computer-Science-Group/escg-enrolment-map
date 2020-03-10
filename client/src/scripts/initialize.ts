@@ -1,6 +1,6 @@
 import * as L from "leaflet";
 import * as I from "./icons";
-import { filtersArr, applyFilters } from "./FILTERS";
+import { filtersArr, applyFilters } from "./process/mod";
 import {
   CollegeMarker,
   PopupText,
@@ -8,8 +8,8 @@ import {
   SchoolMarker,
   LocalStudents
 } from "./interfaces";
-import { College, SchoolName } from "./enums";
-import { studentInfo } from "./RandomData";
+import { CollegeName, SchoolName } from "./enums";
+import { Students } from "./process/students";
 import { calcRadius } from "./main";
 
 /**
@@ -17,14 +17,14 @@ import { calcRadius } from "./main";
  */
 export function Colleges() {
   return new Array<CollegeMarker>(
-    makeCollege(College.eastbourne, [50.78829, 0.271392], I.Colour.orange),
-    makeCollege(College.lewes, [50.870314, 0.015465], I.Colour.blue),
-    makeCollege(College.hastings, [50.85811, 0.577994], I.Colour.green)
+    makeCollege(CollegeName.eastbourne, [50.78829, 0.271392], I.Colour.orange),
+    makeCollege(CollegeName.lewes, [50.870314, 0.015465], I.Colour.blue),
+    makeCollege(CollegeName.hastings, [50.85811, 0.577994], I.Colour.green)
   );
 }
 
 function makeCollege(
-  colName: College,
+  colName: CollegeName,
   coords: L.LatLngExpression,
   colour: I.Colour
 ) {
@@ -55,13 +55,13 @@ function makeSchool(schName: SchoolName, coords: L.LatLngExpression) {
     stroke: false,
     fillColor: "#960096",
     fillOpacity: 0.5,
-    radius: calcRadius(filterCount, studentInfo)
+    radius: calcRadius(filterCount, Students)
   });
   // filtered students - stroke only
   const outlineMarker = L.circle(coords, {
     color: "purple",
     fillOpacity: 0,
-    radius: calcRadius(schoolCount, studentInfo)
+    radius: calcRadius(schoolCount, Students)
   });
   outlineMarker.bindPopup(PopupText(schName, filtersArr, true));
   return {

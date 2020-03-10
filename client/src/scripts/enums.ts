@@ -1,4 +1,4 @@
-export enum College {
+export enum CollegeName {
   eastbourne = "ESCG Eastbourne",
   hastings = "ESCG Hastings",
   lewes = "ESCG Lewes"
@@ -23,5 +23,8 @@ export enum Gender {
 export enum Filters {
   college = "college",
   course = "course",
-  gender = "gender"
+  gender = "gender",
+  school = "school",
+  postcode = "postcode",
+  year = "year"
 }
