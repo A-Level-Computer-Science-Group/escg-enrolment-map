@@ -11,8 +11,49 @@ import {
 import { CollegeName, SchoolName } from "./enums";
 import { Students } from "./process/students";
 import { calcRadius } from "./main";
-
 import { FILTER } from "./process/mod";
+
+/**
+ * Returns an array of college markers that are not yet added to the map.
+ */
+export const initColleges = (): L.Marker[] => {
+  const output = new Array<L.Marker>();
+  FILTER.getColleges(filtersArr).forEach(c => {
+    output.push(new L.Marker(c.coords, {
+      icon: I.newIcon(c.colour as I.Colour)
+    }).bindPopup(PopupTextOld(c.name, filtersArr, true)));
+  });
+  return output;
+};
+
+/**
+ * Returns an array of school markers that are not yet added to the map.
+ */
+export const initSchools = (): L.CircleMarker[] => {
+  const output = new Array<L.CircleMarker>();
+  FILTER.getSchools(filtersArr).forEach(s => {
+    // create 2 markers for each school
+    // filtered students - transparent radius
+    output.push(
+      L.circle(s.coords, {
+        color: "purple",
+        stroke: false,
+        fillColor: "#960096",
+        fillOpacity: 0.5,
+        radius: s.filteredPop
+      })
+    );
+    // total students - stroke only
+    output.push(
+      L.circle(s.coords, {
+        color: "purple",
+        fillOpacity: 0,
+        radius: s.population
+      }).bindPopup(PopupTextOld(s.name, filtersArr, true))
+    );
+  });
+  return output;
+};
 
 /**
  * Returns an array of CollegeMarker objects that are not yet added to the map.
