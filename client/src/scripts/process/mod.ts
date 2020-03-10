@@ -6,19 +6,12 @@ import { Schools } from "./schools";
 import { LatLngExpression } from "leaflet";
 import { Colour } from "../icons";
 
-interface SchoolObject {
-  name: SchoolName;
+interface LocationObject {
+  name: SchoolName | CollegeName;
   coords: LatLngExpression;
   population: number;
   filteredPop: number;
-}
-
-interface CollegeObject {
-  name: CollegeName;
-  coords: LatLngExpression;
-  colour: Colour;
-  population: number;
-  filteredPop: number;
+  colour?: Colour;
 }
 
 export const FILTER = {
@@ -27,20 +20,8 @@ export const FILTER = {
    * counts of students attending the school - one a total and the other filtered.
    * @param filterArr An array of filters to apply.
    */
-  getSchools: (filterArr: Filter[]): SchoolObject[] => {
-    const output = new Array<SchoolObject>();
-    Schools.forEach(s => {
-      filterArr.push({ type: Filters.school, filter: s.name });
-      output.push({
-        name: s.name,
-        coords: s.coords,
-        // filter by school name only
-        population: localStudents(s.name).length,
-        filteredPop: proFilter(filterArr).length
-      });
-      filterArr.pop();
-    });
-    return output;
+  getSchools: (filterArr: Filter[]): LocationObject[] => {
+    return getStudents(filterArr, "school");
   },
 
   /**
@@ -48,25 +29,52 @@ export const FILTER = {
    * a colour, and two numbers - one a total and the other filtered.
    * @param filterArr An array of filters to apply.
    */
-  getColleges: (filterArr: Filter[]): CollegeObject[] => {
-    const output = new Array<CollegeObject>();
-    Colleges.forEach(c => {
-      filterArr.push({ type: Filters.college, filter: c.name });
-      output.push({
-        name: c.name,
-        coords: c.coords,
-        colour: c.colour,
-        // filter by college name only
-        population: localStudents(c.name).length,
-        filteredPop: proFilter(filterArr).length
-      });
-    });
-    return output;
+  getColleges: (filterArr: Filter[]): LocationObject[] => {
+    return getStudents(filterArr, "college");
   }
 };
 
 /**
- * Returns a student array that is filtered based on the location input.
+ * Returns an array of objects, each with a location name, relevant map coordinates,
+ * two counts of students attending the school (one a total and the other
+ * filtered), and optionally a colour.
+ * @param filterArr An array of filters to be applied.
+ * @param location A string to define which location is having its students listed.
+ */
+const getStudents = (
+  filterArr: Filter[],
+  location: "school" | "college"
+): LocationObject[] => {
+  const output = new Array<LocationObject>();
+  const locations =
+    location === "school"
+      ? Schools
+      : location === "college"
+      ? Colleges
+      : undefined;
+  if (locations !== undefined) {
+    locations.forEach((l: College | School) => {
+      // add location to filters
+      filterArr.push({ type: Filters[location], filter: l.name });
+      const colour: Colour | undefined = (l as College).colour;
+      output.push({
+        name: l.name,
+        coords: l.coords,
+        // filter by location name only
+        population: localStudents(l.name).length,
+        filteredPop: applyFilters(filterArr).length,
+        colour: colour
+      });
+      // remove location from filters
+      filterArr.pop();
+    });
+    return output;
+  }
+  return new Array<LocationObject>();
+};
+
+/**
+ * Returns a student array that is filtered based on the location input only.
  * @param location Name of a school or college.
  */
 const localStudents = (location: SchoolName | CollegeName): Student[] => {
@@ -89,7 +97,7 @@ const localStudents = (location: SchoolName | CollegeName): Student[] => {
  * Returns an array of students that match all filters.
  * @param filterArr An array of all filters.
  */
-const proFilter = (filterArr: Filter[]): Student[] => {
+const applyFilters = (filterArr: Filter[]): Student[] => {
   // remove blank filters
   const fArr = filterArr.filter(f => {
     return f.filter !== "";
@@ -148,7 +156,7 @@ export const LocalStudentsOld = (
  * @param studentsArr A supplied or automatically gathered array of students.
  * @param filters An array of filters.
  */
-export const applyFilters = (studentsArr: Student[], filters?: Filter[]) => {
+export const applyFiltersOld = (studentsArr: Student[], filters?: Filter[]) => {
   if (!filters) {
     filters = filtersArr;
   }

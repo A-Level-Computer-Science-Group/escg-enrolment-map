@@ -1,6 +1,6 @@
 import * as L from "leaflet";
 import * as I from "./icons";
-import { filtersArr, applyFilters } from "./process/mod";
+import { filtersArr, applyFiltersOld } from "./process/mod";
 import {
   CollegeMarker,
   PopupText,
@@ -48,7 +48,7 @@ export function Schools() {
 function makeSchool(schName: SchoolName, coords: L.LatLngExpression) {
   // create 2 markers for each school -
   const schoolCount = LocalStudents(schName).length;
-  const filterCount = applyFilters(LocalStudents(schName)).length;
+  const filterCount = applyFiltersOld(LocalStudents(schName)).length;
   // total students - transparent radius
   const transparentMarker = L.circle(coords, {
     color: "purple",

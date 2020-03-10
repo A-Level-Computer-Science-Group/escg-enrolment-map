@@ -1,6 +1,6 @@
 import { CollegeName, CourseType, Filters, Gender, SchoolName } from "./enums";
 import { Marker, Circle, LatLngExpression } from "leaflet";
-import { applyFilters } from "./process/mod";
+import { applyFiltersOld } from "./process/mod";
 import { Students } from "./process/students";
 import { Colour } from "./icons";
 
@@ -99,7 +99,7 @@ export const PopupText = (
       "<br>" +
       getDescriptors(filters) +
       "Students: " +
-      applyFilters(LocalStudents(name), filters).length;
+      applyFiltersOld(LocalStudents(name), filters).length;
   }
   return output;
 };

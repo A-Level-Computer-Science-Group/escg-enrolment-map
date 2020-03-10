@@ -12,7 +12,7 @@ import {
 
 // PULL IN SUPPLIED INFO AND FILTERS
 import { Students } from "./process/students";
-import { filtersArr, applyFilters } from "./process/mod";
+import { filtersArr, applyFiltersOld } from "./process/mod";
 import { Student } from "./interfaces";
 
 import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
@@ -70,7 +70,7 @@ export function init() {
             ? LocalStudents(collegeFilter.filter as CollegeName)
             : Students;
         s.filtered.setRadius(
-          calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
+          calcRadius(applyFiltersOld(LocalStudents(s.name)).length, studentArr)
         );
         // Applies school and college filters to outline radius
         s.total.setRadius(
