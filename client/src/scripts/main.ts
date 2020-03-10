@@ -125,8 +125,8 @@ export function init() {
     return false;
   };
 
-/* *** MAP STUFF *** */
-const mymap = L.map("map").setView([50.78829, 0.271392], 14);
+  /* *** MAP STUFF *** */
+  const mymap = L.map("map").setView([50.78829, 0.271392], 14);
 
   // add map tiles (can't use this commercially without buying an access key)
   L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
