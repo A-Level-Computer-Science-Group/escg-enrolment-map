@@ -4,32 +4,106 @@ import { Colleges } from "./colleges";
 import { Students } from "./students";
 import { Schools } from "./schools";
 import { LatLngExpression } from "leaflet";
+import { Colour } from "../icons";
+
+interface SchoolObject {
+  name: SchoolName;
+  coords: LatLngExpression;
+  population: number;
+  filteredPop: number;
+}
+
+interface CollegeObject {
+  name: CollegeName;
+  coords: LatLngExpression;
+  colour: Colour;
+  population: number;
+  filteredPop: number;
+}
 
 export const FILTER = {
   /**
-   * Returns an array of school names, relevant map coordinates,
-   * and a filtered count of students attending the school.
+   * Returns an array of school names, relevant map coordinates, and two
+   * counts of students attending the school - one a total and the other filtered.
    * @param filterArr An array of filters to apply.
    */
-  getSchools: (
-    filterArr: Filter[]
-  ): { name: SchoolName; coords: LatLngExpression; population: number }[] => {
-    const output = new Array<{
-      name: SchoolName;
-      coords: LatLngExpression;
-      population: number;
-    }>();
+  getSchools: (filterArr: Filter[]): SchoolObject[] => {
+    const output = new Array<SchoolObject>();
     Schools.forEach(s => {
       filterArr.push({ type: Filters.school, filter: s.name });
       output.push({
         name: s.name,
         coords: s.coords,
-        population: proFilter(filterArr).length
+        // filter by school name only
+        population: localStudents(s.name).length,
+        filteredPop: proFilter(filterArr).length
       });
       filterArr.pop();
     });
     return output;
+  },
+
+  /**
+   * Returns an array of college names, relevant map coordinates,
+   * a colour, and two numbers - one a total and the other filtered.
+   * @param filterArr An array of filters to apply.
+   */
+  getColleges: (filterArr: Filter[]): CollegeObject[] => {
+    const output = new Array<CollegeObject>();
+    Colleges.forEach(c => {
+      filterArr.push({ type: Filters.college, filter: c.name });
+      output.push({
+        name: c.name,
+        coords: c.coords,
+        colour: c.colour,
+        // filter by college name only
+        population: localStudents(c.name).length,
+        filteredPop: proFilter(filterArr).length
+      });
+    });
+    return output;
   }
+};
+
+/**
+ * Returns a student array that is filtered based on the location input.
+ * @param location Name of a school or college.
+ */
+const localStudents = (location: SchoolName | CollegeName): Student[] => {
+  // set type to SchoolName or CollegeName depending on input category
+  // sets to undefined as a catch if neither category is met
+  const type = Object.values(SchoolName).includes(location as SchoolName)
+    ? "school"
+    : Object.values(CollegeName).includes(location as CollegeName)
+    ? "college"
+    : undefined;
+  if (type !== undefined) {
+    return Students.filter(s => {
+      return s[type] === location;
+    });
+  }
+  return new Array<Student>();
+};
+
+/**
+ * Returns an array of students that match all filters.
+ * @param filterArr An array of all filters.
+ */
+const proFilter = (filterArr: Filter[]): Student[] => {
+  // remove blank filters
+  const fArr = filterArr.filter(f => {
+    return f.filter !== "";
+  });
+  // if a filter does not match a student, remove the student
+  const outS = Students.filter(s => {
+    fArr.forEach(f => {
+      if (s[f.type] !== f.filter.toString()) {
+        return false;
+      }
+    });
+  });
+  // return filtered students array
+  return outS;
 };
 
 export const courseFilter: Filter = {
@@ -44,14 +118,14 @@ export const collegeFilter: Filter = {
   type: Filters.college,
   filter: ""
 };
-export const filtersArr = [genderFilter, courseFilter, collegeFilter];
+export const filtersArr: Filter[] = [genderFilter, courseFilter, collegeFilter];
 
 /**
  * Returns a student array that is filtered based on the name input.
  * @param name Name of a school or college.
  * @param students Optional. A student array to filter. Filters all students if not defined.
  */
-export const LocalStudents = (
+export const LocalStudentsOld = (
   name: CollegeName | SchoolName,
   students?: Student[] | string
 ): Student[] => {
@@ -94,24 +168,4 @@ export const applyFilters = (studentsArr: Student[], filters?: Filter[]) => {
     });
   }
   return studentsArr;
-};
-
-/**
- * Returns an array of students that match all filters.
- * @param filterArr An array of all filters.
- */
-const proFilter = (filterArr: Filter[]): Student[] => {
-  // remove blank filters
-  const fArr = filterArr.filter(f => {
-    return f.filter !== "";
-  });
-  // if a filter does not match, remove the student
-  const outS = Students.filter(s => {
-    fArr.forEach(f => {
-      if (s[f.type] !== f.filter.toString()) {
-        return false;
-      }
-    });
-  });
-  return outS;
 };
