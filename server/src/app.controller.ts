@@ -1,5 +1,6 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { students, Student } from './data/mod';
+import { Unimplemented, unimplemented } from './unimplemented';
 
 @Controller('student-data')
 export class StudentDataController {
@@ -21,13 +22,4 @@ export class OutcodesDataController {
   get(@Query('gender') gender, @Query('course') course): Unimplemented {
     return unimplemented([gender, course]);
   }
-}
-
-interface Unimplemented {
-  error: string;
-  args: unknown;
-}
-
-function unimplemented<T>(_args: T): Unimplemented {
-  return { error: 'Unimplemented', args: _args };
 }
