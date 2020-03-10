@@ -16,12 +16,15 @@ import { FILTER } from "./process/mod";
 /**
  * Returns an array of college markers that are not yet added to the map.
  */
-export const initColleges = (): L.Marker[] => {
-  const output = new Array<L.Marker>();
+export const initColleges = (): CollegeMarker[] => {
+  const output = new Array<CollegeMarker>();
   FILTER.getColleges(filtersArr).forEach(c => {
-    output.push(new L.Marker(c.coords, {
-      icon: I.newIcon(c.colour as I.Colour)
-    }).bindPopup(PopupTextOld(c.name, filtersArr, true)));
+    output.push({
+      name: c.name as CollegeName,
+      marker: new L.Marker(c.coords, {
+        icon: I.newIcon(c.colour as I.Colour)
+      }).bindPopup(PopupTextOld(c.name, filtersArr, true))
+    });
   });
   return output;
 };
@@ -29,28 +32,27 @@ export const initColleges = (): L.Marker[] => {
 /**
  * Returns an array of school markers that are not yet added to the map.
  */
-export const initSchools = (): L.CircleMarker[] => {
-  const output = new Array<L.CircleMarker>();
+export const initSchools = (): SchoolMarker[] => {
+  const output = new Array<SchoolMarker>();
   FILTER.getSchools(filtersArr).forEach(s => {
     // create 2 markers for each school
-    // filtered students - transparent radius
-    output.push(
-      L.circle(s.coords, {
+    output.push({
+      name: s.name as SchoolName,
+      // filtered students - transparent radius
+      filtered: L.circle(s.coords, {
         color: "purple",
         stroke: false,
         fillColor: "#960096",
         fillOpacity: 0.5,
         radius: s.filteredPop
-      })
-    );
-    // total students - stroke only
-    output.push(
-      L.circle(s.coords, {
+      }),
+      // total students - stroke only
+      total: L.circle(s.coords, {
         color: "purple",
         fillOpacity: 0,
         radius: s.population
       }).bindPopup(PopupTextOld(s.name, filtersArr, true))
-    );
+    });
   });
   return output;
 };
