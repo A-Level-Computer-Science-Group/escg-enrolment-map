@@ -1,6 +1,6 @@
 import * as L from "leaflet";
 import * as INIT from "./initialize";
-import { CourseType, Gender, CollegeName, Filters } from "./enums";
+import { CourseType, Gender, CollegeName, Filters } from "./shared/enums";
 import { courseFilter, genderFilter, collegeFilter } from "./process/mod";
 import {
   SchoolMarker,
@@ -8,12 +8,12 @@ import {
   LocalStudentsOld,
   CollegeMarker,
   Filter
-} from "./interfaces";
+} from "./shared/interfaces";
 
 // PULL IN SUPPLIED INFO AND FILTERS
 import { Students } from "./process/students";
 import { filtersArr, applyFiltersOld } from "./process/mod";
-import { Student } from "./interfaces";
+import { Student } from "./shared/interfaces";
 
 import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
 

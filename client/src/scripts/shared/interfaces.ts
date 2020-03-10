@@ -1,7 +1,7 @@
 import { CollegeName, CourseType, Filters, Gender, SchoolName } from "./enums";
 import { Marker, Circle, LatLngExpression } from "leaflet";
-import { applyFiltersOld } from "./process/mod";
-import { Students } from "./process/students";
+import { applyFiltersOld } from "../process/mod";
+import { Students } from "../process/students";
 import { Colour } from "./icons";
 
 export interface Student {

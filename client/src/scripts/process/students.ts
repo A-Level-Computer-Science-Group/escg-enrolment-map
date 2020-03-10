@@ -1,5 +1,5 @@
-import { CourseType, Gender, SchoolName, CollegeName } from "../enums";
-import { Student } from "../interfaces";
+import { CourseType, Gender, SchoolName, CollegeName } from "../shared/enums";
+import { Student } from "../shared/interfaces";
 
 export const Students: Student[] = [
   {

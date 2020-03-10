@@ -1,5 +1,5 @@
 import * as L from "leaflet";
-import * as I from "./icons";
+import * as I from "./shared/icons";
 import { filtersArr, applyFiltersOld } from "./process/mod";
 import {
   CollegeMarker,
@@ -7,8 +7,8 @@ import {
   Student,
   SchoolMarker,
   LocalStudentsOld
-} from "./interfaces";
-import { CollegeName, SchoolName } from "./enums";
+} from "./shared/interfaces";
+import { CollegeName, SchoolName } from "./shared/enums";
 import { Students } from "./process/students";
 import { calcRadius } from "./main";
 import { FILTER } from "./process/mod";

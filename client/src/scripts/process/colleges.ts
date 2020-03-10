@@ -1,6 +1,6 @@
-import { College } from "../interfaces";
-import { CollegeName } from "../enums";
-import { Colour } from "../icons";
+import { College } from "../shared/interfaces";
+import { CollegeName } from "../shared/enums";
+import { Colour } from "../shared/icons";
 
 export const Colleges: College[] = [
   {

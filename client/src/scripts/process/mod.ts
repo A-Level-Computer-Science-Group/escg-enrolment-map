@@ -1,10 +1,10 @@
-import { CourseType, Gender, CollegeName, SchoolName, Filters } from "../enums";
-import { Filter, Student, College, School } from "../interfaces";
+import { CourseType, Gender, CollegeName, SchoolName, Filters } from "../shared/enums";
+import { Filter, Student, College, School } from "../shared/interfaces";
 import { Colleges } from "./colleges";
 import { Students } from "./students";
 import { Schools } from "./schools";
 import { LatLngExpression } from "leaflet";
-import { Colour } from "../icons";
+import { Colour } from "../shared/icons";
 
 interface LocationObject {
   name: SchoolName | CollegeName;

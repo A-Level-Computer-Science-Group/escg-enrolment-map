@@ -1,5 +1,5 @@
-import { SchoolName } from "../enums";
-import { School } from "../interfaces";
+import { SchoolName } from "../shared/enums";
+import { School } from "../shared/interfaces";
 
 export const Schools: School[] = [
   {
