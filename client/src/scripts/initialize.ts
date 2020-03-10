@@ -60,7 +60,7 @@ export const initSchools = (): SchoolMarker[] => {
 /**
  * Returns an array of CollegeMarker objects that are not yet added to the map.
  */
-export function Colleges() {
+export function CollegesOld() {
   return new Array<CollegeMarker>(
     makeCollege(CollegeName.eastbourne, [50.78829, 0.271392], I.Colour.orange),
     makeCollege(CollegeName.lewes, [50.870314, 0.015465], I.Colour.blue),
@@ -83,7 +83,7 @@ function makeCollege(
 /**
  * Returns an array of SchoolMarker objects that are not yet added to the map.
  */
-export function Schools() {
+export function SchoolsOld() {
   return new Array<SchoolMarker>(
     makeSchool(SchoolName.parklands, [50.798574, 0.26842]),
     makeSchool(SchoolName.ocklynge, [50.785854, 0.255762])
