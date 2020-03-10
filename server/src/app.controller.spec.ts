@@ -16,7 +16,7 @@ describe('StudentDataController', () => {
 
   describe('root', () => {
     it('should return "Hello World!"', () => {
-      expect(appController.get()).toBe('Hello World!');
+      expect(appController.get());
     });
   });
 });
