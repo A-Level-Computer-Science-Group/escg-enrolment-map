@@ -28,7 +28,6 @@ build-server:
     - cd server
     - npm ci
     - npm run build
-    - mv public public-source
     - mv dist public
   artifacts:
     paths:
