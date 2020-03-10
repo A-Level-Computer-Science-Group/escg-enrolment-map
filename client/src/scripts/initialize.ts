@@ -13,6 +13,8 @@ import { Students } from "./process/students";
 import { calcRadius } from "./main";
 import { FILTER } from "./process/mod";
 
+import { FILTER } from "./process/mod";
+
 /**
  * Returns an array of college markers that are not yet added to the map.
  */
