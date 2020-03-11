@@ -13,6 +13,11 @@ export interface Student {
   year?: number;
 }
 
+export interface Population {
+  total: number;
+  filtered: number;
+}
+
 export interface School {
   name: SchoolName;
   coords: LatLngExpression;

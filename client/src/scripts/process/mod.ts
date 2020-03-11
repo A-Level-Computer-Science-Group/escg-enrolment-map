@@ -5,7 +5,7 @@ import {
   SchoolName,
   Filters
 } from "../shared/enums";
-import { Filter, Student, College, School } from "../shared/interfaces";
+import { Filter, Student, College, School, Population } from "../shared/interfaces";
 import { Colleges } from "./colleges";
 import { Students } from "./students";
 import { Schools } from "./schools";
@@ -37,6 +37,15 @@ export const FILTER = {
    */
   getColleges: (filterArr: Filter[]): LocationObject[] => {
     return getStudents(filterArr, "college");
+  },
+
+  /**
+   * Returns a number of Students within a School or College.
+   * @param location A SchoolName or CollegeName
+   */
+  thisLocation: (filterArr: Filter[], location: SchoolName | CollegeName): Population => {
+    const localS = localStudents(location);
+    return { total: localS.length, filtered: applyFilters(filterArr, localS).length };
   }
 };
 
@@ -149,21 +158,25 @@ const localStudents = (location: SchoolName | CollegeName): Student[] => {
  * Returns an array of students that match all filters.
  * @param filterArr An array of all filters.
  */
-const applyFilters = (filterArr: Filter[], studentArr: Student[]): Student[] => {
+const applyFilters = (
+  filterArr: Filter[],
+  studentArr: Student[]
+): Student[] => {
   // remove blank filters
   const fArr = filterArr.filter(f => {
     return f.filter !== "";
   });
   // if a filter does not match a student, remove the student
   const outS = studentArr.filter(s => {
+    let output = true;
     // check every filter for a conflict
     fArr.forEach(f => {
       if (s[f.type] !== f.filter) {
-        return false;
+        output = false;
       }
     });
     // return true if all filters pass
-    return true;
+    return output;
   });
   return outS;
 };
