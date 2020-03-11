@@ -54,7 +54,7 @@ interface Coordinates {
 
 //TODO make this do something. @layton
 // Counts Students from different schools producing `SchoolInfo[]`
-export function studentsFromShools(studnets: Student[]): SchoolInfo[] {
+export function studentsFromSchools(studnets: Student[]): SchoolInfo[] {
   throw 'unimplemented';
 }
 
