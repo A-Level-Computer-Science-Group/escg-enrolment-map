@@ -4,7 +4,6 @@ import {
   SchoolsDataController,
   OutcodesDataController,
 } from './app.controller';
-import { AppService } from './app.service';
 import { OutcodesService } from './outcodes/mod.service';
 
 @Module({
@@ -14,6 +13,6 @@ import { OutcodesService } from './outcodes/mod.service';
     SchoolsDataController,
     OutcodesDataController,
   ],
-  providers: [AppService, OutcodesService],
+  providers: [OutcodesService],
 })
 export class AppModule {}
