@@ -120,11 +120,13 @@ const getStudents = (
         coords: l.coords,
         // filter by location name only
         population: localStudents(l.name).length,
-        filteredPop: applyFilters(filterArr).length,
+        filteredPop: applyFilters(thisFilter).length,
         colour: colour
       });
-      // remove location from filters
-      filterArr.pop();
+    });
+    // TEMP
+    output.forEach(o => {
+      console.log(o.name + ": " + o.population + " | " + o.filteredPop);
     });
     return output;
   }
