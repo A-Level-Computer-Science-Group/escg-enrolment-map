@@ -44,13 +44,13 @@ export const initSchools = (): SchoolMarker[] => {
         stroke: false,
         fillColor: "#960096",
         fillOpacity: 0.5,
-        radius: s.filteredPop
+        radius: calcRadius(s.filteredPop, Students.length)
       }),
       // total students - stroke only
       total: L.circle(s.coords, {
         color: "purple",
         fillOpacity: 0,
-        radius: s.population
+        radius: calcRadius(s.population, Students.length)
       }).bindPopup(PopupTextOld(s.name, filtersArr, true))
     });
   });
@@ -100,13 +100,13 @@ function makeSchool(schName: SchoolName, coords: L.LatLngExpression) {
     stroke: false,
     fillColor: "#960096",
     fillOpacity: 0.5,
-    radius: calcRadius(filterCount, Students)
+    radius: calcRadius(filterCount, Students.length)
   });
   // filtered students - stroke only
   const outlineMarker = L.circle(coords, {
     color: "purple",
     fillOpacity: 0,
-    radius: calcRadius(schoolCount, Students)
+    radius: calcRadius(schoolCount, Students.length)
   });
   outlineMarker.bindPopup(PopupTextOld(schName, filtersArr, true));
   return {

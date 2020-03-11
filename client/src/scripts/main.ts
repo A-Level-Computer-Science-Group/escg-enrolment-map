@@ -70,7 +70,10 @@ export function init() {
             ? LocalStudentsOld(collegeFilter.filter as CollegeName)
             : Students;
         s.filtered.setRadius(
-          calcRadius(applyFiltersOld(LocalStudentsOld(s.name)).length, studentArr)
+          calcRadius(
+            applyFiltersOld(LocalStudentsOld(s.name)).length,
+            studentArr.length
+          )
         );
         // Applies school and college filters to outline radius
         s.total.setRadius(
@@ -79,7 +82,7 @@ export function init() {
               s.name,
               LocalStudentsOld(collegeFilter.filter as Filters.college)
             ).length,
-            studentArr
+            studentArr.length
           )
         );
         // when college filter is changed set colours for all schools
@@ -144,6 +147,6 @@ export function init() {
     s.total.addTo(mymap);
   });
 }
-export function calcRadius(filteredS: number, studentArr: Student[]) {
-  return (filteredS / studentArr.length) * maxRadius;
+export function calcRadius(filteredS: number, sCount: number) {
+  return (filteredS / sCount) * maxRadius;
 }

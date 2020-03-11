@@ -1,4 +1,10 @@
-import { CourseType, Gender, CollegeName, SchoolName, Filters } from "../shared/enums";
+import {
+  CourseType,
+  Gender,
+  CollegeName,
+  SchoolName,
+  Filters
+} from "../shared/enums";
 import { Filter, Student, College, School } from "../shared/interfaces";
 import { Colleges } from "./colleges";
 import { Students } from "./students";
@@ -55,18 +61,23 @@ const getStudents = (
   if (locations !== undefined) {
     locations.forEach((l: College | School) => {
       // add location to filters
-      filterArr.push({ type: Filters[location], filter: l.name });
+      const thisFilter = filterArr.concat({
+        type: Filters[location],
+        filter: l.name
+      });
       const colour: Colour | undefined = (l as College).colour;
       output.push({
         name: l.name,
         coords: l.coords,
         // filter by location name only
         population: localStudents(l.name).length,
-        filteredPop: applyFilters(filterArr).length,
+        filteredPop: applyFilters(thisFilter).length,
         colour: colour
       });
-      // remove location from filters
-      filterArr.pop();
+    });
+    // TEMP
+    output.forEach(o => {
+      console.log(o.name + ": " + o.population + " | " + o.filteredPop);
     });
     return output;
   }
@@ -104,13 +115,16 @@ const applyFilters = (filterArr: Filter[]): Student[] => {
   });
   // if a filter does not match a student, remove the student
   const outS = Students.filter(s => {
+    // check every filter for a conflict
     fArr.forEach(f => {
-      if (s[f.type] !== f.filter.toString()) {
+      console.log("Checking filter: " + f.type + " | " + f.filter)
+      if (s[f.type] !== f.filter) {
         return false;
       }
     });
+    // return true if all filters pass
+    return true;
   });
-  // return filtered students array
   return outS;
 };
 
