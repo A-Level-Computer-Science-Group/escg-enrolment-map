@@ -1,6 +1,13 @@
 import { Controller, Get, Query } from '@nestjs/common';
 import { students, Student } from './data/mod';
-import { Unimplemented, unimplemented } from './unimplemented';
+import {
+  parseQueries,
+  applyFilters,
+  studentsFromOutcodes,
+  studentsFromShools,
+  OutcodeInfo,
+  SchoolInfo,
+} from './filters/mod';
 
 @Controller('student-data')
 export class StudentDataController {
@@ -13,21 +20,19 @@ export class StudentDataController {
 export class SchoolsDataController {
   @Get()
   get(
-    @Query('gender') gender: string | null,
-    @Query('course') _course: string | null,
-  ): Unimplemented {
-    const course = _course != null ? _course.split(',') : [];
-    return unimplemented({ gender, course });
+    @Query('gender') gender?: string,
+    @Query('course') course?: string,
+  ): SchoolInfo[] {
+    return studentsFromShools(applyFilters(parseQueries(gender, course)));
   }
 }
 @Controller('student-data/outcodes')
 export class OutcodesDataController {
   @Get()
   get(
-    @Query('gender') gender: string | null,
-    @Query('course') _course: string | null,
-  ): Unimplemented {
-    const course = _course != null ? _course.split(',') : [];
-    return unimplemented({ gender, course });
+    @Query('gender') gender?: string,
+    @Query('course') course?: string,
+  ): OutcodeInfo[] {
+    return studentsFromOutcodes(applyFilters(parseQueries(gender, course)));
   }
 }
