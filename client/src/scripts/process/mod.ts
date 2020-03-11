@@ -60,18 +60,14 @@ const getStudents = (
       : undefined;
   if (locations !== undefined) {
     locations.forEach((l: College | School) => {
-      // add location to filters
-      const thisFilter = filterArr.concat({
-        type: Filters[location],
-        filter: l.name
-      });
       const colour: Colour | undefined = (l as College).colour;
+      const localS = localStudents(l.name);
       output.push({
         name: l.name,
         coords: l.coords,
         // filter by location name only
-        population: localStudents(l.name).length,
-        filteredPop: applyFilters(thisFilter).length,
+        population: localS.length,
+        filteredPop: applyFilters(filterArr, localS).length,
         colour: colour
       });
     });
@@ -157,16 +153,15 @@ const localStudents = (location: SchoolName | CollegeName): Student[] => {
  * Returns an array of students that match all filters.
  * @param filterArr An array of all filters.
  */
-const applyFilters = (filterArr: Filter[]): Student[] => {
+const applyFilters = (filterArr: Filter[], studentArr: Student[]): Student[] => {
   // remove blank filters
   const fArr = filterArr.filter(f => {
     return f.filter !== "";
   });
   // if a filter does not match a student, remove the student
-  const outS = Students.filter(s => {
+  const outS = studentArr.filter(s => {
     // check every filter for a conflict
     fArr.forEach(f => {
-      console.log("Checking filter: " + f.type + " | " + f.filter)
       if (s[f.type] !== f.filter) {
         return false;
       }
