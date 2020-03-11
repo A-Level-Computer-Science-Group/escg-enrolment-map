@@ -18,8 +18,7 @@ export class OutcodesService {
     const response = await this.httpService
       .get(`https://api.postcodes.io/outcodes/${outcode}`)
       .toPromise();
-    const responseData = response.data;
-    const dataResult = responseData['result'];
+    const dataResult = response.data['result'];
     return {
       outcode: dataResult['outcode'],
       coordinates: {
