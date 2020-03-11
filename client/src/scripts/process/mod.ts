@@ -71,10 +71,6 @@ const getStudents = (
         colour: colour
       });
     });
-    // TEMP
-    output.forEach(o => {
-      console.log(o.name + ": " + o.population + " | " + o.filteredPop);
-    });
     return output;
   },
 
