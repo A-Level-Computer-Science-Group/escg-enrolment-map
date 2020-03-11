@@ -16,7 +16,7 @@ export class SchoolsDataController {
     @Query('gender') gender: string | null,
     @Query('course') _course: string | null,
   ): Unimplemented {
-    const course = _course != null ? _course.split(',') : null;
+    const course = _course != null ? _course.split(',') : [];
     return unimplemented({ gender, course });
   }
 }
@@ -27,7 +27,7 @@ export class OutcodesDataController {
     @Query('gender') gender: string | null,
     @Query('course') _course: string | null,
   ): Unimplemented {
-    const course = _course != null ? _course.split(',') : null;
+    const course = _course != null ? _course.split(',') : [];
     return unimplemented({ gender, course });
   }
 }
