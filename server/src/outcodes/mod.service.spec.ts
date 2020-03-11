@@ -1,5 +1,5 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { Module, HttpModule } from '@nestjs/common';
+import { HttpModule } from '@nestjs/common';
 import { OutcodesService } from './mod.service';
 
 describe('StudentDataController', () => {
@@ -15,33 +15,31 @@ describe('StudentDataController', () => {
   });
 
   it('These outcodes should always return the same correct coordinates.', async () => {
-    await expect(Service.get_outcode_data('bn22')).resolves.toStrictEqual({
+    await expect(Service.getOutcodeData('bn22')).resolves.toStrictEqual({
       coordinates: {
         latitude: 50.7895940563036,
         longitude: 0.283827396572828,
       },
       outcode: 'BN22',
     });
-    await expect(Service.get_outcode_data('TN39')).resolves.toStrictEqual({
+    await expect(Service.getOutcodeData('TN39')).resolves.toStrictEqual({
       coordinates: {
         latitude: 50.8468075416666,
         longitude: 0.451401050595238,
       },
       outcode: 'TN39',
     });
-    await expect(Service.get_outcode_data('    Tn39  ')).resolves.toStrictEqual(
-      {
-        coordinates: {
-          latitude: 50.8468075416666,
-          longitude: 0.451401050595238,
-        },
-        outcode: 'TN39',
+    await expect(Service.getOutcodeData('    Tn39  ')).resolves.toStrictEqual({
+      coordinates: {
+        latitude: 50.8468075416666,
+        longitude: 0.451401050595238,
       },
-    );
+      outcode: 'TN39',
+    });
   });
   it('Invalid outcodes should throw an error.', async () => {
     await expect(
-      Service.get_outcode_data('invalid_postcode_test'),
+      Service.getOutcodeData('invalid_postcode_test'),
     ).rejects.toThrowError();
   });
 });

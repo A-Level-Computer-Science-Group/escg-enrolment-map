@@ -14,17 +14,17 @@ interface OutcodeInfo {
 export class OutcodesService {
   constructor(private readonly httpService: HttpService) {}
 
-  async get_outcode_data(outcode: string): Promise<OutcodeInfo> {
+  async getOutcodeData(outcode: string): Promise<OutcodeInfo> {
     const response = await this.httpService
       .get(`https://api.postcodes.io/outcodes/${outcode}`)
       .toPromise();
-    const response_data = response.data;
-    const data_result = response_data['result'];
+    const responseData = response.data;
+    const dataResult = responseData['result'];
     return {
-      outcode: data_result['outcode'],
+      outcode: dataResult['outcode'],
       coordinates: {
-        latitude: data_result['latitude'],
-        longitude: data_result['longitude'],
+        latitude: dataResult['latitude'],
+        longitude: dataResult['longitude'],
       },
     };
   }
