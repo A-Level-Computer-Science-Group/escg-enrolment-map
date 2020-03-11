@@ -14,13 +14,11 @@ export enum CourseFilter {
 }
 
 function convertToEnum<E, V>(enumList: { [s: string]: E }, value: V): E {
-  return (Object.values(enumList) as any).includes(value)
-    ? ((value as unknown) as E)
-    : (() => {
-        throw `Invalid enumerator variant: "${value}". All valid variants are [${Object.values(
-          enumList,
-        ).toString()}].`;
-      })();
+  if (Object.values(enumList).includes(value as any))
+    return (value as unknown) as E;
+  throw `Invalid enumerator variant: "${value}". All valid variants are [${Object.values(
+    enumList,
+  ).toString()}].`;
 }
 
 export function parseQueries(_gender?: string, _course?: string): Filter[] {
