@@ -13,10 +13,23 @@ export enum CourseFilter {
   appgeneral = 'applied-general',
 }
 
+function convertToEnum<E, V>(enumList: { [s: string]: E }, value: V): E {
+  return (Object.values(enumList) as any).includes(value)
+    ? ((value as unknown) as E)
+    : (() => {
+        throw `Invalid enumerator variant: "${value}". All valid variants are [${Object.values(
+          enumList,
+        ).toString()}].`;
+      })();
+}
+
 export function parseQueries(_gender?: string, _course?: string): Filter[] {
   const course: CourseFilter[] =
-    _course != null ? _course.split(',').map(x => CourseFilter[x]) : [];
-  const gender: GenderFilter[] = _gender != null ? [GenderFilter[_gender]] : [];
+    _course != null
+      ? _course.split(',').map(x => convertToEnum(CourseFilter, x))
+      : [];
+  const gender: GenderFilter[] =
+    _gender != null ? [convertToEnum(GenderFilter, _gender)] : [];
   return (course as Filter[]).concat(gender);
 }
 
