@@ -12,7 +12,11 @@ export enum CourseFilter {
   vocational = 'vocational',
   appgeneral = 'applied-general',
 }
-
+/**
+ * Returns value as an enum of one of the input enums.
+ * @param enumList A list of enums.
+ * @param value A string.
+ */
 function convertToEnum<E, V>(enumList: { [s: string]: E }, value: V): E {
   if (Object.values(enumList).includes(value as any))
     return (value as unknown) as E;
