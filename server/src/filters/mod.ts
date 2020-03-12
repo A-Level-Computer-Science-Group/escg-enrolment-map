@@ -12,10 +12,13 @@ export enum CourseFilter {
   vocational = 'vocational',
   appgeneral = 'applied-general',
 }
+
 /**
- * Returns value as an enum of one of the input enums.
- * @param enumList A list of enums.
- * @param value A string.
+ * Returns enum variant that matches a value if that value can be constant-initialized into the enum.
+ * If the variant check fails it throws an exception.
+ * This creates a safe way to serialize data to an enum.
+ * @param enumList A provider of variants list. The name of the enum type you want to create can be placed here.
+ * @param value The value you want to constant-initialize to the enum type.
  */
 function convertToEnum<E, V>(enumList: { [s: string]: E }, value: V): E {
   if (Object.values(enumList).includes(value as any))
