@@ -1,33 +1,5 @@
 import { students, Student, StudentProperty } from '../data/mod';
 
-const FilterFuncs = {
-  /**
-   * Returns what category the Filter comes from as a string that
-   * matches a student property.
-   * @param filter A Filter.
-   */
-  filterType: function(filter: Filter): StudentProperty {
-    switch (true) {
-      case isGenderFilter(filter):
-        return 'gender' as StudentProperty;
-      case isCourseFilter(filter):
-        return 'course' as StudentProperty;
-      default:
-        throw '"filter" is not amongst acceptable strings.';
-    }
-  },
-
-  /**
-   * Returns a boolean, which is true if the filter value
-   * is included in the Enumerator's values.
-   * @param filter A Filter.
-   * @param E An Enumerator.
-   */
-  isType: function(filter: Filter, E: Enumerator): boolean {
-    return Object.values(E).includes(filter as any);
-  },
-};
-
 export type Filter = GenderFilter | CourseFilter;
 
 type GenderFilter = 'male' | 'female';
