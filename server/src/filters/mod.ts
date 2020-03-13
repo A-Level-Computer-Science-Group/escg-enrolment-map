@@ -32,16 +32,16 @@ const FilterFuncs = {
 
 export type Filter = GenderFilter | CourseFilter;
 
-export type GenderFilter = 'male' | 'female';
-export function isGender(str: string): str is GenderFilter {
+ type GenderFilter = 'male' | 'female';
+ function isGender(str: string): str is GenderFilter {
   return (
     str == 'male' ||
     str == 'female'
   )
 }
 
-export type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
-export function isCourse(str: string): str is CourseFilter {
+ type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
+ function isCourse(str: string): str is CourseFilter {
   return (
     str == 'a-level' ||
     str == 'vocational' ||
