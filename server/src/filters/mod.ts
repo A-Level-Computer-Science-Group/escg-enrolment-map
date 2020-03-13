@@ -1,4 +1,10 @@
 import { students, Student, StudentProperty } from '../data/mod';
+import {
+  HttpService,
+  Injectable,
+  HttpException,
+  HttpStatus,
+} from '@nestjs/common';
 
 export type Filter = GenderFilter | CourseFilter;
 
@@ -17,7 +23,8 @@ function isFilter(str: string): str is Filter {
 }
 
 function isFilterOrThrow(str: string): str is Filter {
-  if (!isFilter(str)) throw `${str} not and instance of Filter`;
+  if (!isFilter(str))
+    throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   return true;
 }
 
@@ -58,7 +65,10 @@ function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
       }
       return student.Sex == key;
     }
-    throw 'Unreachable: all possible filters checked before this point.';
+    throw new HttpException(
+      'Unreachable: all possible filters checked before this point.',
+      HttpStatus.EXPECTATION_FAILED,
+    );
   }
 
   return studentArr.filter(studentMatchesFilter);
@@ -79,7 +89,7 @@ export interface SchoolInfo {
 
 export interface OutcodeInfo {
   outcode: string;
-  coordinates: Coordinates;
+  coordinates: Coordinates | null;
   numMatchingStudents: number;
 }
 
@@ -91,11 +101,5 @@ interface Coordinates {
 //TODO make this do something. @layton
 // Counts Students from different schools producing `SchoolInfo[]`
 export function studentsFromSchools(studnets: Student[]): SchoolInfo[] {
-  throw 'unimplemented';
-}
-
-//TODO make this do something. @layton
-// Counts Students from different outcodes producing `OutcodeInfo[]`
-export function studentsFromOutcodes(studnets: Student[]): OutcodeInfo[] {
-  throw 'unimplemented';
+  throw new HttpException('unimplemented', HttpStatus.EXPECTATION_FAILED);
 }

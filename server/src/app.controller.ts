@@ -3,11 +3,11 @@ import { students, Student } from './data/mod';
 import {
   parseQueries,
   applyFilters,
-  studentsFromOutcodes,
   studentsFromSchools,
   OutcodeInfo,
   SchoolInfo,
 } from './filters/mod';
+import { StudentsFromOutcodesService } from './filters/studentsFromOutcodes.service';
 
 @Controller('student-data')
 export class StudentDataController {
@@ -28,11 +28,17 @@ export class SchoolsDataController {
 }
 @Controller('student-data/outcodes')
 export class OutcodesDataController {
+  constructor(
+    private studentsFromOutcodesService: StudentsFromOutcodesService,
+  ) {}
+
   @Get()
-  get(
+  async get(
     @Query('gender') gender?: string,
     @Query('course') course?: string,
-  ): OutcodeInfo[] {
-    return studentsFromOutcodes(applyFilters(parseQueries(gender, course)));
+  ): Promise<OutcodeInfo[]> {
+    return await this.studentsFromOutcodesService.studentsFromOutcodes(
+      applyFilters(parseQueries(gender, course)),
+    );
   }
 }
