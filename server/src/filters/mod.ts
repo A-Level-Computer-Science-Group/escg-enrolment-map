@@ -1,4 +1,12 @@
-import { students, Student, StudentProperty } from '../data/mod';
+import {
+  students,
+  Student,
+  StudentProperty,
+  schools,
+  School,
+  colleges,
+  College,
+} from '../data/mod';
 
 export type Filter = GenderFilter | CourseFilter;
 
@@ -83,10 +91,7 @@ export interface OutcodeInfo {
   numMatchingStudents: number;
 }
 
-interface Coordinates {
-  latitude: number;
-  longitude: number;
-}
+type Coordinates = [number, number];
 
 //TODO make this do something. @layton
 // Counts Students from different schools producing `SchoolInfo[]`
@@ -96,6 +101,6 @@ export function studentsFromSchools(studnets: Student[]): SchoolInfo[] {
 
 //TODO make this do something. @layton
 // Counts Students from different outcodes producing `OutcodeInfo[]`
-export function studentsFromOutcodes(studnets: Student[]): OutcodeInfo[] {
+export function studentsFromOutcodes(students: Student[]): OutcodeInfo[] {
   throw 'unimplemented';
 }
