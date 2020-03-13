@@ -6,13 +6,6 @@ export interface College {
   colour: 'orange' | 'green' | 'blue';
 }
 
-/**
- * Returns an array of all colleges.
- */
-export function _colleges(): College[] {
-  return colleges;
-}
-
 const colleges: College[] = [
   {
     name: 'ESCG Eastbourne',
@@ -30,3 +23,10 @@ const colleges: College[] = [
     colour: 'green',
   },
 ];
+
+/**
+ * Returns an array of all colleges.
+ */
+export function _colleges(): College[] {
+  return colleges;
+}

@@ -5,13 +5,6 @@ export interface School {
   coords: LatLng;
 }
 
-/**
- * Returns an array of all schools.
- */
-export function _schools(): School[] {
-  return schools;
-}
-
 const schools: School[] = [
   {
     name: 'Parklands',
@@ -22,3 +15,10 @@ const schools: School[] = [
     coords: [50.785854, 0.255762],
   },
 ];
+
+/**
+ * Returns an array of all schools.
+ */
+export function _schools(): School[] {
+  return schools;
+}
