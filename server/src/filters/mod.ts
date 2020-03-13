@@ -66,23 +66,20 @@ function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
 
 export function applyFilters(filters: Filter[]): Student[] {
   let filteredStudents = students;
-  for (const filter of filters) {
+  for (const filter of filters)
     filteredStudents = applyFilter(filter, filteredStudents);
-  }
   return filteredStudents;
 }
 
 export interface SchoolInfo {
   name: string;
   coordinates: Coordinates;
-
   numMatchingStudents: number;
 }
 
 export interface OutcodeInfo {
   outcode: string;
   coordinates: Coordinates;
-
   numMatchingStudents: number;
 }
 
