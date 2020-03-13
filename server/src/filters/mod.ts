@@ -1,34 +1,53 @@
-import { students, Student } from '../data/mod';
+import { students, Student, StudentProperty } from '../data/mod';
 
-// const FilterFuncs = {
-//   /**
-//    * Returns what enum the Filter comes from.
-//    * @param filter A Filter.
-//    */
-//   filterType: function(
-//     filter: Filter,
-//   ): typeof GenderFilter | typeof CourseFilter {
-//     return [GenderFilter, CourseFilter].find(f => {
-//       return Object.values(f).includes(filter as any);
-//     });
-//   },
+const FilterFuncs = {
+  /**
+   * Returns what category the Filter comes from as a string that
+   * matches a student property.
+   * @param filter A Filter.
+   */
+  filterType: function(
+    filter: Filter,
+  ): StudentProperty {
+    switch (true) {
+      case isGender(filter):
+        return 'gender' as StudentProperty;
+      case isCourse(filter):
+        return 'course' as StudentProperty;
+      default:
+        throw '"filter" is not amongst acceptable strings.'
+    }
+  },
 
-//   /**
-//    * Returns a boolean, which is true if the filter value
-//    * is included in the Enumerator's values.
-//    * @param filter A Filter.
-//    * @param E An Enumerator.
-//    */
-//   isType: function(filter: Filter, E: Enumerator): boolean {
-//     return Object.values(E).includes(filter as any);
-//   },
-// };
+  /**
+   * Returns a boolean, which is true if the filter value
+   * is included in the Enumerator's values.
+   * @param filter A Filter.
+   * @param E An Enumerator.
+   */
+  isType: function(filter: Filter, E: Enumerator): boolean {
+    return Object.values(E).includes(filter as any);
+  },
+};
 
 export type Filter = GenderFilter | CourseFilter;
 
 export type GenderFilter = 'male' | 'female';
+export function isGender(str: string): str is GenderFilter {
+  return (
+    str == 'male' ||
+    str == 'female'
+  )
+}
 
 export type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
+export function isCourse(str: string): str is CourseFilter {
+  return (
+    str == 'a-level' ||
+    str == 'vocational' ||
+    str == 'applied-general'
+  )
+}
 
 function isFilter(str: string): str is Filter {
   return (

@@ -13,3 +13,12 @@ export interface Student {
   QualificationType: string;
   School: string;
 }
+
+export type StudentProperty =
+  | 'Campus'
+  | 'FTEnrolmentID'
+  | 'PostCodePart1'
+  | 'QualificationType'
+  | 'School'
+  | 'Sex'
+  | 'Year';
