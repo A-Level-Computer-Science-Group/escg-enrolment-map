@@ -41,13 +41,7 @@ function isCourse(str: string): str is CourseFilter {
 }
 
 function isFilter(str: string): str is Filter {
-  return (
-    str == 'male' ||
-    str == 'female' ||
-    str == 'a-level' ||
-    str == 'vocational' ||
-    str == 'applied-general'
-  );
+  return isGender(str) || isCourse(str);
 }
 
 function isFilterOrThrow(str: string): str is Filter {
