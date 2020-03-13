@@ -64,7 +64,10 @@ function isFilterOrThrow(str: string): str is Filter {
   return true;
 }
 
-export function parseQueries(_gender?: string, _course?: string): Filter[] {
+export function parseQueries(
+  _gender: string | undefined,
+  _course: string | undefined,
+): Filter[] {
   const course: string[] = _course != null ? _course.split(',') : [];
   const gender: string[] = _gender != null ? [_gender] : [];
   return course.concat(gender).filter(isFilterOrThrow);

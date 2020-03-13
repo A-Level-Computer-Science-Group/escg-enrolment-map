@@ -7,7 +7,7 @@ describe('StudentDataController', () => {
     >(['applied-general', 'a-level', 'male']);
   });
   it('Test null Queries.', () => {
-    expect(parseQueries(null, 'applied-general,a-level')).toStrictEqual<
+    expect(parseQueries(undefined, 'applied-general,a-level')).toStrictEqual<
       Filter[]
     >(['applied-general', 'a-level']);
   });
