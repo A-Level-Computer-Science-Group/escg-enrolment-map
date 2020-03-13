@@ -30,40 +30,42 @@ export function parseQueries(
   return course.concat(gender).filter(isFilterOrThrow);
 }
 
-export function applyFilters(filters: Filter[]): Student[] {
-  // TODO make this do something. @layton
-  /**
-   * Returns an array of students which fit the supplied filter.
-   * @param filter A Filter to be applied.
-   * @param studentArr An array of Students to be filtered.
-   */
-  function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
-    function studentMatchesFilter(student: Student): boolean {
-      if (isCourseFilter(filter)) {
-        let key;
-        switch (filter) {
-          case 'a-level':
-            key = 'A Level';
-          case 'vocational':
-            key = 'Vocational'; // can't find any students doing vocational in data.
-          case 'applied-general':
-            key = 'Applied General';
-        }
-        return student.QualificationType == key;
-      } else if (isGenderFilter(filter)) {
-        let key;
-        switch (filter) {
-          case 'male':
-            key = 'M';
-          case 'female':
-            key = 'F';
-        }
-        return student.Sex == key;
+// TODO make this do something. @layton
+/**
+ * Returns an array of students which fit the supplied filter.
+ * @param filter A Filter to be applied.
+ * @param studentArr An array of Students to be filtered.
+ */
+function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
+  function studentMatchesFilter(student: Student): boolean {
+    if (isCourseFilter(filter)) {
+      let key;
+      switch (filter) {
+        case 'a-level':
+          key = 'A Level';
+        case 'vocational':
+          key = 'Vocational'; // can't find any students doing vocational in data.
+        case 'applied-general':
+          key = 'Applied General';
       }
-      throw 'Unreachable: all possible filters checked before this point.';
+      return student.QualificationType == key;
+    } else if (isGenderFilter(filter)) {
+      let key;
+      switch (filter) {
+        case 'male':
+          key = 'M';
+        case 'female':
+          key = 'F';
+      }
+      return student.Sex == key;
     }
-    return studentArr.filter(studentMatchesFilter);
+    throw 'Unreachable: all possible filters checked before this point.';
   }
+
+  return studentArr.filter(studentMatchesFilter);
+}
+
+export function applyFilters(filters: Filter[]): Student[] {
   let filteredStudents = students;
   for (const filter of filters) {
     filteredStudents = applyFilter(filter, filteredStudents);
