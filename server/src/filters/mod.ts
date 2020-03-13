@@ -1,4 +1,3 @@
-import { students, Student, StudentProperty } from '../data/mod';
 import {
   HttpService,
   Injectable,
@@ -98,11 +97,16 @@ export interface SchoolInfo {
 
 export interface OutcodeInfo {
   outcode: string;
-  coordinates: Coordinates | null;
+  coordinates: CoordinatesLegacy | null;
   numMatchingStudents: number;
 }
 
 type Coordinates = [number, number];
+
+interface CoordinatesLegacy {
+  latitude: number;
+  longitude: number;
+}
 
 //TODO make this do something. @layton
 // Counts Students from different schools producing `SchoolInfo[]`
