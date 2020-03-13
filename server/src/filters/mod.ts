@@ -8,9 +8,9 @@ const FilterFuncs = {
    */
   filterType: function(filter: Filter): StudentProperty {
     switch (true) {
-      case isGender(filter):
+      case isGenderFilter(filter):
         return 'gender' as StudentProperty;
-      case isCourse(filter):
+      case isCourseFilter(filter):
         return 'course' as StudentProperty;
       default:
         throw '"filter" is not amongst acceptable strings.';
@@ -31,17 +31,17 @@ const FilterFuncs = {
 export type Filter = GenderFilter | CourseFilter;
 
 type GenderFilter = 'male' | 'female';
-function isGender(str: string): str is GenderFilter {
+function isGenderFilter(str: string): str is GenderFilter {
   return str == 'male' || str == 'female';
 }
 
 type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
-function isCourse(str: string): str is CourseFilter {
+function isCourseFilter(str: string): str is CourseFilter {
   return str == 'a-level' || str == 'vocational' || str == 'applied-general';
 }
 
 function isFilter(str: string): str is Filter {
-  return isGender(str) || isCourse(str);
+  return isGenderFilter(str) || isCourseFilter(str);
 }
 
 function isFilterOrThrow(str: string): str is Filter {
@@ -66,7 +66,31 @@ export function applyFilters(filters: Filter[]): Student[] {
    * @param studentArr An array of Students to be filtered.
    */
   function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
-    throw 'unimplimented';
+    function studentMatchesFilter(student: Student): boolean {
+      if (isCourseFilter(filter)) {
+        let key;
+        switch (filter) {
+          case 'a-level':
+            key = 'A Level';
+          case 'vocational':
+            key = 'Vocational'; // can't find any students doing vocational in data.
+          case 'applied-general':
+            key = 'Applied General';
+        }
+        return student.QualificationType == key;
+      } else if (isGenderFilter(filter)) {
+        let key;
+        switch (filter) {
+          case 'male':
+            key = 'M';
+          case 'female':
+            key = 'F';
+        }
+        return student.Sex == key;
+      }
+      throw 'Unreachable: all possible filters checked before this point.';
+    }
+    return studentArr.filter(studentMatchesFilter);
   }
   let filteredStudents = students;
   for (const filter of filters) {
