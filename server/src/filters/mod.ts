@@ -43,7 +43,7 @@ function isFilter(str: string): str is Filter {
 export function parseQueries(_gender?: string, _course?: string): Filter[] {
   const course: string[] = _course != null ? _course.split(',') : [];
   const gender: string[] = _gender != null ? [_gender] : [];
-  return course.concat(gender).filter(<(x) => x is Filter>(x => isFilter(x)));
+  return course.concat(gender).filter(isFilter);
 }
 
 export function applyFilters(filters: Filter[]): Student[] {
