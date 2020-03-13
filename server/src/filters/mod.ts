@@ -30,7 +30,6 @@ export function parseQueries(
   return course.concat(gender).filter(isFilterOrThrow);
 }
 
-// TODO make this do something. @layton
 /**
  * Returns an array of students which fit the supplied filter.
  * @param filter A Filter to be applied.
