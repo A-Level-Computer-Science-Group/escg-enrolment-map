@@ -40,10 +40,15 @@ function isFilter(str: string): str is Filter {
   );
 }
 
+function isFilterOrThrow(str: string): str is Filter {
+  if (!isFilter(str)) throw `${str} not and instance of Filter`;
+  return true;
+}
+
 export function parseQueries(_gender?: string, _course?: string): Filter[] {
   const course: string[] = _course != null ? _course.split(',') : [];
   const gender: string[] = _gender != null ? [_gender] : [];
-  return course.concat(gender).filter(isFilter);
+  return course.concat(gender).filter(isFilterOrThrow);
 }
 
 export function applyFilters(filters: Filter[]): Student[] {
