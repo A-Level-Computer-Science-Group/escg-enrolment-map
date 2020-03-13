@@ -2,6 +2,30 @@ import { students, Student } from '../data/mod';
 
 export type Filter = GenderFilter | CourseFilter;
 
+const FilterFuncs = {
+  /**
+   * Returns what enum the Filter comes from.
+   * @param filter A Filter.
+   */
+  filterType: function(
+    filter: Filter,
+  ): typeof GenderFilter | typeof CourseFilter {
+    return [GenderFilter, CourseFilter].find(f => {
+      return Object.values(f).includes(filter as any);
+    });
+  },
+
+  /**
+   * Returns a boolean, which is true if the filter value 
+   * is included in the Enumerator's values.
+   * @param filter A Filter.
+   * @param E An Enumerator.
+   */
+  isType: function(filter: Filter, E: Enumerator): boolean {
+    return Object.values(E).includes(filter as any);
+  },
+};
+
 export enum GenderFilter {
   Male = 'male',
   Female = 'female',
@@ -39,14 +63,18 @@ export function parseQueries(_gender?: string, _course?: string): Filter[] {
 }
 
 export function applyFilters(filters: Filter[]): Student[] {
-  //TODO make this do something. @layton
-  // Applies a single filter retuning only the students that match the filter.
-  function applyFilter(students: Student[], filter: Filter): Student[] {
-    throw 'unimplemented';
+  // TODO make this do something. @layton
+  /**
+   * Returns an array of students which fit the supplied filter.
+   * @param filter A Filter to be applied.
+   * @param studentArr An array of Students to be filtered.
+   */
+  function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
+    throw 'unimplimented';
   }
   let filteredStudents = students;
   for (const filter of filters) {
-    filteredStudents = applyFilter(filteredStudents, filter);
+    filteredStudents = applyFilter(filter, filteredStudents);
   }
   return filteredStudents;
 }
