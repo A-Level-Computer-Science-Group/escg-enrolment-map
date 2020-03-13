@@ -6,16 +6,14 @@ const FilterFuncs = {
    * matches a student property.
    * @param filter A Filter.
    */
-  filterType: function(
-    filter: Filter,
-  ): StudentProperty {
+  filterType: function(filter: Filter): StudentProperty {
     switch (true) {
       case isGender(filter):
         return 'gender' as StudentProperty;
       case isCourse(filter):
         return 'course' as StudentProperty;
       default:
-        throw '"filter" is not amongst acceptable strings.'
+        throw '"filter" is not amongst acceptable strings.';
     }
   },
 
@@ -32,21 +30,14 @@ const FilterFuncs = {
 
 export type Filter = GenderFilter | CourseFilter;
 
- type GenderFilter = 'male' | 'female';
- function isGender(str: string): str is GenderFilter {
-  return (
-    str == 'male' ||
-    str == 'female'
-  )
+type GenderFilter = 'male' | 'female';
+function isGender(str: string): str is GenderFilter {
+  return str == 'male' || str == 'female';
 }
 
- type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
- function isCourse(str: string): str is CourseFilter {
-  return (
-    str == 'a-level' ||
-    str == 'vocational' ||
-    str == 'applied-general'
-  )
+type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
+function isCourse(str: string): str is CourseFilter {
+  return str == 'a-level' || str == 'vocational' || str == 'applied-general';
 }
 
 function isFilter(str: string): str is Filter {
