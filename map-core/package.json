@@ -1,5 +1,5 @@
 {
-  "name": "escg-enrolment-map-core",
+  "name": "map-core",
   "version": "0.0.1",
   "description": "Core shared lib for escg-enrolment-map.",
   "main": "dist/index.js",

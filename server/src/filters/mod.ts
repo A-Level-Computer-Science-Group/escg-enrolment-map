@@ -1,4 +1,4 @@
-import { util } from 'escg-enrolment-map-core';
+import { util } from 'map-core';
 import convertToEnum = util.convertToEnum;
 
 import { students, Student } from '../data/mod';
