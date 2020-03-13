@@ -93,10 +93,22 @@ export interface OutcodeInfo {
 
 type Coordinates = [number, number];
 
-//TODO make this do something. @layton
-// Counts Students from different schools producing `SchoolInfo[]`
-export function studentsFromSchools(studnets: Student[]): SchoolInfo[] {
-  throw 'unimplemented';
+/**
+ * Counts Students from different schools producing `SchoolInfo[]`
+ * @param students A Student array.
+ */
+export function getSchoolsFromStudents(students: Student[]): SchoolInfo[] {
+  const output: SchoolInfo[] = [];
+  schools.forEach(sch => {
+    output.push({
+      name: sch.name,
+      coordinates: sch.coords,
+      numMatchingStudents: students.filter(s => {
+        return s.School == sch.name;
+      }).length,
+    });
+  });
+  return output;
 }
 
 //TODO make this do something. @layton
