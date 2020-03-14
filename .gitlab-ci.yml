@@ -4,11 +4,24 @@ cache:
   paths:
     - server/node_modules/
     - client/node_modules/
+    - core/node_modules/
 
 stages:
   - build
   - test
   - lint
+
+build-core:
+  stage: build
+  script:
+    - cd core
+    - npm ci
+    - npm run build
+    - mv public public-source
+    - mv dist public
+  artifacts:
+    paths:
+      - client/public
 
 build-client:
   stage: build
@@ -33,12 +46,27 @@ build-server:
     paths:
       - server/public
 
+test-core:
+  stage: test
+  script:
+    - cd core
+    - npm i
+    - npm run test
+
 test-server:
   stage: test
   script:
     - cd server
     - npm i
     - npm run test
+
+lint-core:
+  stage: lint
+  script:
+    - cd core
+    - npm i
+    - npm run lint:check
+    - npm run format:check
 
 lint-client:
   stage: lint
