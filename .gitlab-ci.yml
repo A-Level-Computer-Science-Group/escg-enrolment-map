@@ -17,7 +17,6 @@ build-core:
     - cd core
     - npm ci
     - npm run build
-    - mv public public-source
     - mv dist public
   artifacts:
     paths:
