@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { OutcodeInfo } from './mod';
+import { e2e } from 'escg-enrolment-map-core';
 import { Student } from '../data/mod';
 import { OutcodesService } from './outcodes/mod.service';
 
@@ -8,7 +8,7 @@ export class StudentsFromOutcodesService {
   constructor(private outcodesService: OutcodesService) {}
 
   // Counts Students from different outcodes producing `OutcodeInfo[]`
-  async studentsFromOutcodes(studnets: Student[]): Promise<OutcodeInfo[]> {
+  async studentsFromOutcodes(studnets: Student[]): Promise<e2e.OutcodeInfo[]> {
     const dic: { [code: string]: number } = {};
     for (const studnet of studnets) {
       const postcode = studnet.PostCodePart1.trim();
