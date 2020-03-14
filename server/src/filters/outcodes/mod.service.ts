@@ -24,7 +24,7 @@ export class OutcodesService {
     }
     const dataResult = response?.data['result'];
     return {
-      outcode: outcode.trim(),
+      outcode: outcode.trim().toUpperCase(),
       coordinates:
         dataResult == null
           ? null
