@@ -54,7 +54,7 @@ function isCourseFilterThrow(str: string): str is filter.CourseType {
   return true;
 }
 
-interface Filters {
+export interface Filters {
   genderFilter: GenderFilter | undefined;
   courseFilters: CourseFilters | undefined;
 }

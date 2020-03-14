@@ -1,23 +1,21 @@
-import {
-  parseQueries,
-  GenderFilter,
-  CourseFilters,
-  ApplyableFilter,
-} from './mod';
+import { parseQueries, GenderFilter, CourseFilters, Filters } from './mod';
 
 describe('StudentDataController', () => {
   it('Test valid Queries.', () => {
     expect(parseQueries('male', 'applied-general,a-level')).toStrictEqual<
-      ApplyableFilter[]
-    >([
-      new CourseFilters(['applied-general', 'a-level']),
-      new GenderFilter('male'),
-    ]);
+      Filters
+    >({
+      courseFilters: new CourseFilters(['applied-general', 'a-level']),
+      genderFilter: new GenderFilter('male'),
+    });
   });
   it('Test null Queries.', () => {
     expect(parseQueries(undefined, 'applied-general,a-level')).toStrictEqual<
-      ApplyableFilter[]
-    >([new CourseFilters(['applied-general', 'a-level'])]);
+      Filters
+    >({
+      courseFilters: new CourseFilters(['applied-general', 'a-level']),
+      genderFilter: undefined,
+    });
   });
   it('Test typos in Queries.', () => {
     expect(() =>
