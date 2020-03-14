@@ -9,7 +9,7 @@ build-core:
   stage: build
   script:
     - cd core
-    - npm ci
+    - npm i
     - npm run build
     - mv dist public
   artifacts:
@@ -55,7 +55,10 @@ test-core:
 test-server:
   stage: test
   script:
-    - cd server
+    - cd core
+    - npm i
+    - npm run build
+    - cd ../server
     - npm i
     - npm run test
 
@@ -70,14 +73,20 @@ lint-core:
 lint-client:
   stage: lint
   script:
-    - cd client
+    - cd core
+    - npm i
+    - npm run build
+    - cd ../client
     - npm i
     - npm run lint --no-fix
 
 lint-server:
   stage: lint
   script:
-    - cd server
+    - cd core
+    - npm i
+    - npm run build
+    - cd ../server
     - npm i
     - npm run lint:check
     - npm run format:check
