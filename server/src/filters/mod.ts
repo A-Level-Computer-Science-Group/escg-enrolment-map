@@ -14,11 +14,11 @@ import {
   College,
 } from '../data/mod';
 
-interface ApplyableFilter {
+export interface ApplyableFilter {
   studentMatchesFilter(student: Student): boolean;
 }
 
-class GenderFilter implements ApplyableFilter {
+export class GenderFilter implements ApplyableFilter {
   type: GenderFilterType;
   constructor(_type: GenderFilterType) {
     this.type = _type;
@@ -45,7 +45,7 @@ function isGenderFilterThrow(str: string): str is GenderFilterType {
   return true;
 }
 
-class CourseFilter implements ApplyableFilter {
+export class CourseFilter implements ApplyableFilter {
   // Multiple filters possible for course.
   types: CourseFilterType[];
   constructor(_types: CourseFilterType[]) {
@@ -81,14 +81,12 @@ export function parseQueries(
   _course: string | undefined,
 ): ApplyableFilter[] {
   let filters = [];
-  if (_gender != null && isGenderFilterThrow(_gender)) {
-    filters.push(new GenderFilter(_gender));
-  }
-  if (_course != null) {
+  if (_course != null)
     filters.push(
       new CourseFilter(_course.split(',').filter(isCourseFilterThrow)),
     );
-  }
+  if (_gender != null && isGenderFilterThrow(_gender))
+    filters.push(new GenderFilter(_gender));
   return filters;
 }
 
