@@ -1,14 +1,14 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 import { students, Student, schools } from '../data/mod';
-import { e2e } from 'escg-enrolment-map-core';
+import { e2e, filter } from 'escg-enrolment-map-core';
 
 export interface ApplyableFilter {
   studentMatchesFilter(student: Student): boolean;
 }
 
-export class GenderFilter implements ApplyableFilter {
-  type: GenderFilterType;
-  constructor(_type: GenderFilterType) {
+export class GenderFilter implements filter.IGender, ApplyableFilter {
+  type: filter.GenderType;
+  constructor(_type: filter.GenderType) {
     this.type = _type;
   }
   studentMatchesFilter(student: Student): boolean {
@@ -23,20 +23,15 @@ export class GenderFilter implements ApplyableFilter {
   }
 }
 
-type GenderFilterType = 'male' | 'female';
-function isGenderFilterType(str: string): str is GenderFilterType {
-  return str == 'male' || str == 'female';
-}
-function isGenderFilterThrow(str: string): str is GenderFilterType {
-  if (!isGenderFilterType(str))
+function isGenderFilterThrow(str: string): str is filter.GenderType {
+  if (!filter.isGenderType(str))
     throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   return true;
 }
-
-export class CourseFilters implements ApplyableFilter {
+export class CourseFilters implements filter.ICourse, ApplyableFilter {
   // Multiple filters possible for course.
-  types: CourseFilterType[];
-  constructor(_types: CourseFilterType[]) {
+  types: filter.CourseType[];
+  constructor(_types: filter.CourseType[]) {
     this.types = _types;
   }
   studentMatchesFilter(student: Student): boolean {
@@ -53,13 +48,8 @@ export class CourseFilters implements ApplyableFilter {
     return keys.includes(student.QualificationType);
   }
 }
-type CourseFilterType = 'a-level' | 'vocational' | 'applied-general';
-function isCourseFilterType(str: string): str is CourseFilterType {
-  return str == 'a-level' || str == 'vocational' || str == 'applied-general';
-}
-
-function isCourseFilterThrow(str: string): str is CourseFilterType {
-  if (!isCourseFilterType(str))
+function isCourseFilterThrow(str: string): str is filter.CourseType {
+  if (!filter.isCourseType(str))
     throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   return true;
 }
