@@ -14,24 +14,64 @@ import {
   College,
 } from '../data/mod';
 
-export type Filter = GenderFilter | CourseFilter;
-
-type GenderFilter = 'male' | 'female';
-function isGenderFilter(str: string): str is GenderFilter {
-  return str == 'male' || str == 'female';
+interface ApplyableFilter {
+  studentMatchesFilter(student: Student): boolean;
 }
 
-type CourseFilter = 'a-level' | 'vocational' | 'applied-general';
-function isCourseFilter(str: string): str is CourseFilter {
+class GenderFilter implements ApplyableFilter {
+  type: GenderFilterType;
+  constructor(_type: GenderFilterType) {
+    this.type = _type;
+  }
+  studentMatchesFilter(student: Student): boolean {
+    let key;
+    switch (this.type) {
+      case 'male':
+        key = 'M';
+      case 'female':
+        key = 'F';
+    }
+    return student.Sex == key;
+  }
+}
+
+type GenderFilterType = 'male' | 'female';
+function isGenderFilterType(str: string): str is GenderFilterType {
+  return str == 'male' || str == 'female';
+}
+function isGenderFilterThrow(str: string): str is GenderFilterType {
+  if (!isGenderFilterType(str))
+    throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
+  return true;
+}
+
+class CourseFilter implements ApplyableFilter {
+  // Multiple filters possible for course.
+  types: CourseFilterType[];
+  constructor(_types: CourseFilterType[]) {
+    this.types = _types;
+  }
+  studentMatchesFilter(student: Student): boolean {
+    let keys = [];
+    for (const type of this.types)
+      switch (type) {
+        case 'a-level':
+          keys.push('A Level');
+        case 'vocational':
+          keys.push('Vocational'); // can't find any students doing vocational in data.
+        case 'applied-general':
+          keys.push('Applied General');
+      }
+    return keys.includes(student.QualificationType);
+  }
+}
+type CourseFilterType = 'a-level' | 'vocational' | 'applied-general';
+function isCourseFilterType(str: string): str is CourseFilterType {
   return str == 'a-level' || str == 'vocational' || str == 'applied-general';
 }
 
-function isFilter(str: string): str is Filter {
-  return isGenderFilter(str) || isCourseFilter(str);
-}
-
-function isFilterOrThrow(str: string): str is Filter {
-  if (!isFilter(str))
+function isCourseFilterThrow(str: string): str is CourseFilterType {
+  if (!isCourseFilterType(str))
     throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
   return true;
 }
@@ -39,10 +79,17 @@ function isFilterOrThrow(str: string): str is Filter {
 export function parseQueries(
   _gender: string | undefined,
   _course: string | undefined,
-): Filter[] {
-  const course = _course != null ? _course.split(',') : [];
-  const gender = _gender != null ? [_gender] : [];
-  return course.concat(gender).filter(isFilterOrThrow);
+): ApplyableFilter[] {
+  let filters = [];
+  if (_gender != null && isGenderFilterThrow(_gender)) {
+    filters.push(new GenderFilter(_gender));
+  }
+  if (_course != null) {
+    filters.push(
+      new CourseFilter(_course.split(',').filter(isCourseFilterThrow)),
+    );
+  }
+  return filters;
 }
 
 /**
@@ -50,39 +97,18 @@ export function parseQueries(
  * @param filter A Filter to be applied.
  * @param studentArr An array of Students to be filtered.
  */
-function applyFilter(filter: Filter, studentArr: Student[]): Student[] {
+function applyFilter(
+  filter: ApplyableFilter,
+  studentArr: Student[],
+): Student[] {
   function studentMatchesFilter(student: Student): boolean {
-    if (isCourseFilter(filter)) {
-      let key;
-      switch (filter) {
-        case 'a-level':
-          key = 'A Level';
-        case 'vocational':
-          key = 'Vocational'; // can't find any students doing vocational in data.
-        case 'applied-general':
-          key = 'Applied General';
-      }
-      return student.QualificationType == key;
-    } else if (isGenderFilter(filter)) {
-      let key;
-      switch (filter) {
-        case 'male':
-          key = 'M';
-        case 'female':
-          key = 'F';
-      }
-      return student.Sex == key;
-    }
-    throw new HttpException(
-      'Unreachable: all possible filters checked before this point.',
-      HttpStatus.EXPECTATION_FAILED,
-    );
+    return filter.studentMatchesFilter(student);
   }
 
   return studentArr.filter(studentMatchesFilter);
 }
 
-export function applyFilters(filters: Filter[]): Student[] {
+export function applyFilters(filters: ApplyableFilter[]): Student[] {
   let filteredStudents = students;
   for (const filter of filters)
     filteredStudents = applyFilter(filter, filteredStudents);
