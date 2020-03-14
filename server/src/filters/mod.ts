@@ -1,5 +1,6 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 import { students, Student, schools } from '../data/mod';
+import { e2e } from 'escg-enrolment-map-core';
 
 export interface ApplyableFilter {
   studentMatchesFilter(student: Student): boolean;
@@ -100,31 +101,12 @@ export function applyFilters(filters: ApplyableFilter[]): Student[] {
   return filteredStudents;
 }
 
-export interface SchoolInfo {
-  name: string;
-  coordinates: Coordinates;
-  numMatchingStudents: number;
-}
-
-export interface OutcodeInfo {
-  outcode: string;
-  coordinates: CoordinatesLegacy | null;
-  numMatchingStudents: number;
-}
-
-type Coordinates = [number, number];
-
-interface CoordinatesLegacy {
-  latitude: number;
-  longitude: number;
-}
-
 /**
  * Counts Students from different schools producing `SchoolInfo[]`
  * @param students A Student array.
  */
-export function getSchoolsFromStudents(students: Student[]): SchoolInfo[] {
-  const output: SchoolInfo[] = [];
+export function getSchoolsFromStudents(students: Student[]): e2e.SchoolInfo[] {
+  const output: e2e.SchoolInfo[] = [];
   schools.forEach(sch => {
     output.push({
       name: sch.name,
