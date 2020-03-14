@@ -1,4 +1,9 @@
-import { HttpService, Injectable } from '@nestjs/common';
+import {
+  HttpService,
+  Injectable,
+  HttpException,
+  HttpStatus,
+} from '@nestjs/common';
 interface Coordinates {
   latitude: number;
   longitude: number;
@@ -13,18 +18,26 @@ interface OutcodeInfo {
 export class OutcodesService {
   constructor(private readonly httpService: HttpService) {}
 
-  async getOutcodeData(outcode: string): Promise<OutcodeInfo> {
+  async getOutcodeData(_outcode: string): Promise<OutcodeInfo> {
+    let outcode = _outcode.trim().toUpperCase();
     let response;
     try {
       response = await this.httpService
         .get(`https://api.postcodes.io/outcodes/${outcode}`)
         .toPromise();
     } catch {
-      response = null;
+      if (outcode == 'ZZ99') {
+        response = null; // Known invalid outcode.
+      } else {
+        throw new HttpException(
+          `Invalid outcode ${outcode}`,
+          HttpStatus.FORBIDDEN,
+        );
+      }
     }
     const dataResult = response?.data['result'];
     return {
-      outcode: outcode.trim().toUpperCase(),
+      outcode,
       coordinates:
         dataResult == null
           ? null
