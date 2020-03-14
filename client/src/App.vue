@@ -17,8 +17,16 @@ export default Vue.extend({
     Map,
     Menu
   },
-  mounted() {
+  async mounted() {
     init();
+    const data = (
+      await fetch(
+        process.env.NODE_ENV === "production"
+          ? "unimpl"
+          : "http://localhost:3000/student-data/outcodes"
+      )
+    ).json();
+    console.log(data);
   }
 });
 </script>
