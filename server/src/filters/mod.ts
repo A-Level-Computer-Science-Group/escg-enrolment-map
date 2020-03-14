@@ -1,18 +1,5 @@
-import {
-  HttpService,
-  Injectable,
-  HttpException,
-  HttpStatus,
-} from '@nestjs/common';
-import {
-  students,
-  Student,
-  StudentProperty,
-  schools,
-  School,
-  colleges,
-  College,
-} from '../data/mod';
+import { HttpException, HttpStatus } from '@nestjs/common';
+import { students, Student, schools } from '../data/mod';
 
 export interface ApplyableFilter {
   studentMatchesFilter(student: Student): boolean;
