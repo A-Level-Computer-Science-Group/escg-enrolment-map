@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import Vue from "vue";
+import { filter } from "escg-enrolment-map-core";
 import { init } from "./scripts/main";
 import Map from "./components/Map.vue";
 import Menu from "./components/Menu.vue";
@@ -16,6 +17,11 @@ export default Vue.extend({
   components: {
     Map,
     Menu
+  },
+  data() {
+    return {
+      filters: {} as filter.Filters
+    };
   },
   async mounted() {
     init();
