@@ -19,7 +19,10 @@ build-core:
 build-client:
   stage: build
   script:
-    - cd client
+    - cd core
+    - npm i
+    - npm run build
+    - cd ../client
     - npm ci
     - npm run build
     - mv public public-source
@@ -31,7 +34,10 @@ build-client:
 build-server:
   stage: build
   script:
-    - cd server
+    - cd core
+    - npm i
+    - npm run build
+    - cd ../server
     - npm ci
     - npm run build
     - mv dist public

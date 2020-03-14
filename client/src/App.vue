@@ -26,7 +26,6 @@ export default Vue.extend({
           : "http://localhost:3000/student-data/outcodes"
       )
     ).json();
-    console.log(data);
   }
 });
 </script>
