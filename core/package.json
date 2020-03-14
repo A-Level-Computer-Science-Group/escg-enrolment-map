@@ -1,0 +1,16 @@
+{
+  "name": "escg-enrolment-map-core",
+  "version": "0.0.1",
+  "description": "Core shared lib for escg-enrolment-map.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}

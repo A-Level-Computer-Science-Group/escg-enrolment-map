@@ -1,5 +1,7 @@
 import { HttpException, HttpStatus } from '@nestjs/common';
 import { students, Student, schools } from '../data/mod';
+import { util } from 'escg-enrolment-map-core';
+import convertToEnum = util.convertToEnum;
 
 export interface ApplyableFilter {
   studentMatchesFilter(student: Student): boolean;
