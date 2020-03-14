@@ -149,9 +149,3 @@ export function getSchoolsFromStudents(students: Student[]): SchoolInfo[] {
   });
   return output;
 }
-
-//TODO make this do something. @layton
-// Counts Students from different outcodes producing `OutcodeInfo[]`
-export function studentsFromOutcodes(studnets: Student[]): OutcodeInfo[] {
-  throw 'unimplemented';
-}
