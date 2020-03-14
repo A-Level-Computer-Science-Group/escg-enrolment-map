@@ -3,7 +3,7 @@ import { students, Student } from './data/mod';
 import {
   parseQueries,
   applyFilters,
-  studentsFromSchools,
+  getSchoolsFromStudents,
   OutcodeInfo,
   SchoolInfo,
 } from './filters/mod';
@@ -23,7 +23,7 @@ export class SchoolsDataController {
     @Query('gender') gender?: string,
     @Query('course') course?: string,
   ): SchoolInfo[] {
-    return studentsFromSchools(applyFilters(parseQueries(gender, course)));
+    return getSchoolsFromStudents(applyFilters(parseQueries(gender, course)));
   }
 }
 @Controller('student-data/outcodes')
