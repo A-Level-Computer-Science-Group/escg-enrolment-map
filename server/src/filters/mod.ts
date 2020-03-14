@@ -33,7 +33,7 @@ function isGenderFilterThrow(str: string): str is GenderFilterType {
   return true;
 }
 
-export class CourseFilter implements ApplyableFilter {
+export class CourseFilters implements ApplyableFilter {
   // Multiple filters possible for course.
   types: CourseFilterType[];
   constructor(_types: CourseFilterType[]) {
@@ -64,18 +64,24 @@ function isCourseFilterThrow(str: string): str is CourseFilterType {
   return true;
 }
 
+interface Filters {
+  genderFilter: GenderFilter | undefined;
+  courseFilters: CourseFilters | undefined;
+}
+
 export function parseQueries(
   _gender: string | undefined,
   _course: string | undefined,
-): ApplyableFilter[] {
-  const filters = [];
+): Filters {
+  let genderFilter;
+  let courseFilters;
   if (_course != null)
-    filters.push(
-      new CourseFilter(_course.split(',').filter(isCourseFilterThrow)),
+    courseFilters = new CourseFilters(
+      _course.split(',').filter(isCourseFilterThrow),
     );
   if (_gender != null && isGenderFilterThrow(_gender))
-    filters.push(new GenderFilter(_gender));
-  return filters;
+    genderFilter = new GenderFilter(_gender);
+  return { genderFilter, courseFilters };
 }
 
 /**
@@ -94,9 +100,9 @@ function applyFilter(
   return studentArr.filter(studentMatchesFilter);
 }
 
-export function applyFilters(filters: ApplyableFilter[]): Student[] {
+export function applyFilters(filters: Filters): Student[] {
   let filteredStudents = students;
-  for (const filter of filters)
+  for (const filter of Object.values(filters).filter(x => x != undefined))
     filteredStudents = applyFilter(filter, filteredStudents);
   return filteredStudents;
 }
