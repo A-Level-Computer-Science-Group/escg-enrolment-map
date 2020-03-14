@@ -52,7 +52,7 @@ export class CourseFilter implements ApplyableFilter {
     this.types = _types;
   }
   studentMatchesFilter(student: Student): boolean {
-    let keys = [];
+    const keys = [];
     for (const type of this.types)
       switch (type) {
         case 'a-level':
@@ -80,7 +80,7 @@ export function parseQueries(
   _gender: string | undefined,
   _course: string | undefined,
 ): ApplyableFilter[] {
-  let filters = [];
+  const filters = [];
   if (_course != null)
     filters.push(
       new CourseFilter(_course.split(',').filter(isCourseFilterThrow)),

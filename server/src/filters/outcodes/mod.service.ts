@@ -19,7 +19,7 @@ export class OutcodesService {
   constructor(private readonly httpService: HttpService) {}
 
   async getOutcodeData(_outcode: string): Promise<OutcodeInfo> {
-    let outcode = _outcode.trim().toUpperCase();
+    const outcode = _outcode.trim().toUpperCase();
     let response;
     try {
       response = await this.httpService
