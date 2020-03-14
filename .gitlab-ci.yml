@@ -1,11 +1,5 @@
 image: node:latest
 
-cache:
-  paths:
-    - server/node_modules/
-    - client/node_modules/
-    - core/node_modules/
-
 stages:
   - build
   - test
