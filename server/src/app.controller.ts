@@ -4,10 +4,9 @@ import {
   parseQueries,
   applyFilters,
   getSchoolsFromStudents,
-  OutcodeInfo,
-  SchoolInfo,
 } from './filters/mod';
 import { StudentsFromOutcodesService } from './filters/studentsFromOutcodes.service';
+import { e2e } from 'escg-enrolment-map-core';
 
 @Controller('student-data')
 export class StudentDataController {
@@ -22,7 +21,7 @@ export class SchoolsDataController {
   get(
     @Query('gender') gender?: string,
     @Query('course') course?: string,
-  ): SchoolInfo[] {
+  ): e2e.SchoolInfo[] {
     return getSchoolsFromStudents(applyFilters(parseQueries(gender, course)));
   }
 }
@@ -36,7 +35,7 @@ export class OutcodesDataController {
   async get(
     @Query('gender') gender?: string,
     @Query('course') course?: string,
-  ): Promise<OutcodeInfo[]> {
+  ): Promise<e2e.OutcodeInfo[]> {
     return await this.studentsFromOutcodesService.studentsFromOutcodes(
       applyFilters(parseQueries(gender, course)),
     );
