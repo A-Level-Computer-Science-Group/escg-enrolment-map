@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Map></Map>
-    <Menu></Menu>
+    <Menu :filters="filters"></Menu>
   </div>
 </template>
 

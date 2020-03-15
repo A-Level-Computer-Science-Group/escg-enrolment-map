@@ -27,25 +27,19 @@
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Eastbourne"
-      >
-        Eastbourne
-      </button>
+      >Eastbourne</button>
       <button
         id="button-three"
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Lewes"
-      >
-        Lewes
-      </button>
+      >Lewes</button>
       <button
         id="button-four"
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Hastings"
-      >
-        Hastings
-      </button>
+      >Hastings</button>
     </div>
   </section>
 </template>
@@ -55,6 +49,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "Menu",
+  props: ["filters"],
   mounted() {
     // resets all filter visuals to "none"
     const menus = document.getElementsByTagName("select");
