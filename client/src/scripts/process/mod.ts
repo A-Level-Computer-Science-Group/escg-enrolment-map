@@ -5,7 +5,13 @@ import {
   SchoolName,
   Filters
 } from "../shared/enums";
-import { Filter, Student, College, School, Population } from "../shared/interfaces";
+import {
+  Filter,
+  Student,
+  College,
+  School,
+  Population
+} from "../shared/interfaces";
 import { Colleges } from "./colleges";
 import { Students } from "./students";
 import { Schools } from "./schools";
@@ -43,9 +49,15 @@ export const FILTER = {
    * Returns a number of Students within a School or College.
    * @param location A SchoolName or CollegeName
    */
-  thisLocation: (filterArr: Filter[], location: SchoolName | CollegeName): Population => {
+  thisLocation: (
+    filterArr: Filter[],
+    location: SchoolName | CollegeName
+  ): Population => {
     const localS = localStudents(location);
-    return { total: localS.length, filtered: applyFilters(filterArr, localS).length };
+    return {
+      total: localS.length,
+      filtered: applyFilters(filterArr, localS).length
+    };
   }
 };
 
