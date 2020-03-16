@@ -27,19 +27,25 @@
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Eastbourne"
-      >Eastbourne</button>
+      >
+        Eastbourne
+      </button>
       <button
         id="button-three"
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Lewes"
-      >Lewes</button>
+      >
+        Lewes
+      </button>
       <button
         id="button-four"
         class="collegeFilter"
         onclick="buttonToggle(this, true);"
         value="Hastings"
-      >Hastings</button>
+      >
+        Hastings
+      </button>
     </div>
   </section>
 </template>
