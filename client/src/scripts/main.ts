@@ -121,14 +121,14 @@ const maxRadius = 1500;
   return false;
 };
 
-  /* *** MAP STUFF *** */
-  const mymap = L.map("map").setView([50.78829, 0.271392], 14);
+/* *** MAP STUFF *** */
+const mymap = L.map("map").setView([50.78829, 0.271392], 14);
 
-  // add map tiles (can't use this commercially without buying an access key)
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
-  }).addTo(mymap);
+// add map tiles (can't use this commercially without buying an access key)
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+}).addTo(mymap);
 
 // get an array of all colleges as markers and add them to the map
 const collegeMarkers = INIT.CollegesOld();
