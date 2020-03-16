@@ -55,6 +55,7 @@ import Vue from "vue";
 
 export default Vue.extend({
   name: "Menu",
+  props: ["filters"],
   mounted() {
     // resets all filter visuals to "none"
     const menus = document.getElementsByTagName("select");

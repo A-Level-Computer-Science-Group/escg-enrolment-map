@@ -4,8 +4,8 @@ import {
   SchoolsDataController,
   OutcodesDataController,
 } from './app.controller';
-import { AppService } from './app.service';
-import { OutcodesService } from './outcodes/mod.service';
+import { OutcodesService } from './filters/outcodes/mod.service';
+import { StudentsFromOutcodesService } from './filters/studentsFromOutcodes.service';
 
 @Module({
   imports: [HttpModule],
@@ -14,6 +14,6 @@ import { OutcodesService } from './outcodes/mod.service';
     SchoolsDataController,
     OutcodesDataController,
   ],
-  providers: [AppService, OutcodesService],
+  providers: [OutcodesService, StudentsFromOutcodesService],
 })
 export class AppModule {}
