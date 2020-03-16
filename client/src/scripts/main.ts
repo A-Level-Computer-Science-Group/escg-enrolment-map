@@ -1,31 +1,32 @@
 import * as L from "leaflet";
 import * as INIT from "./initialize";
-import { CourseType, Gender, College, Filters } from "./enums";
-import { courseFilter, genderFilter, collegeFilter } from "./FILTERS";
+import { CourseType, Gender, CollegeName, Filters } from "./shared/enums";
+import { courseFilter, genderFilter, collegeFilter } from "./process/mod";
 import {
   SchoolMarker,
-  PopupText,
-  LocalStudents,
+  PopupTextOld,
+  LocalStudentsOld,
   CollegeMarker,
   Filter
-} from "./interfaces";
+} from "./shared/interfaces";
 
 // PULL IN SUPPLIED INFO AND FILTERS
-import { studentInfo } from "./RandomData";
-import { filtersArr, applyFilters } from "./FILTERS";
-import { Student } from "./student";
+import { Students } from "./process/students";
+import { FILTER, filtersArr, applyFiltersOld } from "./process/mod";
+import { Student } from "./shared/interfaces";
 
 import { toggleTick, toggleGrey, updateFilter, removeTicks } from "./button";
 
 // map variables
 const maxRadius = 1500;
+/**
+ * When a button is clicked it toggles ticked and grey and set specific filter.
+ * If any other buttons are ticked, they are unticked.
+ * @param e The referenced HTML button.
+ * @param filter The string filter the button references.
+ */
+
 export function init() {
-  /**
-   * When a button is clicked it toggles ticked and grey and set specific filter.
-   * If any other buttons are ticked, they are unticked.
-   * @param e The referenced HTML button.
-   * @param filter The string filter the button references.
-   */
   (window as any).buttonToggle = (e: HTMLButtonElement, filter: string) => {
     toggleTick(e);
     toggleGrey(e);
@@ -54,7 +55,7 @@ export function init() {
         break;
       case "college":
         myFilter = collegeFilter;
-        myType = College;
+        myType = CollegeName;
         break;
       default:
         return false;
@@ -66,18 +67,21 @@ export function init() {
       // for each school, adjust the radius, colours and popups
       schoolMarkers.forEach(s => {
         const studentArr =
-          LocalStudents(collegeFilter.filter as College).length !== 0
-            ? LocalStudents(collegeFilter.filter as College)
-            : studentInfo;
+          LocalStudentsOld(collegeFilter.filter as CollegeName).length !== 0
+            ? LocalStudentsOld(collegeFilter.filter as CollegeName)
+            : Students;
         s.filtered.setRadius(
-          calcRadius(applyFilters(LocalStudents(s.name)).length, studentArr)
+          calcRadiusOld(
+            applyFiltersOld(LocalStudentsOld(s.name)).length,
+            studentArr
+          )
         );
         // Applies school and college filters to outline radius
         s.total.setRadius(
-          calcRadius(
-            LocalStudents(
+          calcRadiusOld(
+            LocalStudentsOld(
               s.name,
-              LocalStudents(collegeFilter.filter as Filters.college)
+              LocalStudentsOld(collegeFilter.filter as Filters.college)
             ).length,
             studentArr
           )
@@ -111,39 +115,40 @@ export function init() {
             });
           });
         }
-        s.total.bindPopup(PopupText(s.name, filtersArr, true));
+        s.total.bindPopup(PopupTextOld(s.name, filtersArr, true));
       });
       // for each college, adjust the popups
       collegeMarkers.forEach(c => {
-        c.marker.bindPopup(PopupText(c.name, filtersArr, true));
+        c.marker.bindPopup(PopupTextOld(c.name, filtersArr, true));
       });
       return true;
     }
     return false;
   };
-
-  /* *** MAP STUFF *** */
-  const mymap = L.map("map").setView([50.78829, 0.271392], 14);
-
-  // add map tiles (can't use this commercially without buying an access key)
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    attribution:
-      'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
-  }).addTo(mymap);
-
-  // get an array of all colleges as markers and add them to the map
-  const collegeMarkers = INIT.Colleges();
-  collegeMarkers.forEach(c => {
-    c.marker.addTo(mymap);
-  });
-
-  // get an array of all schools as markers and add them to the map
-  const schoolMarkers = INIT.Schools();
-  schoolMarkers.forEach(s => {
-    s.filtered.addTo(mymap);
-    s.total.addTo(mymap);
-  });
 }
-export function calcRadius(filteredS: number, studentArr: Student[]) {
+
+/* *** MAP STUFF *** */
+const mymap = L.map("map").setView([50.78829, 0.271392], 14);
+
+// add map tiles (can't use this commercially without buying an access key)
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution:
+    'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+}).addTo(mymap);
+
+// get an array of all colleges as markers and add them to the map
+const collegeMarkers = INIT.CollegesOld();
+collegeMarkers.forEach(c => {
+  c.marker.addTo(mymap);
+});
+
+// get an array of all schools as markers and add them to the map
+const schoolMarkers = INIT.SchoolsOld();
+schoolMarkers.forEach(s => {
+  s.filtered.addTo(mymap);
+  s.total.addTo(mymap);
+});
+
+export function calcRadiusOld(filteredS: number, studentArr: Student[]) {
   return (filteredS / studentArr.length) * maxRadius;
 }

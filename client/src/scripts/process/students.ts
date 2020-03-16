@@ -1,7003 +1,7003 @@
-import { CourseType, Gender, SchoolName, College } from "./enums";
-import { Student } from "./student";
+import { CourseType, Gender, SchoolName, CollegeName } from "../shared/enums";
+import { Student } from "../shared/interfaces";
 
-export const studentInfo: Student[] = [
+export const Students: Student[] = [
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.parklands,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.vocational
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.lewes,
+    college: CollegeName.lewes,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.female,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.ocklynge,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   },
 
   {
     school: SchoolName.parklands,
-    college: College.eastbourne,
+    college: CollegeName.eastbourne,
     gender: Gender.male,
     course: CourseType.alevel
   },
 
   {
     school: SchoolName.parklands,
-    college: College.hastings,
+    college: CollegeName.hastings,
     gender: Gender.male,
     course: CourseType.appgeneral
   }
